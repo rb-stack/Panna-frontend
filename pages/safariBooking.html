@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>panna | Online Safari Booking Page</title>
+    <meta name="description" content="Tadoba Jeep Safari booking and enquiry" />
+    <meta
+      name="keywords"
+      content="Tadoba, Jeep Safari, Canter, Tiger Reserve"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/styles/main.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://kit.fontawesome.com/a2e0e9e24a.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      :root {
+        --brand: #0e7a6d;
+        --brand-600: #0b5e54;
+      }
+      html,
+      body {
+        font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto,
+          Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      }
+
+      /* Calendar cells */
+      .cal-day {
+        @apply text-sm md:text-base w-10 h-10 md:w-12 md:h-12 rounded-lg flex items-center justify-center cursor-pointer select-none;
+      }
+      .cal-day.empty {
+        @apply cursor-default;
+      }
+      .cal-day:hover:not(.past):not(.blocked) {
+        @apply ring-2 ring-offset-2 ring-gray-300;
+      }
+      .cal-day.today {
+        @apply border border-dashed border-gray-400;
+      }
+      .cal-day.selected {
+        @apply bg-gray-900 text-white;
+      }
+      .cal-day.past {
+        @apply text-gray-300 line-through cursor-not-allowed;
+      }
+      .cal-day.blocked {
+        @apply bg-red-100 text-red-600 cursor-not-allowed relative;
+      }
+      .cal-day.blocked::after {
+        content: "✕";
+        @apply absolute top-1 right-1 text-xs;
+      }
+
+      /* Table styling override for mobile */
+      .pricing-table th,
+      .pricing-table td {
+        @apply p-3 align-top;
+      }
+
+      /* Utility badges */
+      .badge {
+        @apply inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-medium;
+      }
+      .badge-amber {
+        @apply bg-amber-100 text-amber-800;
+      }
+      .badge-red {
+        @apply bg-red-100 text-red-700;
+      }
+
+      /* Simple container widths */
+      .container {
+        @apply max-w-6xl mx-auto px-4;
+      }
+
+      /* Mobile menu animation */
+      #mobile-menu {
+        transition: max-height 0.3s ease-out;
+        max-height: 0;
+        overflow: hidden;
+      }
+
+      #mobile-menu.open {
+        max-height: 500px;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 text-gray-800">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-10">
+      <div class="container mx-auto px-4">
+        <div class="flex justify-between items-center py-4">
+          <a href="#" class="text-2xl font-bold text-indigo-600">Logo</a>
+
+          <!-- Mobile menu button -->
+          <button
+            class="md:hidden focus:outline-none"
+            id="mobile-menu-button"
+            aria-label="Toggle menu"
+          >
+            <svg
+              class="w-6 h-6 text-gray-600"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              ></path>
+            </svg>
+          </button>
+
+          <!-- Desktop Navigation -->
+          <nav class="hidden md:flex items-center space-x-4">
+            <a
+              href="#"
+              class="text-gray-600 hover:text-green-600 font-medium text-sm"
+              >Home</a
+            >
+            <a
+              href="#"
+              class="text-gray-600 hover:text-green-600 font-medium text-sm"
+              >Tour Packages</a
+            >
+            <a
+              href="#"
+              class="text-gray-600 hover:text-green-600 font-medium text-sm"
+              >Hotel in Panna</a
+            >
+            <a
+              href="../pages/payment.html"
+              class="text-gray-600 hover:text-green-600 font-medium text-sm"
+              >Payment</a
+            >
+            <a
+              href="../pages/safariBooking.html"
+              class="custom-nav-btn text-gray-600 hover:text-green-600 font-medium text-sm"
+              >Online Safari Booking</a
+            >
+            <a
+              href="tel:+917982653974"
+              class="custom-nav-btn text-gray-600 hover:text-green-600 font-medium text-sm"
+              >+91-7982653974</a
+            >
+          </nav>
+        </div>
+
+        <!-- Mobile Navigation (hidden by default) -->
+        <nav id="mobile-menu" class="md:hidden">
+          <div class="pb-4 space-y-2">
+            <a
+              href="#"
+              class="block py-2 text-gray-600 hover:text-green-600 font-medium text-sm"
+              >Home</a
+            >
+            <a
+              href="#"
+              class="block py-2 text-gray-600 hover:text-green-600 font-medium text-sm"
+              >Tour Packages</a
+            >
+            <a
+              href="#"
+              class="block py-2 text-gray-600 hover:text-green-600 font-medium text-sm"
+              >Hotel in Panna</a
+            >
+            <a
+              href="#"
+              class="block py-2 text-gray-600 hover:text-green-600 font-medium text-sm"
+              >Payment</a
+            >
+            <a
+              href="#"
+              class="block py-3 custom-nav-btn text-gray-600 hover:text-green-600 font-medium text-sm"
+              >Online Safari Booking</a
+            >
+            <a
+              href="tel:+917982653974"
+              class="block py-3 custom-nav-btn text-gray-600 hover:text-green-600 font-medium text-sm"
+              >+91-7982653974</a
+            >
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main -->
+    <main id="booking" class="container py-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <!-- Left: Safari Info -->
+        <section
+          id="info"
+          class="bg-white rounded-2xl shadow-sm border border-gray-200"
+        >
+          <div class="p-6">
+            <h2 class="text-xl font-semibold">Tadoba Jeep Safari Details</h2>
+            <div class="mt-4 overflow-x-auto">
+              <table class="min-w-full pricing-table text-sm">
+                <thead class="bg-gray-900 text-white">
+                  <tr>
+                    <th style="width: 40%">Tickets Booking in 4-59 Days</th>
+                    <th style="width: 30%">Monday to Friday</th>
+                    <th style="width: 30%">Saturday & Sundays</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-100">
+                  <tr>
+                    <td>Amount</td>
+                    <td>INR 6100</td>
+                    <td>INR 7100</td>
+                  </tr>
+                  <tr class="bg-gray-50">
+                    <td>Tickets Booking in 60-120 Days</td>
+                    <td>Monday to Friday</td>
+                    <td>Saturday & Sundays</td>
+                  </tr>
+                  <tr>
+                    <td>Amount</td>
+                    <td>INR 9000</td>
+                    <td>INR 10000</td>
+                  </tr>
+                  <tr class="bg-gray-50">
+                    <td>Tickets Booking in 01-03 Days (Tatkal)</td>
+                    <td>Monday to Sunday</td>
+                    <td>N/A</td>
+                  </tr>
+                  <tr>
+                    <td>Amount</td>
+                    <td>INR 10000</td>
+                    <td>N/A</td>
+                  </tr>
+                  <tr class="bg-gray-50">
+                    <td colspan="3">
+                      Safari Booking will be CLOSED after 5:00 PM for next-day
+                      booking.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="3">
+                      All Core Gates are CLOSED on every Tuesday.
+                    </td>
+                  </tr>
+                  <tr class="bg-gray-50">
+                    <td colspan="3">
+                      All Buffer Gates are CLOSED on every Wednesday.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="3">
+                      M, E, N in above table stands for Morning, Evening, Night
+                      respectively.
+                    </td>
+                  </tr>
+                  <tr class="bg-gray-50">
+                    <td colspan="3">
+                      Tatkal Booking is available for Core gates only 3 days
+                      prior to safari.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="3" class="font-semibold">
+                      Terms and Conditions:
+                    </td>
+                  </tr>
+                  <tr class="text-gray-700">
+                    <td colspan="3">
+                      Visitors are not allowed to exceed the permitted passenger
+                      count.
+                    </td>
+                  </tr>
+                  <tr class="text-gray-700 bg-gray-50">
+                    <td colspan="3">Jeep Safari amounts are non-refundable.</td>
+                  </tr>
+                  <tr class="text-gray-700">
+                    <td colspan="3">
+                      Bookings are overseen by park officials; safaris run in
+                      core & buffer zones.
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- Right: Calendar + Form -->
+        <section class="bg-white rounded-2xl shadow-sm border border-gray-200">
+          <div class="p-6">
+            <!-- Alerts -->
+            <div id="alerts" class="space-y-2 hidden">
+              <div id="cutoffAlert" class="badge badge-amber hidden">
+                <i class="fa-regular fa-clock"></i
+                ><span>Booking/Enquiry is closed for today.</span>
+              </div>
+              <div id="blockedAlert" class="badge badge-red hidden">
+                <i class="fa-solid fa-ban"></i
+                ><span>Safari is not available on the selected date.</span>
+              </div>
+            </div>
+
+            <!-- Calendar -->
+            <div class="rounded-xl border border-gray-200 overflow-hidden">
+              <div
+                class="flex items-center justify-between px-4 py-3 bg-gray-50"
+              >
+                <button
+                  id="prevMonth"
+                  class="p-2 rounded-lg hover:bg-gray-100"
+                  aria-label="Previous month"
+                >
+                  <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <h3 id="monthLabel" class="text-lg font-semibold">
+                  Month YYYY
+                </h3>
+                <button
+                  id="nextMonth"
+                  class="p-2 rounded-lg hover:bg-gray-100"
+                  aria-label="Next month"
+                >
+                  <i class="fa-solid fa-chevron-right"></i>
+                </button>
+              </div>
+              <div class="px-2 pb-4">
+                <div
+                  class="grid grid-cols-7 gap-2 text-xs md:text-sm font-medium text-gray-500 px-2 pt-3"
+                >
+                  <div class="text-center">Sun</div>
+                  <div class="text-center">Mon</div>
+                  <div class="text-center">Tue</div>
+                  <div class="text-center">Wed</div>
+                  <div class="text-center">Thu</div>
+                  <div class="text-center">Fri</div>
+                  <div class="text-center">Sat</div>
+                </div>
+                <div id="calendarGrid" class="grid grid-cols-7 gap-2 p-2"></div>
+                <div id="selectedInfo" class="px-2 pb-3 text-sm hidden">
+                  <span class="font-medium">Selected Date:</span>
+                  <span id="selectedDateText"></span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Form -->
+            <form id="enquiryForm" class="mt-6 space-y-4">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="space-y-4">
+                  <div>
+                    <label
+                      for="safariZone"
+                      class="block text-sm font-medium mb-1"
+                      >Safari Zone</label
+                    >
+                    <select
+                      id="safariZone"
+                      name="safariZone"
+                      required
+                      class="w-full rounded-xl border-gray-300 focus:ring-gray-900 focus:border-gray-900"
+                    >
+                      <option value="">Select Zone</option>
+                      <option>
+                        Moharli/Mamla/Agarzari/Adegaon/Junona/Devada
+                      </option>
+                      <option>
+                        Kolara/Alizanza/Madnapur/Palasgaon/Shirkheda Belara
+                      </option>
+                      <option>Navegaon/Ramdegi/Nimdela</option>
+                      <option>
+                        Kesalaghat/Pangadi/Pangadi Aswal Chuha/Zari Peth
+                      </option>
+                    </select>
+                  </div>
+                  <div>
+                    <label
+                      for="vehicleType"
+                      class="block text-sm font-medium mb-1"
+                      >Vehicle Type</label
+                    >
+                    <select
+                      id="vehicleType"
+                      name="vehicleType"
+                      class="w-full rounded-xl border-gray-300 focus:ring-gray-900 focus:border-gray-900"
+                    >
+                      <option>Jeep</option>
+                      <option>Canter</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label
+                      for="safariTime"
+                      class="block text-sm font-medium mb-1"
+                      >Safari Time</label
+                    >
+                    <select
+                      id="safariTime"
+                      name="safariTime"
+                      required
+                      class="w-full rounded-xl border-gray-300 focus:ring-gray-900 focus:border-gray-900"
+                    >
+                      <option value="">Select Time</option>
+                      <option>Morning</option>
+                      <option>Evening</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label for="name" class="block text-sm font-medium mb-1"
+                      >Full Name</label
+                    >
+                    <input
+                      id="name"
+                      name="name"
+                      type="text"
+                      placeholder="Enter your full name"
+                      required
+                      class="w-full rounded-xl border-gray-300 focus:ring-gray-900 focus:border-gray-900"
+                    />
+                  </div>
+                </div>
+                <div class="space-y-4">
+                  <div>
+                    <label for="adults" class="block text-sm font-medium mb-1"
+                      >Adults</label
+                    >
+                    <select
+                      id="adults"
+                      name="adults"
+                      class="w-full rounded-xl border-gray-300 focus:ring-gray-900 focus:border-gray-900"
+                    ></select>
+                  </div>
+                  <div>
+                    <label for="children" class="block text-sm font-medium mb-1"
+                      >Children (below 6)</label
+                    >
+                    <select
+                      id="children"
+                      name="children"
+                      class="w-full rounded-xl border-gray-300 focus:ring-gray-900 focus:border-gray-900"
+                    ></select>
+                  </div>
+                  <div>
+                    <label for="email" class="block text-sm font-medium mb-1"
+                      >Email</label
+                    >
+                    <input
+                      id="email"
+                      name="email"
+                      type="email"
+                      placeholder="Enter your email"
+                      required
+                      class="w-full rounded-xl border-gray-300 focus:ring-gray-900 focus:border-gray-900"
+                    />
+                  </div>
+                  <div>
+                    <label for="phone" class="block text-sm font-medium mb-1"
+                      >Phone</label
+                    >
+                    <input
+                      id="phone"
+                      name="phone"
+                      type="tel"
+                      placeholder="Enter your mobile number"
+                      required
+                      pattern="[0-9]{10}"
+                      class="w-full rounded-xl border-gray-300 focus:ring-gray-900 focus:border-gray-900"
+                    />
+                  </div>
+                </div>
+              </div>
+              <p id="dateWarning" class="text-sm text-red-600 hidden">
+                Please select a date for your safari.
+              </p>
+              <div class="flex flex-wrap items-center gap-3">
+                <button
+                  id="enquiryBtn"
+                  type="submit"
+                  class="inline-flex items-center gap-2 rounded-xl bg-gray-900 text-white px-5 py-3 disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  <i class="fa-regular fa-circle-question"></i>
+                  Enquiry Now
+                </button>
+                <span id="statusMsg" class="text-sm"></span>
+              </div>
+            </form>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- More Info -->
+    <section
+      id="more"
+      class="py-10 bg-white border-t border-gray-200 bg-[#d4ffd436]"
+    >
+      <div class="container space-y-8">
+        <div>
+          <h3 class="text-xl font-semibold">
+            Tadoba Online Jeep Safari Booking
+          </h3>
+          <p class="mt-2 text-sm md:text-base text-gray-700">
+            Embarking on a Jeep Safari in Tadoba National Park offers an
+            unparalleled experience for those with a passion for exploration.
+            The journey through the dense reserve is exceptionally rewarding,
+            with the likelihood of spotting tigers and other wild animals being
+            higher compared to other regions. The open jeep safari accommodates
+            up to six people, along with a guide and driver.
+          </p>
+          <p class="mt-2 text-sm md:text-base text-gray-700">
+            For booking a jeep safari in Tadoba, we recommend reserving online
+            in advance. If you are unable to book online, you may contact us
+            directly for assistance.
+          </p>
+          <p class="mt-2 text-sm md:text-base text-gray-700">
+            Best Time to Visit – March to May is optimal for sightings. Monsoon
+            (June–September) is partially closed. October–November has vibrant
+            greenery. December–February is pleasant.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="text-xl font-semibold">Route Chart Tadoba</h3>
+          <div class="mt-4 grid sm:grid-cols-2 lg:grid-cols-3 gap-4 text-sm">
+            <div class="p-4 rounded-xl border border-gray-200">
+              <h6 class="font-medium">Nagpur to Moharli Gate - 180 km</h6>
+              <p class="text-gray-600">Via Chandrapur - Nagpur Rd/Mancherial</p>
+            </div>
+            <div class="p-4 rounded-xl border border-gray-200">
+              <h6 class="font-medium">Chandrapur to Kolara Gate - 180 km</h6>
+              <p class="text-gray-600">Via Chimur</p>
+            </div>
+            <div class="p-4 rounded-xl border border-gray-200">
+              <h6 class="font-medium">Nagpur to Khutwanda Gate - 180 km</h6>
+              <p class="text-gray-600">Via Chandrapur - Nagpur Rd/Mancherial</p>
+            </div>
+            <div class="p-4 rounded-xl border border-gray-200">
+              <h6 class="font-medium">Chandrapur to Moharli Gate - 180 km</h6>
+              <p class="text-gray-600">Via Durgapur Road</p>
+            </div>
+            <div class="p-4 rounded-xl border border-gray-200">
+              <h6 class="font-medium">Nagpur to Kolara Gate - 180 km</h6>
+              <p class="text-gray-600">Via Umred, Bhisi, Chimur</p>
+            </div>
+            <div class="p-4 rounded-xl border border-gray-200">
+              <h6 class="font-medium">Nagpur to Pangadi Gate - 180 km</h6>
+              <p class="text-gray-600">Via Chandrapur - Nagpur Rd/Mancherial</p>
+            </div>
+            <div class="p-4 rounded-xl border border-gray-200">
+              <h6 class="font-medium">Chandrapur to Navegaon Gate - 180 km</h6>
+              <p class="text-gray-600">Need not to go Chimur</p>
+            </div>
+            <div class="p-4 rounded-xl border border-gray-200">
+              <h6 class="font-medium">Nagpur to Navegaon Gate - 180 km</h6>
+              <p class="text-gray-600">Via Chandrapur</p>
+            </div>
+            <div class="p-4 rounded-xl border border-gray-200">
+              <h6 class="font-medium">Nagpur to Zari Gate - 180 km</h6>
+              <p class="text-gray-600">Via Ghat Rd and Rambagh Rd</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-6 text-sm">
+          <div>
+            <h5 class="text-lg font-semibold">
+              Important Information about Jeep Safari in Tadoba
+            </h5>
+            <ul class="mt-3 list-disc pl-5 space-y-1 text-gray-700">
+              <li>Choose the gate for safari as per your accommodation.</li>
+              <li>Book your permit through the gates close to your resort.</li>
+              <li>All buffer gates will be closed on Wednesday from Feb 1.</li>
+              <li>Visitors must carry entry permits and valid ID proof.</li>
+              <li>
+                Permits are provisional and subject to change/cancellation.
+              </li>
+              <li>Follow Tadoba Tiger Reserve guidelines as directed.</li>
+              <li>
+                Registered guides are pre-decided; changes are not permitted.
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h5 class="text-lg font-semibold">
+              Online Jeep Safari Booking Procedure
+            </h5>
+            <ul class="mt-3 list-disc pl-5 space-y-1 text-gray-700">
+              <li>Provide full name, age, sex of each visitor as per ID.</li>
+              <li>Select safari timing (Morning/Evening).</li>
+              <li>
+                Provide a valid ID number (Voter ID, Aadhaar, Driving License,
+                etc.).
+              </li>
+              <li>Safari entry fee is paid in advance.</li>
+              <li>Jeep & Canter safari amounts are non-refundable.</li>
+              <li>All visitors must follow park rules & regulations.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 py-12 mt-auto">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+            <h3 class="text-white text-lg font-semibold mb-4">Company</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
+              necessitatibus assumenda harum reprehenderit maiores laudantium
+              dignissimos voluptas ipsa minus adipisci!
+            </p>
+          </div>
+
+          <div>
+            <h3 class="text-white text-lg font-semibold mb-4">Useful Links</h3>
+            <ul class="space-y-1">
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >About
+                </a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Contact Us</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Tour Packages</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Online Safari</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Hotels</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-white text-lg font-semibold mb-4">Contact Us</h3>
+            <ul class="space-y-1">
+              <li>
+                <a
+                  href="mailto:info@tadoba.com"
+                  class="hover:text-white transition-colors"
+                  ><span><i class="fa-solid fa-envelope"></i></span>
+                  info@tadoba.com</a
+                >
+              </li>
+              <li>
+                <a
+                  href="mailto:contact@tadoba.com"
+                  class="hover:text-white transition-colors"
+                  ><span><i class="fa-solid fa-envelope"></i></span>
+                  contact@tadoba.com</a
+                >
+              </li>
+              <li>
+                <a
+                  href="tel:+919988764563"
+                  class="hover:text-white transition-colors"
+                  ><span><i class="fa-solid fa-phone"></i></span> +91
+                  9988764563</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-white text-lg font-semibold mb-4">Connect</h3>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="text-gray-300 hover:text-white transition-colors"
+                aria-label="Facebook"
+              >
+                <svg
+                  class="w-6 h-6"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="#"
+                class="text-gray-300 hover:text-white transition-colors"
+                aria-label="Twitter"
+              >
+                <svg
+                  class="w-6 h-6"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723 10.033 10.033 0 01-3.127 1.195 4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.937 4.937 0 004.604 3.417 9.868 9.868 0 01-6.102 2.105c-.39 0-.779-.023-1.170-.067a13.995 13.995 0 007.557 2.209c9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63a9.936 9.936 0 002.46-2.548l-.047-.02z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="#"
+                class="text-gray-300 hover:text-white transition-colors"
+                aria-label="LinkedIn"
+              >
+                <svg
+                  class="w-6 h-6"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="border-t border-gray-700 mt-8 pt-8 text-sm text-center">
+          <p>
+            &copy; <span id="currentYear"></span> Seven Safar Tours And
+            Travells. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Simple JavaScript for mobile menu toggle
+      function toggleMenu() {
+        const menu = document.getElementById("mobile-menu");
+        menu.classList.toggle("open");
+      }
+
+      /* ======================
+       CONFIG
+    ====================== */
+      // Replace this with your env base URL (same as import.meta.env.VITE_APP_API_URL)
+      const API_BASE = "https://your-api.example.com"; // <-- CHANGE ME
+
+      // SEO config fetch path used in the original React code
+      const SEO_PATH = "/api/pageseo/get-page-seo?path=/safari-booking";
+
+      // Booking config endpoint (cutOffTime + blockedDates)
+      const BOOKING_CONFIG_PATH = "/api/safaridate/config";
+
+      // Enquiry endpoint
+      const ENQUIRY_PATH = "/api/safarienquiry/create";
+
+      /* ======================
+       STATE
+    ====================== */
+      let currentDate = new Date();
+      let selectedDate = null;
+      let bookingConfig = { cutOffTime: "17:00", blockedDates: [] };
+
+      /* ======================
+       DOM REFS
+    ====================== */
+      const monthLabel = document.getElementById("monthLabel");
+      const calendarGrid = document.getElementById("calendarGrid");
+      const prevMonthBtn = document.getElementById("prevMonth");
+      const nextMonthBtn = document.getElementById("nextMonth");
+      const selectedInfo = document.getElementById("selectedInfo");
+      const selectedDateText = document.getElementById("selectedDateText");
+      const dateWarning = document.getElementById("dateWarning");
+      const cutoffAlert = document.getElementById("cutoffAlert");
+      const blockedAlert = document.getElementById("blockedAlert");
+      const alertsWrap = document.getElementById("alerts");
+      const enquiryForm = document.getElementById("enquiryForm");
+      const enquiryBtn = document.getElementById("enquiryBtn");
+      const statusMsg = document.getElementById("statusMsg");
+
+      // Form fields
+      const adultsSel = document.getElementById("adults");
+      const childrenSel = document.getElementById("children");
+
+      /* ======================
+       HELPERS
+    ====================== */
+      function pad(n) {
+        return n.toString().padStart(2, "0");
+      }
+
+      function sameDay(a, b) {
+        return (
+          a.getFullYear() === b.getFullYear() &&
+          a.getMonth() === b.getMonth() &&
+          a.getDate() === b.getDate()
+        );
+      }
+
+      function isPast(d) {
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
+        const compareDate = new Date(
+          d.getFullYear(),
+          d.getMonth(),
+          d.getDate()
+        );
+        return compareDate < today;
+      }
+
+      function isBlocked(d) {
+        return bookingConfig.blockedDates.some((bd) => {
+          const blockedDate = new Date(bd);
+          return (
+            blockedDate.getFullYear() === d.getFullYear() &&
+            blockedDate.getMonth() === d.getMonth() &&
+            blockedDate.getDate() === d.getDate()
+          );
+        });
+      }
+
+      function afterCutoffForToday() {
+        if (!selectedDate) return false;
+
+        const now = new Date();
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
+
+        // Check if selected date is today
+        if (!sameDay(selectedDate, today)) return false;
+
+        // Parse cutoff time
+        const [hh, mm] = bookingConfig.cutOffTime.split(":").map(Number);
+        const cutoff = new Date();
+        cutoff.setHours(hh || 17, mm || 0, 0, 0);
+
+        return now > cutoff;
+      }
+
+      function updateAlerts() {
+        const isAfter = afterCutoffForToday();
+        const blocked = selectedDate ? isBlocked(selectedDate) : false;
+
+        alertsWrap.classList.toggle("hidden", !(isAfter || blocked));
+        cutoffAlert.classList.toggle("hidden", !isAfter);
+        blockedAlert.classList.toggle("hidden", !blocked);
+
+        // Disable enquiry when after cutoff or blocked
+        enquiryBtn.disabled = !!(isAfter || blocked);
+      }
+
+      function renderMonth() {
+        const y = currentDate.getFullYear();
+        const m = currentDate.getMonth();
+        monthLabel.textContent = currentDate.toLocaleString("default", {
+          month: "long",
+          year: "numeric",
+        });
+        calendarGrid.innerHTML = "";
+
+        const first = new Date(y, m, 1);
+        const last = new Date(y, m + 1, 0);
+        const startPad = first.getDay();
+        const days = last.getDate();
+
+        const cells = [];
+        for (let i = 0; i < startPad; i++) cells.push(null);
+        for (let d = 1; d <= days; d++) cells.push(d);
+
+        const today = new Date();
+
+        cells.forEach((d) => {
+          const cell = document.createElement("div");
+          cell.className = "cal-day empty";
+          if (d === null) {
+            cell.textContent = "";
+          } else {
+            const dateObj = new Date(y, m, d);
+            const classes = ["cal-day", "active"];
+            if (sameDay(dateObj, today)) classes.push("today");
+            if (isPast(dateObj)) classes.push("past");
+            if (selectedDate && sameDay(dateObj, selectedDate))
+              classes.push("selected");
+            if (isBlocked(dateObj)) classes.push("blocked");
+            cell.className = classes.join(" ");
+            cell.textContent = d;
+            if (!classes.includes("past") && !classes.includes("blocked")) {
+              cell.addEventListener("click", () => {
+                selectedDate = dateObj;
+                selectedInfo.classList.remove("hidden");
+                selectedDateText.textContent =
+                  selectedDate.toLocaleDateString();
+                dateWarning.classList.add("hidden");
+                renderMonth();
+                updateAlerts();
+              });
+            }
+          }
+          calendarGrid.appendChild(cell);
+        });
+
+        updateAlerts();
+      }
+
+      function populateSelects() {
+        adultsSel.innerHTML = "";
+        for (let i = 1; i <= 8; i++) {
+          const opt = document.createElement("option");
+          opt.value = i;
+          opt.textContent = i;
+          adultsSel.appendChild(opt);
+        }
+        childrenSel.innerHTML = "";
+        const def = document.createElement("option");
+        def.value = 0;
+        def.textContent = "No. of Children (below 6)";
+        childrenSel.appendChild(def);
+        for (let i = 1; i <= 12; i++) {
+          const opt = document.createElement("option");
+          opt.value = i;
+          opt.textContent = i;
+          childrenSel.appendChild(opt);
+        }
+      }
+
+      async function fetchSEO() {
+        try {
+          const res = await fetch(API_BASE + SEO_PATH);
+          if (!res.ok) return;
+          const data = await res.json();
+          if (data && data.seo) {
+            const seo = data.seo;
+            if (seo.metaTitle) document.title = seo.metaTitle;
+            if (seo.metaDescription) {
+              let m = document.querySelector('meta[name="description"]');
+              if (!m) {
+                m = document.createElement("meta");
+                m.setAttribute("name", "description");
+                document.head.appendChild(m);
+              }
+              m.setAttribute("content", seo.metaDescription);
+            }
+            if (seo.metaKeywords) {
+              let m = document.querySelector('meta[name="keywords"]');
+              if (!m) {
+                m = document.createElement("meta");
+                m.setAttribute("name", "keywords");
+                document.head.appendChild(m);
+              }
+              m.setAttribute("content", seo.metaKeywords);
+            }
+            if (seo.canonicalUrl) {
+              let l = document.querySelector('link[rel="canonical"]');
+              if (!l) {
+                l = document.createElement("link");
+                l.setAttribute("rel", "canonical");
+                document.head.appendChild(l);
+              }
+              l.setAttribute("href", seo.canonicalUrl);
+            }
+            if (seo.noIndex) {
+              let r = document.querySelector('meta[name="robots"]');
+              if (!r) {
+                r = document.createElement("meta");
+                r.setAttribute("name", "robots");
+                document.head.appendChild(r);
+              }
+              r.setAttribute("content", "noindex, nofollow");
+            }
+          }
+        } catch (err) {
+          console.warn("SEO fetch failed", err);
+        }
+      }
+
+      async function fetchBookingConfig() {
+        try {
+          const res = await fetch(API_BASE + BOOKING_CONFIG_PATH);
+          if (!res.ok) return;
+          const data = await res.json();
+          if (data) {
+            bookingConfig = { ...bookingConfig, ...data };
+            renderMonth();
+          }
+        } catch (err) {
+          console.warn("Booking config fetch failed", err);
+        }
+      }
+
+      async function submitEnquiry(evt) {
+        evt.preventDefault();
+        statusMsg.textContent = "";
+        if (!selectedDate) {
+          dateWarning.classList.remove("hidden");
+          return;
+        }
+        if (afterCutoffForToday()) {
+          statusMsg.textContent = `Enquiry is closed for today. Last time was ${bookingConfig.cutOffTime}.`;
+          return;
+        }
+        if (isBlocked(selectedDate)) {
+          statusMsg.textContent =
+            "Enquiry is not available for the selected date.";
+          return;
+        }
+
+        const form = new FormData(enquiryForm);
+        const payload = {
+          name: form.get("name") || "",
+          email: form.get("email") || "",
+          phone: form.get("phone") || "",
+          safariZone: form.get("safariZone") || "",
+          vehicleType: form.get("vehicleType") || "Jeep",
+          safariTime: form.get("safariTime") || "",
+          children: Number(form.get("children") || 0),
+          adults: Number(form.get("adults") || 1),
+          amountPaid: 6100,
+          date: selectedDate.toISOString(),
+        };
+
+        // Clean empty keys
+        Object.keys(payload).forEach((k) => {
+          if (payload[k] === "") delete payload[k];
+        });
+
+        enquiryBtn.disabled = true;
+        enquiryBtn.classList.add("opacity-70");
+        statusMsg.textContent = "Submitting enquiry...";
+
+        try {
+          const res = await fetch(API_BASE + ENQUIRY_PATH, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(payload),
+          });
+          const data = await res.json().catch(() => ({}));
+          if (res.ok) {
+            statusMsg.textContent =
+              "Enquiry submitted successfully! Admin will contact you soon.";
+            enquiryForm.reset();
+            selectedDate = null;
+            renderMonth();
+            selectedInfo.classList.add("hidden");
+          } else {
+            statusMsg.textContent = data.error || "Failed to submit enquiry.";
+          }
+        } catch (err) {
+          statusMsg.textContent = "Network error. Please try again.";
+        } finally {
+          enquiryBtn.disabled = false;
+          enquiryBtn.classList.remove("opacity-70");
+        }
+      }
+
+      /* ======================
+       INIT
+    ====================== */
+      document.addEventListener("DOMContentLoaded", function () {
+        // Set current year in footer
+        document.getElementById("currentYear").textContent =
+          new Date().getFullYear();
+
+        // Mobile menu functionality
+        document
+          .getElementById("mobile-menu-button")
+          .addEventListener("click", toggleMenu);
+
+        // Initialize form selects
+        populateSelects();
+
+        // Calendar navigation
+        prevMonthBtn.addEventListener("click", () => {
+          const d = new Date(currentDate);
+          d.setMonth(d.getMonth() - 1);
+          currentDate = d;
+          renderMonth();
+        });
+
+        nextMonthBtn.addEventListener("click", () => {
+          const d = new Date(currentDate);
+          d.setMonth(d.getMonth() + 1);
+          currentDate = d;
+          renderMonth();
+        });
+
+        // Form submission
+        enquiryForm.addEventListener("submit", submitEnquiry);
+
+        // Initial render
+        renderMonth();
+
+        // Fetch SEO and booking config
+        fetchSEO();
+        fetchBookingConfig();
+      });
+    </script>
+  </body>
+</html>

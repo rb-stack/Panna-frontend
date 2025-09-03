@@ -4,73 +4,62 @@ function toggleMenu() {
   menu.classList.toggle("hidden");
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-  const slider = document.getElementById("tour-slider");
-  const slides = document.querySelectorAll(".slide");
-  const prevBtn = document.getElementById("prev-btn");
-  const nextBtn = document.getElementById("next-btn");
+// Tour Packages slider
 
-  let currentSlide = 0;
-  let slidesPerView = calculateSlidesPerView();
+// Newsletter slider
+const carousel = document.getElementById("carousel");
+const prev = document.getElementById("prev");
+const next = document.getElementById("next");
 
-  // Calculate how many slides to show based on screen width
-  function calculateSlidesPerView() {
-    if (window.innerWidth >= 1024) return 3;
-    if (window.innerWidth >= 768) return 2;
-    return 1;
+let index = 0;
+let autoSlide;
+
+function getCardsPerView() {
+  if (window.innerWidth >= 1024) return 4; // large screens
+  if (window.innerWidth >= 640) return 2; // medium screens
+  return 1; // small screens
+}
+
+function updateCarousel() {
+  const cardWidth = carousel.querySelector("div").offsetWidth;
+  carousel.style.transform = `translateX(-${index * cardWidth}px)`;
+}
+
+function nextSlide() {
+  if (index < carousel.children.length - getCardsPerView()) {
+    index++;
+  } else {
+    index = 0; // loop back
   }
+  updateCarousel();
+}
 
-  // Update slider position
-  function updateSlider() {
-    const slideWidth = slides[0].offsetWidth + 32; // width + margin
-    slider.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
-
-    // Update active dot
-    dots.forEach((dot, i) => {
-      dot.classList.toggle("active", i === currentSlide);
-    });
+function prevSlide() {
+  if (index > 0) {
+    index--;
+  } else {
+    index = carousel.children.length - getCardsPerView();
   }
+  updateCarousel();
+}
 
-  // Go to specific slide
-  function goToSlide(n) {
-    currentSlide = n;
-    if (currentSlide >= slides.length - slidesPerView + 1) {
-      currentSlide = slides.length - slidesPerView;
-    }
-    if (currentSlide < 0) currentSlide = 0;
-    updateSlider();
-  }
+next.addEventListener("click", nextSlide);
+prev.addEventListener("click", prevSlide);
 
-  // Next slide
-  function nextSlide() {
-    if (currentSlide >= slides.length - slidesPerView) {
-      currentSlide = 0;
-    } else {
-      currentSlide++;
-    }
-    updateSlider();
-  }
+function startAutoSlide() {
+  autoSlide = setInterval(nextSlide, 3000); // every 3 sec
+}
 
-  // Previous slide
-  function prevSlide() {
-    if (currentSlide <= 0) {
-      currentSlide = slides.length - slidesPerView;
-    } else {
-      currentSlide--;
-    }
-    updateSlider();
-  }
+function stopAutoSlide() {
+  clearInterval(autoSlide);
+}
 
-  // Event listeners
-  nextBtn.addEventListener("click", nextSlide);
-  prevBtn.addEventListener("click", prevSlide);
+// Auto slide with hover pause
+carousel.parentElement.addEventListener("mouseenter", stopAutoSlide);
+carousel.parentElement.addEventListener("mouseleave", startAutoSlide);
 
-  // Handle window resize
-  window.addEventListener("resize", () => {
-    slidesPerView = calculateSlidesPerView();
-    updateSlider();
-  });
+window.addEventListener("resize", updateCarousel);
 
-  // Initialize slider
-  updateSlider();
-});
+// Init
+updateCarousel();
+startAutoSlide();
