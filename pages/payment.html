@@ -58,12 +58,12 @@
           <!-- Desktop Navigation -->
           <nav class="hidden md:flex items-center space-x-4">
             <a
-              href="#"
+              href="../index.html"
               class="text-gray-600 hover:text-green-600 font-medium text-sm"
               >Home</a
             >
             <a
-              href="#"
+              href="../pages/tourPackages.html"
               class="text-gray-600 hover:text-green-600 font-medium text-sm"
               >Tour Packages</a
             >
@@ -73,12 +73,12 @@
               >Hotel in Panna</a
             >
             <a
-              href="./pages/payment.html"
+              href="../pages/payment.html"
               class="text-gray-600 hover:text-green-600 font-medium text-sm"
               >Payment</a
             >
             <a
-              href="#"
+              href="../pages/safariBooking.html"
               class="custom-nav-btn text-gray-600 hover:text-green-600 font-medium text-sm"
               >Online Safari Booking</a
             >
@@ -126,117 +126,87 @@
       </div>
     </header>
 
+    <!-- Payment Hero Section -->
+    <section
+      id="payment-hero-section"
+      class="h-[20vh] w-full mx-auto flex flex-col justify-center items-center text-center bg-gray-100"
+    >
+      <h1 class="text-green-700 md:text-5xl font-bold">Quick Payment</h1>
+      <p class="text-lg md:text-xl md:w-3/4 mx-auto">
+        Complete your booking securely
+      </p>
+    </section>
     <section
       id="payment-section"
       class="bg-gray-100 flex items-center justify-center min-h-screen"
     >
       <!-- Payment Card -->
-      <div class="bg-white shadow-lg rounded-2xl w-full max-w-md p-6">
-        <h1 class="text-2xl font-bold text-center mb-4">Payment Details</h1>
-
-        <form id="paymentForm" class="space-y-4">
-          <!-- Amount -->
-          <div>
-            <label for="amount" class="block text-sm font-medium text-gray-700"
-              >Amount</label
-            >
-            <input
-              type="number"
-              id="amount"
-              name="amount"
-              required
-              class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none"
-              placeholder="Enter amount"
-            />
-          </div>
-
-          <!-- Name -->
-          <div>
-            <label for="name" class="block text-sm font-medium text-gray-700"
-              >Name</label
-            >
-            <input
-              type="text"
-              id="name"
-              name="name"
-              required
-              class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none"
-              placeholder="Enter your full name"
-            />
-          </div>
-
-          <!-- Email -->
-          <div>
-            <label for="email" class="block text-sm font-medium text-gray-700"
-              >Email</label
-            >
-            <input
-              type="email"
-              id="email"
-              name="email"
-              required
-              class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none"
-              placeholder="Enter your email address"
-            />
-          </div>
-
-          <!-- Mobile Number -->
-          <div>
-            <label for="mobile" class="block text-sm font-medium text-gray-700"
-              >Mobile Number</label
-            >
-            <input
-              type="tel"
-              id="mobile"
-              name="mobile"
-              required
-              pattern="[0-9]{10}"
-              class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none"
-              placeholder="Enter 10 digit mobile number"
-            />
-          </div>
-          <div class="flex w-full gap-4">
-            <!-- City -->
-            <div class="w-2/3">
-              <label for="city" class="block text-sm font-medium text-gray-700"
-                >City</label
-              >
-              <input
-                type="text"
-                id="city"
-                name="city"
-                required
-                class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none"
-                placeholder="Enter your city name"
-              />
+      <section class="payment-form-section py-0">
+        <div class="container">
+          <div class="payment-form-wrapper">
+            <h4 class="mb-0.5 py-0">Enter Payment Details</h4>
+            <div class="row g-4">
+              <div class="col-md-6">
+                <label>Amount (INR)</label
+                ><input
+                  type="number"
+                  class="form-control"
+                  name="amount"
+                  placeholder="Enter amount"
+                /><label class="mt-3">Name</label
+                ><input
+                  type="text"
+                  class="form-control"
+                  name="name"
+                  placeholder="Your name"
+                /><label class="mt-3">Email</label
+                ><input
+                  type="email"
+                  class="form-control"
+                  name="email"
+                  placeholder="you@example.com"
+                /><label class="mt-3">Mobile</label
+                ><input
+                  type="tel"
+                  class="form-control"
+                  name="mobile"
+                  placeholder="Mobile number"
+                />
+              </div>
+              <div class="col-md-6">
+                <label>Zip Code</label
+                ><input
+                  type="text"
+                  class="form-control"
+                  name="zip"
+                  placeholder="ZIP Code"
+                /><label class="mt-3">City</label
+                ><input
+                  type="text"
+                  class="form-control"
+                  name="city"
+                  placeholder="Your city"
+                /><label class="mt-3">Currency</label
+                ><input
+                  type="text"
+                  class="form-control"
+                  disabled=""
+                  value="INR (Indian Rupee)"
+                /><label class="mt-3">Remark</label
+                ><input
+                  type="text"
+                  class="form-control"
+                  name="remark"
+                  placeholder="Any remarks"
+                />
+              </div>
             </div>
-
-            <!-- Zip Code -->
-            <div class="w-1/3">
-              <label for="zip" class="block text-sm font-medium text-gray-700"
-                >Zip Code</label
-              >
-              <input
-                type="text"
-                id="zip"
-                name="zip"
-                required
-                pattern="[0-9]{5,6}"
-                class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none"
-                placeholder="Enter zip code"
-              />
+            <div class="text-end mt-4">
+              <button class="hf-btn-enquiry px-4">Confirm &amp; Pay</button>
             </div>
           </div>
-
-          <!-- Pay Button -->
-          <button
-            type="submit"
-            class="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition"
-          >
-            Pay Now
-          </button>
-        </form>
-      </div>
+        </div>
+      </section>
     </section>
 
     <!-- Footer -->
@@ -245,7 +215,7 @@
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <h3 class="text-white text-lg font-semibold mb-4">Company</h3>
-            <p>
+            <p style="color: rgb(219, 219, 219) !important">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
               necessitatibus assumenda harum reprehenderit maiores laudantium
               dignissimos voluptas ipsa minus adipisci!
@@ -360,7 +330,7 @@
         </div>
 
         <div class="border-t border-gray-700 mt-8 pt-8 text-sm text-center">
-          <p>
+          <p style="color: rgb(219, 219, 219) !important">
             &copy; 2025 Seven Safar Tours And Travells. All rights reserved.
           </p>
         </div>
