@@ -68,7 +68,7 @@
               >Tour Packages</a
             >
             <a
-              href="#"
+              href="../pages/hotelinPanna.html"
               class="text-gray-600 hover:text-green-600 font-medium text-sm"
               >Hotel in Panna</a
             >
@@ -575,28 +575,11 @@
         </div>
       </div>
     </footer>
-
     <script>
-      const form = document.getElementById("paymentForm");
-
-      form.addEventListener("submit", function (e) {
-        e.preventDefault();
-
-        const amount = document.getElementById("amount").value;
-        const name = document.getElementById("name").value;
-        const email = document.getElementById("email").value;
-        const mobile = document.getElementById("mobile").value;
-        const city = document.getElementById("city").value;
-        const zip = document.getElementById("zip").value;
-
-        if (!amount || !name || !email || !mobile || !city || !zip) {
-          alert("Please fill all fields!");
-          return;
-        }
-
-        alert(`Payment of $${amount} submitted successfully by ${name}!`);
-        form.reset();
-      });
+      function toggleMenu() {
+        const menu = document.getElementById("mobile-menu");
+        menu.classList.toggle("hidden");
+      }
     </script>
   </body>
 </html>
