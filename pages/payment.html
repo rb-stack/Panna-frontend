@@ -14,19 +14,19 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
-      body {
-        font-family: "Poppins", sans-serif;
+      label {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
       }
-      .card-input:focus {
-        outline: none;
-        box-shadow: 0 0 0 2px #2563eb;
-      }
-      .payment-option {
-        transition: all 0.3s ease;
-      }
-      .payment-option:hover {
-        transform: translateY(-3px);
+
+      input,
+      textarea {
+        padding: 0.5rem 1rem !important;
+        border: 1px solid #ccc;
+        border-radius: 0.375rem; /* Rounded corners */
+        font-size: 1rem;
+        width: 100%;
       }
     </style>
   </head>
@@ -129,49 +129,113 @@
     <!-- Payment Hero Section -->
     <section
       id="payment-hero-section"
-      class="h-[20vh] w-full mx-auto flex flex-col justify-center items-center text-center bg-gray-100"
+      class="h-[20vh] w-full mx-auto flex flex-col justify-center items-center text-center bg-green-50"
     >
-      <h1 class="text-green-700 md:text-5xl font-bold">Quick Payment</h1>
-      <p class="text-lg md:text-xl md:w-3/4 mx-auto">
+      <h1 class="text-green-700 text-3xl md:text-5xl font-bold">
+        Quick Payment
+      </h1>
+      <p class="text-md md:text-xl md:w-3/4 mx-auto">
         Complete your booking securely
       </p>
     </section>
+
+    <!-- Form -->
     <section
       id="payment-section"
-      class="bg-gray-100 flex items-center justify-center min-h-screen"
+      class="bg-green-50 flex items-center justify-center pb-10 md:px-6 px-4"
     >
-      <!-- Payment Card -->
-      <section class="payment-form-section py-0">
-        <div class="container">
-          <div class="payment-form-wrapper">
-            <h4 class="mb-0.5 py-0">Enter Payment Details</h4>
-            <div class="row g-4">
-              <div class="col-md-6">
-                <label>Amount (INR)</label
-                ><input
+      <div
+        id="payment-container"
+        class="container md:max-w-5xl mx-auto border-2 rounded-lg bg-white p-6 shadow-lg"
+      >
+        <h4 class="pb-4 font-bold text-xl border-b-2 border-gray-300">
+          Enter Payment Details
+        </h4>
+        <form>
+          <div
+            id="form-wrapper"
+            class="grid md:grid-cols-2 gap-6 mt-4 items-start"
+          >
+            <div class="payment-left-container flex flex-col">
+              <label>
+                Enter Amount
+                <input
                   type="number"
                   class="form-control"
                   name="amount"
-                  placeholder="Enter amount"
-                /><label class="mt-3">Name</label
-                ><input
+                  placeholder="Enter amount (INR)"
+              /></label>
+              <label class="mt-3"
+                >Name
+                <input
                   type="text"
                   class="form-control"
                   name="name"
                   placeholder="Your name"
-                /><label class="mt-3">Email</label
-                ><input
-                  type="email"
-                  class="form-control"
-                  name="email"
-                  placeholder="you@example.com"
-                /><label class="mt-3">Mobile</label
-                ><input
+              /></label>
+              <label class="mt-3"
+                >Mobile
+                <input
                   type="tel"
                   class="form-control"
                   name="mobile"
                   placeholder="Mobile number"
+              /></label>
+              <label class="mt-3"
+                >Payment Purpose
+                <textarea
+                  name="payment-purpose"
+                  class="form-control"
+                  placeholder="Enter payment purpose"
+                ></textarea>
+              </label>
+            </div>
+            <div class="payment-right-container flex flex-col">
+              <label
+                >Email
+                <input
+                  type="email"
+                  class="form-control"
+                  name="email"
+                  placeholder="you@example.com"
                 />
+              </label>
+              <label class="mt-3">
+                City
+                <input
+                  type="text"
+                  class="form-control"
+                  name="city"
+                  placeholder="Enter city name"
+              /></label>
+              <label class="mt-3">
+                Zip Code
+                <input
+                  type="text"
+                  class="form-control"
+                  name="zip-code"
+                  placeholder="Enter zip code"
+              /></label>
+
+              <div id="payment-btn" class="mt-6 text-end">
+                <button
+                  class="bg-green-500 text-white font-bold text-2xl px-4 mt-5 w-full py-4 rounded-md hover:bg-green-600 transition-colors"
+                  type="submit"
+                  id="submitBtn"
+                >
+                  Confirm &amp; Pay
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <!-- <div class="container">
+          <div class="payment-form-wrapper">
+            <h4 class="mb-0.5 py-0">Enter Payment Details</h4>
+            <div class="row g-4">
+              <div class="col-md-6">
               </div>
               <div class="col-md-6">
                 <label>Zip Code</label
@@ -205,8 +269,183 @@
               <button class="hf-btn-enquiry px-4">Confirm &amp; Pay</button>
             </div>
           </div>
+        </div> -->
+    </section>
+
+    <!-- Important Link Section -->
+    <section id="importantLink-section" class="w-full relative">
+      <div class="w-full mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 p-4">
+        <!-- Box 1: Safari Zones -->
+        <div
+          class="importantLink-box1 link-box bg-white p-5 rounded-lg shadow-md"
+        >
+          <h4 class="section-title text-xl font-bold text-green-700 pb-3 mb-4">
+            <i class="fas fa-tree mr-2"></i>Panna Safari Zones
+          </h4>
+          <div class="links-grid grid grid-cols-2 gap-3">
+            <div class="links-column">
+              <a
+                href="#"
+                class="link-item block bg-gray-100 hover:bg-green-100 py-2 px-4 rounded-md mb-2 text-sm"
+              >
+                <i class="fas fa-paw mr-2 text-green-600"></i>
+                Mohrali
+              </a>
+              <a
+                href="#"
+                class="link-item block bg-gray-100 hover:bg-green-100 py-2 px-4 rounded-md mb-2 text-sm"
+              >
+                <i class="fas fa-tree mr-2 text-green-600"></i>
+                Junona Gate
+              </a>
+              <a
+                href="#"
+                class="link-item block bg-gray-100 hover:bg-green-100 py-2 px-4 rounded-md text-sm"
+              >
+                <i class="fas fa-map-marked-alt mr-2 text-green-600"></i>
+                Ken River Trail
+              </a>
+            </div>
+            <div class="links-column">
+              <a
+                href="#"
+                class="link-item block bg-gray-100 hover:bg-green-100 py-2 px-4 rounded-md mb-2 text-sm"
+              >
+                <i class="fas fa-mountain mr-2 text-green-600"></i>
+                Hinauta Range
+              </a>
+              <a
+                href="#"
+                class="link-item block bg-gray-100 hover:bg-green-100 py-2 px-4 rounded-md mb-2 text-sm"
+              >
+                <i class="fas fa-water mr-2 text-green-600"></i>
+                Pandav Falls
+              </a>
+              <a
+                href="#"
+                class="link-item block bg-gray-100 hover:bg-green-100 py-2 px-4 rounded-md text-sm"
+              >
+                <i class="fas fa-binoculars mr-2 text-green-600"></i>
+                View Points
+              </a>
+            </div>
+          </div>
         </div>
-      </section>
+
+        <!-- Box 2: Safari Booking -->
+        <div
+          class="importantLink-box2 link-box bg-white p-5 rounded-lg shadow-md"
+        >
+          <h4 class="section-title text-xl font-bold text-blue-700 pb-3 mb-4">
+            <i class="fas fa-ticket-alt mr-2"></i>Panna Safari Booking
+          </h4>
+          <div class="links-grid grid grid-cols-2 gap-3">
+            <div class="links-column">
+              <a
+                href="#"
+                class="link-item block bg-gray-100 hover:bg-green-100 py-2 px-4 rounded-md mb-2 text-sm"
+              >
+                <i class="fas fa-paw mr-2 text-green-600"></i>
+                Panna Jeep Safari
+              </a>
+              <a
+                href="#"
+                class="link-item block bg-gray-100 hover:bg-green-100 py-2 px-4 rounded-md mb-2 text-sm"
+              >
+                <i class="fas fa-tree mr-2 text-green-600"></i>
+                Canter Safari
+              </a>
+              <a
+                href="#"
+                class="link-item block bg-gray-100 hover:bg-green-100 py-2 px-4 rounded-md text-sm"
+              >
+                <i class="fas fa-map-marked-alt mr-2 text-green-600"></i>
+                Safari Permit Tips
+              </a>
+            </div>
+            <div class="links-column">
+              <a
+                href="#"
+                class="link-item block bg-gray-100 hover:bg-green-100 py-2 px-4 rounded-md mb-2 text-sm"
+              >
+                <i class="fas fa-mountain mr-2 text-green-600"></i>
+                Covid Safety Tips
+              </a>
+              <a
+                href="#"
+                class="link-item block bg-gray-100 hover:bg-green-100 py-2 px-4 rounded-md mb-2 text-sm"
+              >
+                <i class="fas fa-water mr-2 text-green-600"></i>
+                Things To Carry
+              </a>
+              <a
+                href="#"
+                class="link-item block bg-gray-100 hover:bg-green-100 py-2 px-4 rounded-md text-sm"
+              >
+                <i class="fas fa-binoculars mr-2 text-green-600"></i>
+                How To Reach
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Box 3: Visitor Information -->
+        <div
+          class="importantLink-box3 link-box bg-white p-5 rounded-lg shadow-md"
+        >
+          <h4 class="section-title text-xl font-bold text-purple-700 pb-3 mb-4">
+            <i class="fas fa-info-circle mr-2"></i>Panna Information
+          </h4>
+          <div class="links-grid grid grid-cols-2 gap-3">
+            <div class="links-column">
+              <a
+                href="#"
+                class="link-item block bg-gray-100 hover:bg-green-100 py-2 px-4 rounded-md mb-2 text-sm"
+              >
+                <i class="fas fa-paw mr-2 text-green-600"></i>
+                Terms
+              </a>
+              <a
+                href="#"
+                class="link-item block bg-gray-100 hover:bg-green-100 py-2 px-4 rounded-md mb-2 text-sm"
+              >
+                <i class="fas fa-tree mr-2 text-green-600"></i>
+                Privacy Policy
+              </a>
+              <a
+                href="#"
+                class="link-item block bg-gray-100 hover:bg-green-100 py-2 px-4 rounded-md text-sm"
+              >
+                <i class="fas fa-map-marked-alt mr-2 text-green-600"></i>
+                Refund Policy
+              </a>
+            </div>
+            <div class="links-column">
+              <a
+                href="#"
+                class="link-item block bg-gray-100 hover:bg-green-100 py-2 px-4 rounded-md mb-2 text-sm"
+              >
+                <i class="fas fa-mountain mr-2 text-green-600"></i>
+                Panna Map
+              </a>
+              <a
+                href="#"
+                class="link-item block bg-gray-100 hover:bg-green-100 py-2 px-4 rounded-md mb-2 text-sm"
+              >
+                <i class="fas fa-water mr-2 text-green-600"></i>
+                Panna Hotels
+              </a>
+              <a
+                href="#"
+                class="link-item block bg-gray-100 hover:bg-green-100 py-2 px-4 rounded-md text-sm"
+              >
+                <i class="fas fa-binoculars mr-2 text-green-600"></i>
+                Panna Restaurants
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Footer -->
