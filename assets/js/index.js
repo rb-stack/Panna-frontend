@@ -9,25 +9,25 @@ document.addEventListener("DOMContentLoaded", function () {
   // Sample card data
   const cardData = [
     {
-      title: "Blog 1",
+      title: "An Exciting Pench and Tadoba Wildlife Safari Tour in 4N 5D",
       description:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
       image: "../assets/images/newsblog1.jpg",
     },
     {
-      title: "Blog 2",
+      title: "4 Nights 5 Days Pench and Kanha Safari Tour with Itinerary",
       description:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
       image: "../assets/images/newsblog2.jpg",
     },
     {
-      title: "Blog 3",
+      title: "How Many Jeep Safaris are in a 2-night & 3-day Pench Tour?",
       description:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
       image: "../assets/images/newsblog3.jpg",
     },
     {
-      title: "Blog 4",
+      title: "1 Night 2 Days Pench National Park Jeep Safari Tour Package",
       description:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
       image: "../assets/images/newsblog4.jpg",
@@ -100,10 +100,10 @@ document.addEventListener("DOMContentLoaded", function () {
                         <img src="${data.image}" alt="${data.title}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
                     </div>
                     <div class="p-4">
-                        <h3 class="font-bold text-lg mb-2 text-gray-800">${data.title}</h3>
-                        <p class="text-gray-600 text-sm mb-4">${data.description}</p>
+                        <h3 class="font-semibold mb-2 text-gray-800">${data.title}</h3>
+                        <p class="text-gray-400 text-sm mb-4" style="color: #575757 !important">${data.description}</p>
                         <div>
-                            <button class="text-gray-800 py-2 rounded-lg hover:text-gray-700 transition-colors">
+                            <button class="text-gray-800 py-2 rounded-lg hover:text-gray-700 transition-colors bg-[#287028] text-white py-2 px-4 font-bold">
                             <a href="#Newsletter-section">Read Article</a>
                             </button>
                         </div>
