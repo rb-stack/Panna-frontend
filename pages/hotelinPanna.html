@@ -13,14 +13,6 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
     <style>
-      /* Custom CSS to replace the missing external files */
-      #enquiry-btn {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        z-index: 20;
-      }
-
       #hotel-hero-section {
         background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
           url("https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80");
@@ -1034,15 +1026,8 @@
       </div>
     </footer>
 
+    <script src="../assets/js/index.js"></script>
     <script>
-      // Mobile menu functionality
-      const mobileMenuButton = document.getElementById("mobile-menu-button");
-      const mobileMenu = document.getElementById("mobile-menu");
-
-      mobileMenuButton.addEventListener("click", function () {
-        mobileMenu.classList.toggle("hidden");
-      });
-
       // Price range slider functionality
       const priceRange = document.getElementById("price-range");
       const priceValue = document.getElementById("price-value");
@@ -1084,20 +1069,6 @@
           }
         });
       }
-
-      // Close mobile menu when clicking outside
-      document.addEventListener("click", function (event) {
-        const isClickInsideMenu = mobileMenu.contains(event.target);
-        const isClickInsideButton = mobileMenuButton.contains(event.target);
-
-        if (
-          !isClickInsideMenu &&
-          !isClickInsideButton &&
-          !mobileMenu.classList.contains("hidden")
-        ) {
-          mobileMenu.classList.add("hidden");
-        }
-      });
     </script>
   </body>
 </html>
