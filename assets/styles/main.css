@@ -48,7 +48,7 @@ body {
   right: 2%;
   bottom: 5%;
   z-index: 10;
-  background: rgb(0, 168, 0);
+  background: #3d7d4a;
   padding: 10px 21px;
   border-radius: 24px;
   font-size: 1rem;
@@ -474,7 +474,7 @@ body {
   flex-direction: column;
   padding: 1rem 1rem;
   border-radius: 8px;
-  background: #4260422e;
+  background: #dcfce7;
 }
 
 .zone-card:hover {
@@ -484,6 +484,20 @@ body {
 }
 
 /* Tour packages Styles */
+
+.tour-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.tour-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+.carousel-container {
+  overflow: hidden;
+}
+.tour-card-wrapper {
+  transition: transform 0.5s ease;
+}
 
 /* Styling History Section */
 .history-card {

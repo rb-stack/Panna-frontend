@@ -4,6 +4,136 @@ function toggleMenu() {
   menu.classList.toggle("hidden");
 }
 
+// Tour packages slider
+document.addEventListener("DOMContentLoaded", function () {
+  const carousel = document.getElementById("tour-carousel");
+  const cards = document.querySelectorAll(".tour-card");
+  const prevBtn = document.getElementById("prev-btn");
+  const nextBtn = document.getElementById("next-btn");
+  const indicatorsContainer = document.getElementById("carousel-indicators");
+
+  const cardWidth = cards[0].offsetWidth + 32; // width + margin
+  let currentPosition = 0;
+  let autoScrollInterval;
+  const visibleCards = () =>
+    window.innerWidth < 768 ? 1 : window.innerWidth < 1024 ? 2 : 4;
+  const totalCards = cards.length;
+  const totalSlides = Math.ceil(totalCards / visibleCards());
+
+  // Create indicators
+  for (let i = 0; i < totalSlides; i++) {
+    const indicator = document.createElement("div");
+    indicator.classList.add(
+      "h-2",
+      "w-8",
+      "rounded-full",
+      "cursor-pointer",
+      "transition-all"
+    );
+    indicator.dataset.slide = i;
+    if (i === 0) {
+      indicator.classList.add("bg-blue-500");
+    } else {
+      indicator.classList.add("bg-gray-300");
+    }
+    indicatorsContainer.appendChild(indicator);
+  }
+
+  const indicators = document.querySelectorAll("#carousel-indicators > div");
+
+  // Update indicators
+  function updateIndicators() {
+    const currentSlide =
+      Math.abs(currentPosition) / (cardWidth * visibleCards());
+    indicators.forEach((indicator, index) => {
+      if (index === currentSlide) {
+        indicator.classList.remove("bg-gray-300");
+        indicator.classList.add("bg-blue-500");
+      } else {
+        indicator.classList.remove("bg-blue-500");
+        indicator.classList.add("bg-gray-300");
+      }
+    });
+  }
+
+  // Move carousel
+  function moveCarousel() {
+    carousel.style.transform = `translateX(${currentPosition}px)`;
+    updateIndicators();
+  }
+
+  // Next slide
+  function nextSlide() {
+    if (currentPosition > -(cardWidth * (totalCards - visibleCards()))) {
+      currentPosition -= cardWidth * visibleCards();
+    } else {
+      currentPosition = 0;
+    }
+    moveCarousel();
+  }
+
+  // Previous slide
+  function prevSlide() {
+    if (currentPosition < 0) {
+      currentPosition += cardWidth * visibleCards();
+    } else {
+      currentPosition = -(cardWidth * (totalCards - visibleCards()));
+    }
+    moveCarousel();
+  }
+
+  // Event listeners for buttons
+  nextBtn.addEventListener("click", () => {
+    nextSlide();
+    resetAutoScroll();
+  });
+
+  prevBtn.addEventListener("click", () => {
+    prevSlide();
+    resetAutoScroll();
+  });
+
+  // Event listeners for indicators
+  indicators.forEach((indicator) => {
+    indicator.addEventListener("click", () => {
+      const slideIndex = parseInt(indicator.dataset.slide);
+      currentPosition = -(slideIndex * cardWidth * visibleCards());
+      moveCarousel();
+      resetAutoScroll();
+    });
+  });
+
+  // Auto scroll
+  function startAutoScroll() {
+    autoScrollInterval = setInterval(nextSlide, 4000);
+  }
+
+  function resetAutoScroll() {
+    clearInterval(autoScrollInterval);
+    startAutoScroll();
+  }
+
+  // Handle responsive behavior
+  function handleResize() {
+    const newVisibleCards = visibleCards();
+    cardWidth = cards[0].offsetWidth + 32;
+
+    // Adjust current position to the nearest valid position
+    const maxPosition = -(cardWidth * (totalCards - newVisibleCards));
+    if (currentPosition < maxPosition) {
+      currentPosition = maxPosition;
+    }
+
+    moveCarousel();
+    resetAutoScroll();
+  }
+
+  window.addEventListener("resize", handleResize);
+
+  // Initialize
+  startAutoScroll();
+});
+
 // Newsletter slider
 document.addEventListener("DOMContentLoaded", function () {
   // Sample card data
