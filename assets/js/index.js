@@ -1,8 +1,34 @@
 // Simple JavaScript for mobile menu toggle
 function toggleMenu() {
-  const menu = document.getElementById("mobile-menu");
-  menu.classList.toggle("hidden");
+  const mobileMenu = document.getElementById("mobile-menu");
+  const overlay = document.getElementById("menu-overlay");
+
+  mobileMenu.classList.toggle("menu-open");
+  overlay.classList.toggle("active");
+
+  // Prevent body scrolling when menu is open
+  if (mobileMenu.classList.contains("menu-open")) {
+    document.body.style.overflow = "hidden";
+  } else {
+    document.body.style.overflow = "auto";
+  }
 }
+
+function closeMenu() {
+  const mobileMenu = document.getElementById("mobile-menu");
+  const overlay = document.getElementById("menu-overlay");
+
+  mobileMenu.classList.remove("menu-open");
+  overlay.classList.remove("active");
+  document.body.style.overflow = "auto";
+}
+
+// Close menu when pressing Escape key
+document.addEventListener("keydown", function (event) {
+  if (event.key === "Escape") {
+    closeMenu();
+  }
+});
 
 // Tour packages slider
 document.addEventListener("DOMContentLoaded", function () {
