@@ -34,21 +34,7 @@
       .price-range-slider {
         width: 100%;
         height: 5px;
-        -webkit-appearance: none;
-        appearance: none;
-        background: #d1d5db;
         outline: none;
-        border-radius: 5px;
-      }
-
-      .price-range-slider::-webkit-slider-thumb {
-        -webkit-appearance: none;
-        appearance: none;
-        width: 20px;
-        height: 20px;
-        border-radius: 50%;
-        background: #16a34a;
-        cursor: pointer;
       }
 
       .hotel-card {
@@ -259,24 +245,26 @@
         <div class="lg:hidden responsive-btn">
           <button
             id="filter-toggle"
-            class="w-full bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700 transition-colors"
+            class="w-fit bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700 transition-colors"
           >
             Show Filters
           </button>
         </div>
         <div
           id="filter-container"
-          class="hidden lg:block w-full lg:w-1/4 bg-white rounded-xl shadow-md p-6 h-fit"
+          class="hidden lg:block w-full lg:w-1/5 bg-white rounded-xl shadow-md h-fit"
           style="border: 2px solid #0000002e"
         >
           <div class="close-filters" id="close-filters">×</div>
-          <h2 class="text-xl font-semibold text-gray-800 mb-6">Filter</h2>
+          <h2
+            class="text-xl font-semibold text-gray-800 px-6 py-3 border-b border-gray-300"
+          >
+            Filter
+          </h2>
 
           <!-- Price Range Filter -->
-          <div class="mb-6">
-            <h3 class="text-lg font-medium text-gray-700 mb-3">
-              Price Range (₹)
-            </h3>
+          <div class="mb-3 border-b border-gray-300 px-6 py-3">
+            <h3 class="text-lg font-medium text-gray-700">Price Range</h3>
             <input
               type="range"
               min="1000"
@@ -289,7 +277,7 @@
               <span class="text-sm text-gray-600">₹1000</span>
               <span class="text-sm text-gray-600">₹10000</span>
             </div>
-            <div class="text-center mt-2">
+            <div class="mt-2">
               <span class="text-blue-600 font-medium"
                 >Selected: ₹<span id="price-value">5000</span></span
               >
@@ -297,7 +285,7 @@
           </div>
 
           <!-- Star Rating Filter -->
-          <div class="mb-6">
+          <div class="mb-3 border-b border-gray-300 px-6 py-3">
             <h3 class="text-lg font-medium text-gray-700 mb-3">Star Rating</h3>
             <div class="space-y-2">
               <div class="flex items-center">
@@ -354,7 +342,7 @@
           </div>
 
           <!-- Amenities Filter -->
-          <div class="mb-6">
+          <div class="mb-3 border-b border-gray-300 px-6 py-3">
             <h3 class="text-lg font-medium text-gray-700 mb-3">Amenities</h3>
             <div class="grid grid-cols-1 gap-2">
               <div class="flex items-center">
@@ -405,7 +393,7 @@
           </div>
 
           <!-- Location Filter -->
-          <div class="mb-6">
+          <div class="mb-3 border-b border-gray-300 px-6 py-3">
             <h3 class="text-lg font-medium text-gray-700 mb-3">Location</h3>
             <select
               class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -420,12 +408,12 @@
           </div>
 
           <!-- Filter Buttons -->
-          <div class="flex gap-3">
+          <div class="flex gap-3 p-6">
             <button
               id="apply-filter-btn"
               class="flex-1 bg-green-600 text-white py-2 px-2 rounded-lg hover:bg-green-700 transition-colors"
             >
-              Apply Filters
+              Apply
             </button>
             <button
               class="flex-1 bg-gray-200 text-gray-700 py-2 px-2 rounded-lg hover:bg-gray-300 transition-colors"
@@ -436,7 +424,7 @@
         </div>
 
         <!-- Hotel Cards Section (75% width on large screens) -->
-        <div class="w-full lg:w-3/4">
+        <div class="w-full lg:w-4/5">
           <!-- Hotel Cards Grid -->
           <div class="flex flex-col gap-6">
             <!-- Hotel Card 1 -->
@@ -452,7 +440,7 @@
                 <div
                   class="absolute top-4 right-4 bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded-lg"
                 >
-                  4.8 ★
+                  featured
                 </div>
               </div>
               <div class="p-5 flex flex-col md:flex-row justify-between flex-1">
@@ -507,7 +495,7 @@
                     <button
                       class="bg-green-600 text-white px-4 py-2 font-bold rounded-md hover:bg-green-700 transition-colors w-full md:w-auto"
                     >
-                      Book Now
+                      <a href="../pages/hotelPanna.html"> Book Now </a>
                     </button>
                   </div>
                 </div>
@@ -527,7 +515,7 @@
                 <div
                   class="absolute top-4 right-4 bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded-lg"
                 >
-                  4.5 ★
+                  featured
                 </div>
               </div>
               <div class="p-5 flex flex-col md:flex-row justify-between flex-1">
@@ -582,7 +570,7 @@
                     <button
                       class="bg-green-600 text-white px-4 py-2 font-bold rounded-md hover:bg-green-700 transition-colors w-full md:w-auto"
                     >
-                      Book Now
+                      <a href="../pages/hotelPanna.html"> Book Now </a>
                     </button>
                   </div>
                 </div>
@@ -599,11 +587,6 @@
                   alt="Budget Hotel"
                   class="w-full h-48 md:h-full object-cover"
                 />
-                <div
-                  class="absolute top-4 right-4 bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded-lg"
-                >
-                  4.2 ★
-                </div>
               </div>
               <div class="p-5 flex flex-col md:flex-row justify-between flex-1">
                 <div class="flex-1">
@@ -657,7 +640,7 @@
                     <button
                       class="bg-green-600 text-white px-4 py-2 font-bold rounded-md hover:bg-green-700 transition-colors w-full md:w-auto"
                     >
-                      Book Now
+                      <a href="../pages/hotelPanna.html"> Book Now </a>
                     </button>
                   </div>
                 </div>
@@ -674,11 +657,6 @@
                   alt="Luxury Resort"
                   class="w-full h-48 md:h-full object-cover"
                 />
-                <div
-                  class="absolute top-4 right-4 bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded-lg"
-                >
-                  4.9 ★
-                </div>
               </div>
               <div class="p-5 flex flex-col md:flex-row justify-between flex-1">
                 <div class="flex-1">
@@ -736,14 +714,14 @@
                     <button
                       class="bg-green-600 text-white px-4 py-2 font-bold rounded-md hover:bg-green-700 transition-colors w-full md:w-auto"
                     >
-                      Book Now
+                      <a href="../pages/hotelPanna.html"> Book Now </a>
                     </button>
                   </div>
                 </div>
               </div>
             </div>
 
-            <!-- Hotel Card 2 -->
+            <!-- Hotel Card 5 -->
             <div
               class="hotel-card bg-white rounded-xl shadow-md overflow-hidden flex flex-col md:flex-row"
             >
@@ -753,11 +731,6 @@
                   alt="Wildlife Resort"
                   class="w-full h-48 md:h-full object-cover"
                 />
-                <div
-                  class="absolute top-4 right-4 bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded-lg"
-                >
-                  4.5 ★
-                </div>
               </div>
               <div class="p-5 flex flex-col md:flex-row justify-between flex-1">
                 <div class="flex-1">
@@ -811,14 +784,14 @@
                     <button
                       class="bg-green-600 text-white px-4 py-2 font-bold rounded-md hover:bg-green-700 transition-colors w-full md:w-auto"
                     >
-                      Book Now
+                      <a href="../pages/hotelPanna.html"> Book Now </a>
                     </button>
                   </div>
                 </div>
               </div>
             </div>
 
-            <!-- Hotel Card 3 -->
+            <!-- Hotel Card 6 -->
             <div
               class="hotel-card bg-white rounded-xl shadow-md overflow-hidden flex flex-col md:flex-row"
             >
@@ -828,11 +801,6 @@
                   alt="Budget Hotel"
                   class="w-full h-48 md:h-full object-cover"
                 />
-                <div
-                  class="absolute top-4 right-4 bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded-lg"
-                >
-                  4.2 ★
-                </div>
               </div>
               <div class="p-5 flex flex-col md:flex-row justify-between flex-1">
                 <div class="flex-1">
@@ -886,86 +854,7 @@
                     <button
                       class="bg-green-600 text-white px-4 py-2 font-bold rounded-md hover:bg-green-700 transition-colors w-full md:w-auto"
                     >
-                      Book Now
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Hotel Card 4 -->
-            <div
-              class="hotel-card bg-white rounded-xl shadow-md overflow-hidden flex flex-col md:flex-row"
-            >
-              <div class="relative md:w-64">
-                <img
-                  src="https://images.unsplash.com/photo-1582719508461-905c673771fd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
-                  alt="Luxury Resort"
-                  class="w-full h-48 md:h-full object-cover"
-                />
-                <div
-                  class="absolute top-4 right-4 bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded-lg"
-                >
-                  4.9 ★
-                </div>
-              </div>
-              <div class="p-5 flex flex-col md:flex-row justify-between flex-1">
-                <div class="flex-1">
-                  <div>
-                    <h3 class="text-xl font-bold text-gray-800">
-                      Panna Premier Resort
-                    </h3>
-                  </div>
-                  <p class="text-gray-600 mt-2 flex items-center">
-                    <i class="fas fa-map-marker-alt mr-2 text-red-500"></i>
-                    Khajuraho Road, Panna
-                  </p>
-                  <div
-                    class="flex items-center mt-4 text-sm text-gray-700 flex-wrap"
-                  >
-                    <span class="flex items-center mr-4 mb-2">
-                      <i class="fas fa-wifi mr-1 text-blue-500"></i> WiFi
-                    </span>
-                    <span class="flex items-center mr-4 mb-2">
-                      <i class="fas fa-swimming-pool mr-1 text-blue-500"></i>
-                      Pool
-                    </span>
-                    <span class="flex items-center mr-4 mb-2">
-                      <i class="fas fa-spa mr-1 text-blue-500"></i>
-                      Spa
-                    </span>
-                    <span class="flex items-center mb-2">
-                      <i class="fas fa-utensils mr-1 text-blue-500"></i>
-                      Fine Dining
-                    </span>
-                  </div>
-                </div>
-                <div
-                  class="border-t md:border-t-0 md:border-l-2 border-green-100 pt-4 md:pt-0 md:pl-4 mt-4 md:mt-0"
-                >
-                  <div
-                    class="flex flex-col gap-4 justify-between items-start md:items-end"
-                  >
-                    <div class="flex">
-                      <i class="fas fa-star text-yellow-400"></i>
-                      <i class="fas fa-star text-yellow-400"></i>
-                      <i class="fas fa-star text-yellow-400"></i>
-                      <i class="fas fa-star text-yellow-400"></i>
-                      <i class="fas fa-star text-yellow-400"></i>
-                    </div>
-                    <div class="flex flex-col items-start md:items-end">
-                      <span class="text-2xl font-bold text-gray-800"
-                        >₹5999</span
-                      >
-                      <span class="text-gray-600 text-xs"
-                        >+₹500 taxes & fees</span
-                      >
-                      <span class="text-gray-600 text-xs">Per Night</span>
-                    </div>
-                    <button
-                      class="bg-green-600 text-white px-4 py-2 font-bold rounded-md hover:bg-green-700 transition-colors w-full md:w-auto"
-                    >
-                      Book Now
+                      <a href="../pages/hotelPanna.html"> Book Now </a>
                     </button>
                   </div>
                 </div>

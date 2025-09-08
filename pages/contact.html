@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Panna | Book your safari now</title>
+    <title>Panna | Contact Us Page</title>
     <!-- Tailwind CSS via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Custom CSS files -->
@@ -13,36 +13,6 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-    <style>
-      #tour-hero-section {
-        background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
-          url("../assets/images/tour-plan-banner.jpg");
-        background-size: cover;
-        background-position: center;
-        height: 40vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        color: white;
-      }
-
-      .tour-hero-content-wrapper {
-        max-width: 800px;
-        padding: 0 20px;
-      }
-
-      /* Responsive adjustments */
-      @media (max-width: 768px) {
-        .tour-hero-content-wrapper h1 {
-          font-size: 2rem;
-        }
-
-        .tour-hero-content-wrapper p {
-          font-size: 1rem;
-        }
-      }
-    </style>
   </head>
   <body class="min-h-screen flex flex-col">
     <!-- Header -->
@@ -72,27 +42,27 @@
           <!-- Desktop Navigation -->
           <nav class="hidden md:flex items-center space-x-4">
             <a
-              href="../index.html"
+              href="./index.html"
               class="text-gray-600 hover:text-green-600 font-medium text-sm"
               >Home</a
             >
             <a
-              href="../pages/safariBooking.html"
+              href="./pages/safariBooking.html"
               class="custom-nav-btn text-gray-600 hover:text-green-600 font-medium text-sm"
               >Online Safari Booking</a
             >
             <a
-              href="../pages/hotelinPanna.html"
+              href="./pages/hotelinPanna.html"
               class="text-gray-600 hover:text-green-600 font-medium text-sm"
               >Hotel in Panna</a
             >
             <a
-              href="../pages/tourPackages.html"
+              href="./pages/tourPackages.html"
               class="text-gray-600 hover:text-green-600 font-medium text-sm"
               >Tour Packages</a
             >
             <a
-              href="../pages/payment.html"
+              href="./pages/payment.html"
               class="text-gray-600 hover:text-green-600 font-medium text-sm"
               >Pay Now</a
             >
@@ -161,333 +131,98 @@
       </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="" id="tour-hero-section">
-      <div class="tour-hero-content-wrapper text-white">
-        <h1 class="text-xl md:text-3xl font-bold">
-          Panna National Park Tour and Packages
-        </h1>
-        <p
-          class="mt-1 text-lg md:text-xl md:w-3/4 mx-auto"
-          style="color: rgb(202, 202, 202) !important"
-        >
-          <span class="font-semibold">Book your toor now!!</span>
-          Wildlife tour packages offered by us are meant for a memorable
-          vacation in Pench National Park
-        </p>
-      </div>
-    </section>
-
-    <!-- Tour Content -->
-    <section id="tour-content-section">
-      <div class="container mx-auto px-4 py-10">
-        <div class="flex flex-col lg:flex-row gap-6">
-          <!-- Tour Cards Section (75% width on large screens) -->
-          <div class="w-full lg:w-3/4">
-            <!-- Tour Card 1 -->
-            <div
-              class="tour-card bg-white rounded-xl shadow-md overflow-hidden flex flex-col md:flex-row"
-            >
-              <div class="relative md:w-64">
-                <img
-                  src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
-                  alt="Luxury Resort"
-                  class="w-full h-48 md:h-full object-cover"
-                />
-                <div
-                  class="absolute top-4 left-4 bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded-lg"
-                >
-                  Tour 1
-                </div>
-              </div>
-              <div class="p-5 flex flex-col md:flex-row justify-between flex-1">
-                <div class="flex-1">
-                  <div>
-                    <h3 class="text-xl font-bold text-gray-800">
-                      Panna Jungle Lodge
-                    </h3>
-                  </div>
-                  <div class="flex">
-                    <i class="fas fa-star text-yellow-400 text-xs"></i>
-                    <i class="fas fa-star text-yellow-400 text-xs"></i>
-                    <i class="fas fa-star text-yellow-400 text-xs"></i>
-                    <i class="fas fa-star text-yellow-400 text-xs"></i>
-                    <i class="far fa-star text-yellow-400 text-xs"></i>
-                  </div>
-                  <div
-                    class="mt-2 text-gray-600 bg-green-200 py-1 px-2 rounded-sm w-fit"
-                  >
-                    <p style="font-size: 13px !important">
-                      1 Night/2 Days | 01 Jeep Safari
-                    </p>
-                  </div>
-                  <p
-                    class="mt-2"
-                    style="
-                      color: rgb(85, 85, 85) !important;
-                      font-size: 13px !important;
-                    "
-                  >
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Fugit iste est ipsum illum saepe porro illo repellendus
-                    nesciunt! Deserunt perspiciatis non neque deleniti ipsam,
-                    praesentium ipsa rem. Inventore, iure. Similique.
-                  </p>
-                  <button
-                    class="bg-green-600 text-white px-5 py-1 font-bold rounded-md hover:bg-green-700 transition-colors w-full md:w-auto mt-3"
-                  >
-                    Enquiry Now
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            <!-- Tour Card 2 -->
-            <div
-              class="tour-card bg-white rounded-xl shadow-md overflow-hidden flex flex-col md:flex-row mt-5"
-            >
-              <div class="relative md:w-64">
-                <img
-                  src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
-                  alt="Luxury Resort"
-                  class="w-full h-48 md:h-full object-cover"
-                />
-                <div
-                  class="absolute top-4 left-4 bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded-lg"
-                >
-                  Tour 1
-                </div>
-              </div>
-              <div class="p-5 flex flex-col md:flex-row justify-between flex-1">
-                <div class="flex-1">
-                  <div>
-                    <h3 class="text-xl font-bold text-gray-800">
-                      Panna Jungle Lodge
-                    </h3>
-                  </div>
-                  <div class="flex">
-                    <i class="fas fa-star text-yellow-400 text-xs"></i>
-                    <i class="fas fa-star text-yellow-400 text-xs"></i>
-                    <i class="fas fa-star text-yellow-400 text-xs"></i>
-                    <i class="fas fa-star text-yellow-400 text-xs"></i>
-                    <i class="far fa-star text-yellow-400 text-xs"></i>
-                  </div>
-                  <div
-                    class="mt-2 text-gray-600 bg-green-200 py-1 px-2 rounded-sm w-fit"
-                  >
-                    <p style="font-size: 13px !important">
-                      1 Night/2 Days | 01 Jeep Safari
-                    </p>
-                  </div>
-                  <p
-                    class="mt-2"
-                    style="
-                      color: rgb(85, 85, 85) !important;
-                      font-size: 13px !important;
-                    "
-                  >
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Fugit iste est ipsum illum saepe porro illo repellendus
-                    nesciunt! Deserunt perspiciatis non neque deleniti ipsam,
-                    praesentium ipsa rem. Inventore, iure. Similique.
-                  </p>
-                  <button
-                    class="bg-green-600 text-white px-5 py-1 font-bold rounded-md hover:bg-green-700 transition-colors w-full md:w-auto mt-3"
-                  >
-                    Enquiry Now
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            <!-- Tour Card 3 -->
-            <div
-              class="tour-card bg-white rounded-xl shadow-md overflow-hidden flex flex-col md:flex-row mt-5"
-            >
-              <div class="relative md:w-64">
-                <img
-                  src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
-                  alt="Luxury Resort"
-                  class="w-full h-48 md:h-full object-cover"
-                />
-                <div
-                  class="absolute top-4 left-4 bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded-lg"
-                >
-                  Tour 1
-                </div>
-              </div>
-              <div class="p-5 flex flex-col md:flex-row justify-between flex-1">
-                <div class="flex-1">
-                  <div>
-                    <h3 class="text-xl font-bold text-gray-800">
-                      Panna Jungle Lodge
-                    </h3>
-                  </div>
-                  <div class="flex">
-                    <i class="fas fa-star text-yellow-400 text-xs"></i>
-                    <i class="fas fa-star text-yellow-400 text-xs"></i>
-                    <i class="fas fa-star text-yellow-400 text-xs"></i>
-                    <i class="fas fa-star text-yellow-400 text-xs"></i>
-                    <i class="far fa-star text-yellow-400 text-xs"></i>
-                  </div>
-                  <div
-                    class="mt-2 text-gray-600 bg-green-200 py-1 px-2 rounded-sm w-fit"
-                  >
-                    <p style="font-size: 13px !important">
-                      1 Night/2 Days | 01 Jeep Safari
-                    </p>
-                  </div>
-                  <p
-                    class="mt-2"
-                    style="
-                      color: rgb(85, 85, 85) !important;
-                      font-size: 13px !important;
-                    "
-                  >
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Fugit iste est ipsum illum saepe porro illo repellendus
-                    nesciunt! Deserunt perspiciatis non neque deleniti ipsam,
-                    praesentium ipsa rem. Inventore, iure. Similique.
-                  </p>
-                  <button
-                    class="bg-green-600 text-white px-5 py-1 font-bold rounded-md hover:bg-green-700 transition-colors w-full md:w-auto mt-3"
-                  >
-                    Enquiry Now
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            <!-- Tour Card 4 -->
-            <div
-              class="tour-card bg-white rounded-xl shadow-md overflow-hidden flex flex-col md:flex-row mt-5"
-            >
-              <div class="relative md:w-64">
-                <img
-                  src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
-                  alt="Luxury Resort"
-                  class="w-full h-48 md:h-full object-cover"
-                />
-                <div
-                  class="absolute top-4 left-4 bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded-lg"
-                >
-                  Tour 1
-                </div>
-              </div>
-              <div class="p-5 flex flex-col md:flex-row justify-between flex-1">
-                <div class="flex-1">
-                  <div>
-                    <h3 class="text-xl font-bold text-gray-800">
-                      Panna Jungle Lodge
-                    </h3>
-                  </div>
-                  <div class="flex">
-                    <i class="fas fa-star text-yellow-400 text-xs"></i>
-                    <i class="fas fa-star text-yellow-400 text-xs"></i>
-                    <i class="fas fa-star text-yellow-400 text-xs"></i>
-                    <i class="fas fa-star text-yellow-400 text-xs"></i>
-                    <i class="far fa-star text-yellow-400 text-xs"></i>
-                  </div>
-                  <div
-                    class="mt-2 text-gray-600 bg-green-200 py-1 px-2 rounded-sm w-fit"
-                  >
-                    <p style="font-size: 13px !important">
-                      1 Night/2 Days | 01 Jeep Safari
-                    </p>
-                  </div>
-                  <p
-                    class="mt-2"
-                    style="
-                      color: rgb(85, 85, 85) !important;
-                      font-size: 13px !important;
-                    "
-                  >
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Fugit iste est ipsum illum saepe porro illo repellendus
-                    nesciunt! Deserunt perspiciatis non neque deleniti ipsam,
-                    praesentium ipsa rem. Inventore, iure. Similique.
-                  </p>
-                  <button
-                    class="bg-green-600 text-white px-5 py-1 font-bold rounded-md hover:bg-green-700 transition-colors w-full md:w-auto mt-3"
-                  >
-                    Enquiry Now
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Banner Section (25% width on large screens) -->
-          <div
-            class="hidden lg:block w-full lg:w-1/4 rounded-md shadow-md overflow-hidden bg-gray-800 h-fit border-2 border-gray-100"
-          >
-            <form id="enquiry-form" class="p-4 flex flex-col gap-4 pb-12">
-              <h3 class="text-xl font-semibold text-yellow-500">Enquiry</h3>
-              <input
-                type="text"
-                placeholder="Enter your name"
-                required
-                id="name"
-                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
-              />
-              <input
-                type="text"
-                placeholder="Enter Contact Number"
-                required
-                id="number"
-                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
-              />
-              <input
-                type="email"
-                placeholder="Enter Email"
-                required
-                id="name"
-                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
-              />
-              <select
-                name="country"
-                id="country"
-                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
-              >
-                <option value="" disabled selected>Select your Country</option>
-                <option value="India" default>India</option>
-                <option value="China">China</option>
-                <option value="China">China</option>
-                <option value="China">China</option>
-                <option value="China">China</option>
-                <option value="China">China</option>
-                <option value="China">China</option>
-                <option value="China">China</option>
-              </select>
-              <select
-                name="packages"
-                id="packages"
-                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
-              >
-                <option value="" disabled selected>Select your Package</option>
-                <option value="core-zone" default>
-                  Lorem ipsum dolor sit amet.
-                </option>
-                <option value="buffer-zone">Lorem ipsum dolor sit amet.</option>
-                <option value="buffer-zone">Lorem ipsum dolor sit amet.</option>
-                <option value="buffer-zone">Lorem ipsum dolor sit amet.</option>
-              </select>
-              <button
-                type="submit"
-                class="bg-green-700 text-lg font-semibold text-white rounded-md hover:bg-green-800 py-2 px-3 w-full"
-              >
-                Submit
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- Enquiry Now Button -->
     <div id="enquiry-btn">
       <button>Enquiry Now</button>
     </div>
+
+    <!-- Contact Section -->
+    <section id="contact-section">
+      <div
+        id="cotact-section-wrapper"
+        class="grid grid-cols-1 md:grid-cols-2 gap-4 w-full md:max-w-6xl mx-auto mt-8 p-4 md:p-0"
+      >
+        <div class="contact-left-wrapper hidden md:block">
+          <div class="relative h-full rounded-xl overflow-hidden shadow-lg">
+            <!-- Banner Image -->
+            <img
+              src="../assets/images/main-banner.jpg"
+              alt="tiger banner image"
+              class="w-full h-full object-cover"
+            />
+
+            <!-- Overlay Text -->
+            <div
+              class="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-start text-center p-6"
+            >
+              <h2 class="text-3xl font-bold text-white mb-2">
+                Seven Safar Tour And Travels
+              </h2>
+
+              <!-- Example Buttons -->
+              <ul
+                class="space-y-2 text-white bg-[#2a2a2a80] py-2 px-4 rounded-lg flex items-start flex-col"
+              >
+                <li>
+                  <a href="#" class="hover:text-white transition-colors">
+                    <i class="fa-solid fa-envelope mr-2"></i> info@tadoba.com
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-white transition-colors">
+                    <i class="fa-solid fa-envelope mr-2"></i> contact@tadoba.com
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-white transition-colors">
+                    <i class="fa-solid fa-phone mr-2"></i> +91 9988764563
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="contact-right-wrapper border-2 border-gray-300 shadow-lg rounded-xl p-6"
+        >
+          <form class="flex flex-col gap-6">
+            <div class="mb-2">
+              <h1 class="text-xl font-bold">We'd love to hear from you</h1>
+              <span class="text-gray-600 text-md"
+                >Send us a message and we'll respond as soon as possible</span
+              >
+            </div>
+            <input
+              type="text"
+              id="name"
+              required
+              placeholder="Enter Your Name"
+              class="w-full px-3 py-1 border border-gray-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-green-500"
+            />
+            <input
+              type="email"
+              id="email"
+              required
+              placeholder="Enter Your Email"
+              class="w-full px-3 py-1 border border-gray-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-green-500"
+            />
+            <textarea
+              name="message"
+              placeholder="message"
+              rows="5"
+              class="w-full px-3 py-1 border border-gray-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-green-500"
+            ></textarea>
+            <button
+              type="submit"
+              class="w-full bg-green-700 text-white py-3 px-4 font-bold rounded-sm hover:bg-green-800 transition duration-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+            >
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
 
     <!-- Important Link Section -->
     <section id="importantLink-section" class="w-full relative mt-6">
@@ -718,27 +453,37 @@
               </h3>
               <ul class="space-y-1 text-gray-300">
                 <li>
-                  <a href="#" class="hover:text-white transition-colors"
+                  <a
+                    href="../pages/about.html"
+                    class="hover:text-white transition-colors"
                     >About</a
                   >
                 </li>
                 <li>
-                  <a href="#" class="hover:text-white transition-colors"
+                  <a
+                    href="../pages/contact.html"
+                    class="hover:text-white transition-colors"
                     >Contact Us</a
                   >
                 </li>
                 <li>
-                  <a href="#" class="hover:text-white transition-colors"
+                  <a
+                    href="../pages/tourPackages.html"
+                    class="hover:text-white transition-colors"
                     >Tour Packages</a
                   >
                 </li>
                 <li>
-                  <a href="#" class="hover:text-white transition-colors"
+                  <a
+                    href="../pages/safariBooking.html"
+                    class="hover:text-white transition-colors"
                     >Online Safari</a
                   >
                 </li>
                 <li>
-                  <a href="#" class="hover:text-white transition-colors"
+                  <a
+                    href="../pages/hotelinPanna.html"
+                    class="hover:text-white transition-colors"
                     >Hotels</a
                   >
                 </li>
