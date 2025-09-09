@@ -239,10 +239,10 @@
     </section>
 
     <!-- Hotel Content -->
-    <div class="container mx-auto px-4 py-10">
-      <div class="flex flex-col lg:flex-row gap-6">
+    <div class="container mx-auto px-4 md:py-10 pt-5">
+      <div class="flex flex-col lg:flex-row md:gap-6">
         <!-- Filter Section (25% width on large screens) -->
-        <div class="lg:hidden responsive-btn">
+        <div class="lg:hidden responsive-btn flex justify-end">
           <button
             id="filter-toggle"
             class="w-fit bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700 transition-colors"
@@ -450,13 +450,24 @@
                       Panna Jungle Lodge
                     </h3>
                   </div>
-                  <p class="text-gray-600 mt-2 flex items-center">
-                    <i class="fas fa-map-marker-alt mr-2 text-red-500"></i>
-                    Madla Gate, Panna
-                  </p>
+                  <div class="flex items-center justify-between">
+                    <p class="text-gray-600 mt-2 flex items-center">
+                      <i class="fas fa-map-marker-alt mr-2 text-red-500"></i>
+                      Madla Gate, Panna
+                    </p>
+
+                    <div class="flex md:hidden block">
+                      <i class="fas fa-star text-yellow-400"></i>
+                      <i class="fas fa-star text-yellow-400"></i>
+                      <i class="fas fa-star text-yellow-400"></i>
+                      <i class="fas fa-star text-yellow-400"></i>
+                      <i class="far fa-star text-yellow-400"></i>
+                    </div>
+                  </div>
                   <div
-                    class="flex items-center mt-4 text-sm text-gray-700 flex-wrap"
+                    class="flex items-center mt-4 text-xs text-gray-700 flex-wrap"
                   >
+                    <h4 class="font-bold mr-3 mb-2">Facilities:</h4>
                     <span class="flex items-center mr-4 mb-2">
                       <i class="fas fa-wifi mr-1 text-blue-500"></i> WiFi
                     </span>
@@ -469,21 +480,39 @@
                       Restaurant
                     </span>
                   </div>
+                  <div
+                    class="flex items-center mt-1 text-xs text-gray-700 flex-wrap"
+                  >
+                    <h4 class="font-bold mr-3 mb-2">
+                      <i class="fas fa-utensils mr-1 text-red-500"></i>
+                      1 Delux room
+                    </h4>
+                    <h4 class="font-bold mr-3 mb-2">
+                      <i class="fas fa-utensils mr-1 text-red-500"></i>
+                      1 Night | 2 Days
+                    </h4>
+                    <h4 class="font-bold mr-3 mb-2">
+                      <i class="fas fa-utensils mr-1 text-red-500"></i>
+                      1 Jeep Safari
+                    </h4>
+                  </div>
                 </div>
                 <div
-                  class="border-t md:border-t-0 md:border-l-2 border-green-100 pt-4 md:pt-0 md:pl-4 mt-4 md:mt-0"
+                  class="md:border-t md:border-t-0 md:border-l-2 md:border-green-100 md:pl-4"
                 >
                   <div
                     class="flex flex-col gap-4 justify-between items-start md:items-end"
                   >
-                    <div class="flex">
+                    <div class="flex hidden md:block">
                       <i class="fas fa-star text-yellow-400"></i>
                       <i class="fas fa-star text-yellow-400"></i>
                       <i class="fas fa-star text-yellow-400"></i>
                       <i class="fas fa-star text-yellow-400"></i>
                       <i class="far fa-star text-yellow-400"></i>
                     </div>
-                    <div class="flex flex-col items-start md:items-end">
+                    <div
+                      class="flex md:flex-col items-center gap-2 md:gap-0 md:items-start md:items-end"
+                    >
                       <span class="text-2xl font-bold text-gray-800"
                         >₹3499</span
                       >
@@ -502,14 +531,14 @@
               </div>
             </div>
 
-            <!-- Hotel Card 2 -->
+            <!-- Hotel Card 1 -->
             <div
               class="hotel-card bg-white rounded-xl shadow-md overflow-hidden flex flex-col md:flex-row"
             >
               <div class="relative md:w-64">
                 <img
-                  src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
-                  alt="Wildlife Resort"
+                  src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                  alt="Luxury Resort"
                   class="w-full h-48 md:h-full object-cover"
                 />
                 <div
@@ -522,156 +551,27 @@
                 <div class="flex-1">
                   <div>
                     <h3 class="text-xl font-bold text-gray-800">
-                      Ken River Retreat
+                      Panna Jungle Lodge
                     </h3>
                   </div>
-                  <p class="text-gray-600 mt-2 flex items-center">
-                    <i class="fas fa-map-marker-alt mr-2 text-red-500"></i>
-                    Hinauta, Panna
-                  </p>
-                  <div
-                    class="flex items-center mt-4 text-sm text-gray-700 flex-wrap"
-                  >
-                    <span class="flex items-center mr-4 mb-2">
-                      <i class="fas fa-wifi mr-1 text-blue-500"></i> WiFi
-                    </span>
-                    <span class="flex items-center mr-4 mb-2">
-                      <i class="fas fa-parking mr-1 text-blue-500"></i>
-                      Parking
-                    </span>
-                    <span class="flex items-center mb-2">
-                      <i class="fas fa-utensils mr-1 text-blue-500"></i>
-                      Breakfast
-                    </span>
-                  </div>
-                </div>
-                <div
-                  class="border-t md:border-t-0 md:border-l-2 border-green-100 pt-4 md:pt-0 md:pl-4 mt-4 md:mt-0"
-                >
-                  <div
-                    class="flex flex-col gap-4 justify-between items-start md:items-end"
-                  >
-                    <div class="flex">
-                      <i class="fas fa-star text-yellow-400"></i>
-                      <i class="fas fa-star text-yellow-400"></i>
-                      <i class="fas fa-star text-yellow-400"></i>
-                      <i class="far fa-star text-yellow-400"></i>
-                      <i class="far fa-star text-yellow-400"></i>
-                    </div>
-                    <div class="flex flex-col items-start md:items-end">
-                      <span class="text-2xl font-bold text-gray-800"
-                        >₹2499</span
-                      >
-                      <span class="text-gray-600 text-xs"
-                        >+₹300 taxes & fees</span
-                      >
-                      <span class="text-gray-600 text-xs">Per Night</span>
-                    </div>
-                    <button
-                      class="bg-green-600 text-white px-4 py-2 font-bold rounded-md hover:bg-green-700 transition-colors w-full md:w-auto"
-                    >
-                      <a href="../pages/hotelPanna.html"> Book Now </a>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
+                  <div class="flex items-center justify-between">
+                    <p class="text-gray-600 mt-2 flex items-center">
+                      <i class="fas fa-map-marker-alt mr-2 text-red-500"></i>
+                      Madla Gate, Panna
+                    </p>
 
-            <!-- Hotel Card 3 -->
-            <div
-              class="hotel-card bg-white rounded-xl shadow-md overflow-hidden flex flex-col md:flex-row"
-            >
-              <div class="relative md:w-64">
-                <img
-                  src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
-                  alt="Budget Hotel"
-                  class="w-full h-48 md:h-full object-cover"
-                />
-              </div>
-              <div class="p-5 flex flex-col md:flex-row justify-between flex-1">
-                <div class="flex-1">
-                  <div>
-                    <h3 class="text-xl font-bold text-gray-800">
-                      Tiger Den Hotel
-                    </h3>
-                  </div>
-                  <p class="text-gray-600 mt-2 flex items-center">
-                    <i class="fas fa-map-marker-alt mr-2 text-red-500"></i>
-                    Kuppitola, Panna
-                  </p>
-                  <div
-                    class="flex items-center mt-4 text-sm text-gray-700 flex-wrap"
-                  >
-                    <span class="flex items-center mr-4 mb-2">
-                      <i class="fas fa-wifi mr-1 text-blue-500"></i> WiFi
-                    </span>
-                    <span class="flex items-center mr-4 mb-2">
-                      <i class="fas fa-car mr-1 text-blue-500"></i>
-                      Safari Tours
-                    </span>
-                    <span class="flex items-center mb-2">
-                      <i class="fas fa-utensils mr-1 text-blue-500"></i>
-                      Restaurant
-                    </span>
-                  </div>
-                </div>
-                <div
-                  class="border-t md:border-t-0 md:border-l-2 border-green-100 pt-4 md:pt-0 md:pl-4 mt-4 md:mt-0"
-                >
-                  <div
-                    class="flex flex-col gap-4 justify-between items-start md:items-end"
-                  >
-                    <div class="flex">
+                    <div class="flex md:hidden block">
+                      <i class="fas fa-star text-yellow-400"></i>
                       <i class="fas fa-star text-yellow-400"></i>
                       <i class="fas fa-star text-yellow-400"></i>
                       <i class="fas fa-star text-yellow-400"></i>
                       <i class="far fa-star text-yellow-400"></i>
-                      <i class="far fa-star text-yellow-400"></i>
                     </div>
-                    <div class="flex flex-col items-start md:items-end">
-                      <span class="text-2xl font-bold text-gray-800"
-                        >₹1799</span
-                      >
-                      <span class="text-gray-600 text-xs"
-                        >+₹200 taxes & fees</span
-                      >
-                      <span class="text-gray-600 text-xs">Per Night</span>
-                    </div>
-                    <button
-                      class="bg-green-600 text-white px-4 py-2 font-bold rounded-md hover:bg-green-700 transition-colors w-full md:w-auto"
-                    >
-                      <a href="../pages/hotelPanna.html"> Book Now </a>
-                    </button>
                   </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Hotel Card 4 -->
-            <div
-              class="hotel-card bg-white rounded-xl shadow-md overflow-hidden flex flex-col md:flex-row"
-            >
-              <div class="relative md:w-64">
-                <img
-                  src="https://images.unsplash.com/photo-1582719508461-905c673771fd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
-                  alt="Luxury Resort"
-                  class="w-full h-48 md:h-full object-cover"
-                />
-              </div>
-              <div class="p-5 flex flex-col md:flex-row justify-between flex-1">
-                <div class="flex-1">
-                  <div>
-                    <h3 class="text-xl font-bold text-gray-800">
-                      Panna Premier Resort
-                    </h3>
-                  </div>
-                  <p class="text-gray-600 mt-2 flex items-center">
-                    <i class="fas fa-map-marker-alt mr-2 text-red-500"></i>
-                    Khajuraho Road, Panna
-                  </p>
                   <div
-                    class="flex items-center mt-4 text-sm text-gray-700 flex-wrap"
+                    class="flex items-center mt-4 text-xs text-gray-700 flex-wrap"
                   >
+                    <h4 class="font-bold mr-3 mb-2">Facilities:</h4>
                     <span class="flex items-center mr-4 mb-2">
                       <i class="fas fa-wifi mr-1 text-blue-500"></i> WiFi
                     </span>
@@ -679,35 +579,49 @@
                       <i class="fas fa-swimming-pool mr-1 text-blue-500"></i>
                       Pool
                     </span>
-                    <span class="flex items-center mr-4 mb-2">
-                      <i class="fas fa-spa mr-1 text-blue-500"></i>
-                      Spa
-                    </span>
                     <span class="flex items-center mb-2">
                       <i class="fas fa-utensils mr-1 text-blue-500"></i>
-                      Fine Dining
+                      Restaurant
                     </span>
+                  </div>
+                  <div
+                    class="flex items-center mt-1 text-xs text-gray-700 flex-wrap"
+                  >
+                    <h4 class="font-bold mr-3 mb-2">
+                      <i class="fas fa-utensils mr-1 text-red-500"></i>
+                      1 Delux room
+                    </h4>
+                    <h4 class="font-bold mr-3 mb-2">
+                      <i class="fas fa-utensils mr-1 text-red-500"></i>
+                      1 Night | 2 Days
+                    </h4>
+                    <h4 class="font-bold mr-3 mb-2">
+                      <i class="fas fa-utensils mr-1 text-red-500"></i>
+                      1 Jeep Safari
+                    </h4>
                   </div>
                 </div>
                 <div
-                  class="border-t md:border-t-0 md:border-l-2 border-green-100 pt-4 md:pt-0 md:pl-4 mt-4 md:mt-0"
+                  class="md:border-t md:border-t-0 md:border-l-2 md:border-green-100 md:pl-4"
                 >
                   <div
                     class="flex flex-col gap-4 justify-between items-start md:items-end"
                   >
-                    <div class="flex">
+                    <div class="flex hidden md:block">
                       <i class="fas fa-star text-yellow-400"></i>
                       <i class="fas fa-star text-yellow-400"></i>
                       <i class="fas fa-star text-yellow-400"></i>
                       <i class="fas fa-star text-yellow-400"></i>
-                      <i class="fas fa-star text-yellow-400"></i>
+                      <i class="far fa-star text-yellow-400"></i>
                     </div>
-                    <div class="flex flex-col items-start md:items-end">
+                    <div
+                      class="flex md:flex-col items-center gap-2 md:gap-0 md:items-start md:items-end"
+                    >
                       <span class="text-2xl font-bold text-gray-800"
-                        >₹5999</span
+                        >₹3499</span
                       >
                       <span class="text-gray-600 text-xs"
-                        >+₹500 taxes & fees</span
+                        >+₹400 taxes & fees</span
                       >
                       <span class="text-gray-600 text-xs">Per Night</span>
                     </div>
@@ -721,133 +635,305 @@
               </div>
             </div>
 
-            <!-- Hotel Card 5 -->
+            <!-- Hotel Card 1 -->
             <div
               class="hotel-card bg-white rounded-xl shadow-md overflow-hidden flex flex-col md:flex-row"
             >
               <div class="relative md:w-64">
                 <img
-                  src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
-                  alt="Wildlife Resort"
+                  src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                  alt="Luxury Resort"
                   class="w-full h-48 md:h-full object-cover"
                 />
-              </div>
-              <div class="p-5 flex flex-col md:flex-row justify-between flex-1">
-                <div class="flex-1">
-                  <div>
-                    <h3 class="text-xl font-bold text-gray-800">
-                      Ken River Retreat
-                    </h3>
-                  </div>
-                  <p class="text-gray-600 mt-2 flex items-center">
-                    <i class="fas fa-map-marker-alt mr-2 text-red-500"></i>
-                    Hinauta, Panna
-                  </p>
-                  <div
-                    class="flex items-center mt-4 text-sm text-gray-700 flex-wrap"
-                  >
-                    <span class="flex items-center mr-4 mb-2">
-                      <i class="fas fa-wifi mr-1 text-blue-500"></i> WiFi
-                    </span>
-                    <span class="flex items-center mr-4 mb-2">
-                      <i class="fas fa-parking mr-1 text-blue-500"></i>
-                      Parking
-                    </span>
-                    <span class="flex items-center mb-2">
-                      <i class="fas fa-utensils mr-1 text-blue-500"></i>
-                      Breakfast
-                    </span>
-                  </div>
-                </div>
                 <div
-                  class="border-t md:border-t-0 md:border-l-2 border-green-100 pt-4 md:pt-0 md:pl-4 mt-4 md:mt-0"
+                  class="absolute top-4 right-4 bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded-lg"
                 >
-                  <div
-                    class="flex flex-col gap-4 justify-between items-start md:items-end"
-                  >
-                    <div class="flex">
-                      <i class="fas fa-star text-yellow-400"></i>
-                      <i class="fas fa-star text-yellow-400"></i>
-                      <i class="fas fa-star text-yellow-400"></i>
-                      <i class="far fa-star text-yellow-400"></i>
-                      <i class="far fa-star text-yellow-400"></i>
-                    </div>
-                    <div class="flex flex-col items-start md:items-end">
-                      <span class="text-2xl font-bold text-gray-800"
-                        >₹2499</span
-                      >
-                      <span class="text-gray-600 text-xs"
-                        >+₹300 taxes & fees</span
-                      >
-                      <span class="text-gray-600 text-xs">Per Night</span>
-                    </div>
-                    <button
-                      class="bg-green-600 text-white px-4 py-2 font-bold rounded-md hover:bg-green-700 transition-colors w-full md:w-auto"
-                    >
-                      <a href="../pages/hotelPanna.html"> Book Now </a>
-                    </button>
-                  </div>
+                  featured
                 </div>
-              </div>
-            </div>
-
-            <!-- Hotel Card 6 -->
-            <div
-              class="hotel-card bg-white rounded-xl shadow-md overflow-hidden flex flex-col md:flex-row"
-            >
-              <div class="relative md:w-64">
-                <img
-                  src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
-                  alt="Budget Hotel"
-                  class="w-full h-48 md:h-full object-cover"
-                />
               </div>
               <div class="p-5 flex flex-col md:flex-row justify-between flex-1">
                 <div class="flex-1">
                   <div>
                     <h3 class="text-xl font-bold text-gray-800">
-                      Tiger Den Hotel
+                      Panna Jungle Lodge
                     </h3>
                   </div>
-                  <p class="text-gray-600 mt-2 flex items-center">
-                    <i class="fas fa-map-marker-alt mr-2 text-red-500"></i>
-                    Kuppitola, Panna
-                  </p>
+                  <div class="flex items-center justify-between">
+                    <p class="text-gray-600 mt-2 flex items-center">
+                      <i class="fas fa-map-marker-alt mr-2 text-red-500"></i>
+                      Madla Gate, Panna
+                    </p>
+
+                    <div class="flex md:hidden block">
+                      <i class="fas fa-star text-yellow-400"></i>
+                      <i class="fas fa-star text-yellow-400"></i>
+                      <i class="fas fa-star text-yellow-400"></i>
+                      <i class="fas fa-star text-yellow-400"></i>
+                      <i class="far fa-star text-yellow-400"></i>
+                    </div>
+                  </div>
                   <div
-                    class="flex items-center mt-4 text-sm text-gray-700 flex-wrap"
+                    class="flex items-center mt-4 text-xs text-gray-700 flex-wrap"
                   >
+                    <h4 class="font-bold mr-3 mb-2">Facilities:</h4>
                     <span class="flex items-center mr-4 mb-2">
                       <i class="fas fa-wifi mr-1 text-blue-500"></i> WiFi
                     </span>
                     <span class="flex items-center mr-4 mb-2">
-                      <i class="fas fa-car mr-1 text-blue-500"></i>
-                      Safari Tours
+                      <i class="fas fa-swimming-pool mr-1 text-blue-500"></i>
+                      Pool
                     </span>
                     <span class="flex items-center mb-2">
                       <i class="fas fa-utensils mr-1 text-blue-500"></i>
                       Restaurant
                     </span>
                   </div>
+                  <div
+                    class="flex items-center mt-1 text-xs text-gray-700 flex-wrap"
+                  >
+                    <h4 class="font-bold mr-3 mb-2">
+                      <i class="fas fa-utensils mr-1 text-red-500"></i>
+                      1 Delux room
+                    </h4>
+                    <h4 class="font-bold mr-3 mb-2">
+                      <i class="fas fa-utensils mr-1 text-red-500"></i>
+                      1 Night | 2 Days
+                    </h4>
+                    <h4 class="font-bold mr-3 mb-2">
+                      <i class="fas fa-utensils mr-1 text-red-500"></i>
+                      1 Jeep Safari
+                    </h4>
+                  </div>
                 </div>
                 <div
-                  class="border-t md:border-t-0 md:border-l-2 border-green-100 pt-4 md:pt-0 md:pl-4 mt-4 md:mt-0"
+                  class="md:border-t md:border-t-0 md:border-l-2 md:border-green-100 md:pl-4"
                 >
                   <div
                     class="flex flex-col gap-4 justify-between items-start md:items-end"
                   >
-                    <div class="flex">
+                    <div class="flex hidden md:block">
                       <i class="fas fa-star text-yellow-400"></i>
                       <i class="fas fa-star text-yellow-400"></i>
                       <i class="fas fa-star text-yellow-400"></i>
-                      <i class="far fa-star text-yellow-400"></i>
+                      <i class="fas fa-star text-yellow-400"></i>
                       <i class="far fa-star text-yellow-400"></i>
                     </div>
-                    <div class="flex flex-col items-start md:items-end">
+                    <div
+                      class="flex md:flex-col items-center gap-2 md:gap-0 md:items-start md:items-end"
+                    >
                       <span class="text-2xl font-bold text-gray-800"
-                        >₹1799</span
+                        >₹3499</span
                       >
                       <span class="text-gray-600 text-xs"
-                        >+₹200 taxes & fees</span
+                        >+₹400 taxes & fees</span
+                      >
+                      <span class="text-gray-600 text-xs">Per Night</span>
+                    </div>
+                    <button
+                      class="bg-green-600 text-white px-4 py-2 font-bold rounded-md hover:bg-green-700 transition-colors w-full md:w-auto"
+                    >
+                      <a href="../pages/hotelPanna.html"> Book Now </a>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Hotel Card 1 -->
+            <div
+              class="hotel-card bg-white rounded-xl shadow-md overflow-hidden flex flex-col md:flex-row"
+            >
+              <div class="relative md:w-64">
+                <img
+                  src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                  alt="Luxury Resort"
+                  class="w-full h-48 md:h-full object-cover"
+                />
+                <div
+                  class="absolute top-4 right-4 bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded-lg"
+                >
+                  featured
+                </div>
+              </div>
+              <div class="p-5 flex flex-col md:flex-row justify-between flex-1">
+                <div class="flex-1">
+                  <div>
+                    <h3 class="text-xl font-bold text-gray-800">
+                      Panna Jungle Lodge
+                    </h3>
+                  </div>
+                  <div class="flex items-center justify-between">
+                    <p class="text-gray-600 mt-2 flex items-center">
+                      <i class="fas fa-map-marker-alt mr-2 text-red-500"></i>
+                      Madla Gate, Panna
+                    </p>
+
+                    <div class="flex md:hidden block">
+                      <i class="fas fa-star text-yellow-400"></i>
+                      <i class="fas fa-star text-yellow-400"></i>
+                      <i class="fas fa-star text-yellow-400"></i>
+                      <i class="fas fa-star text-yellow-400"></i>
+                      <i class="far fa-star text-yellow-400"></i>
+                    </div>
+                  </div>
+                  <div
+                    class="flex items-center mt-4 text-xs text-gray-700 flex-wrap"
+                  >
+                    <h4 class="font-bold mr-3 mb-2">Facilities:</h4>
+                    <span class="flex items-center mr-4 mb-2">
+                      <i class="fas fa-wifi mr-1 text-blue-500"></i> WiFi
+                    </span>
+                    <span class="flex items-center mr-4 mb-2">
+                      <i class="fas fa-swimming-pool mr-1 text-blue-500"></i>
+                      Pool
+                    </span>
+                    <span class="flex items-center mb-2">
+                      <i class="fas fa-utensils mr-1 text-blue-500"></i>
+                      Restaurant
+                    </span>
+                  </div>
+                  <div
+                    class="flex items-center mt-1 text-xs text-gray-700 flex-wrap"
+                  >
+                    <h4 class="font-bold mr-3 mb-2">
+                      <i class="fas fa-utensils mr-1 text-red-500"></i>
+                      1 Delux room
+                    </h4>
+                    <h4 class="font-bold mr-3 mb-2">
+                      <i class="fas fa-utensils mr-1 text-red-500"></i>
+                      1 Night | 2 Days
+                    </h4>
+                    <h4 class="font-bold mr-3 mb-2">
+                      <i class="fas fa-utensils mr-1 text-red-500"></i>
+                      1 Jeep Safari
+                    </h4>
+                  </div>
+                </div>
+                <div
+                  class="md:border-t md:border-t-0 md:border-l-2 md:border-green-100 md:pl-4"
+                >
+                  <div
+                    class="flex flex-col gap-4 justify-between items-start md:items-end"
+                  >
+                    <div class="flex hidden md:block">
+                      <i class="fas fa-star text-yellow-400"></i>
+                      <i class="fas fa-star text-yellow-400"></i>
+                      <i class="fas fa-star text-yellow-400"></i>
+                      <i class="fas fa-star text-yellow-400"></i>
+                      <i class="far fa-star text-yellow-400"></i>
+                    </div>
+                    <div
+                      class="flex md:flex-col items-center gap-2 md:gap-0 md:items-start md:items-end"
+                    >
+                      <span class="text-2xl font-bold text-gray-800"
+                        >₹3499</span
+                      >
+                      <span class="text-gray-600 text-xs"
+                        >+₹400 taxes & fees</span
+                      >
+                      <span class="text-gray-600 text-xs">Per Night</span>
+                    </div>
+                    <button
+                      class="bg-green-600 text-white px-4 py-2 font-bold rounded-md hover:bg-green-700 transition-colors w-full md:w-auto"
+                    >
+                      <a href="../pages/hotelPanna.html"> Book Now </a>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Hotel Card 1 -->
+            <div
+              class="hotel-card bg-white rounded-xl shadow-md overflow-hidden flex flex-col md:flex-row"
+            >
+              <div class="relative md:w-64">
+                <img
+                  src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                  alt="Luxury Resort"
+                  class="w-full h-48 md:h-full object-cover"
+                />
+                <div
+                  class="absolute top-4 right-4 bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded-lg"
+                >
+                  featured
+                </div>
+              </div>
+              <div class="p-5 flex flex-col md:flex-row justify-between flex-1">
+                <div class="flex-1">
+                  <div>
+                    <h3 class="text-xl font-bold text-gray-800">
+                      Panna Jungle Lodge
+                    </h3>
+                  </div>
+                  <div class="flex items-center justify-between">
+                    <p class="text-gray-600 mt-2 flex items-center">
+                      <i class="fas fa-map-marker-alt mr-2 text-red-500"></i>
+                      Madla Gate, Panna
+                    </p>
+
+                    <div class="flex md:hidden block">
+                      <i class="fas fa-star text-yellow-400"></i>
+                      <i class="fas fa-star text-yellow-400"></i>
+                      <i class="fas fa-star text-yellow-400"></i>
+                      <i class="fas fa-star text-yellow-400"></i>
+                      <i class="far fa-star text-yellow-400"></i>
+                    </div>
+                  </div>
+                  <div
+                    class="flex items-center mt-4 text-xs text-gray-700 flex-wrap"
+                  >
+                    <h4 class="font-bold mr-3 mb-2">Facilities:</h4>
+                    <span class="flex items-center mr-4 mb-2">
+                      <i class="fas fa-wifi mr-1 text-blue-500"></i> WiFi
+                    </span>
+                    <span class="flex items-center mr-4 mb-2">
+                      <i class="fas fa-swimming-pool mr-1 text-blue-500"></i>
+                      Pool
+                    </span>
+                    <span class="flex items-center mb-2">
+                      <i class="fas fa-utensils mr-1 text-blue-500"></i>
+                      Restaurant
+                    </span>
+                  </div>
+                  <div
+                    class="flex items-center mt-1 text-xs text-gray-700 flex-wrap"
+                  >
+                    <h4 class="font-bold mr-3 mb-2">
+                      <i class="fas fa-utensils mr-1 text-red-500"></i>
+                      1 Delux room
+                    </h4>
+                    <h4 class="font-bold mr-3 mb-2">
+                      <i class="fas fa-utensils mr-1 text-red-500"></i>
+                      1 Night | 2 Days
+                    </h4>
+                    <h4 class="font-bold mr-3 mb-2">
+                      <i class="fas fa-utensils mr-1 text-red-500"></i>
+                      1 Jeep Safari
+                    </h4>
+                  </div>
+                </div>
+                <div
+                  class="md:border-t md:border-t-0 md:border-l-2 md:border-green-100 md:pl-4"
+                >
+                  <div
+                    class="flex flex-col gap-4 justify-between items-start md:items-end"
+                  >
+                    <div class="flex hidden md:block">
+                      <i class="fas fa-star text-yellow-400"></i>
+                      <i class="fas fa-star text-yellow-400"></i>
+                      <i class="fas fa-star text-yellow-400"></i>
+                      <i class="fas fa-star text-yellow-400"></i>
+                      <i class="far fa-star text-yellow-400"></i>
+                    </div>
+                    <div
+                      class="flex md:flex-col items-center gap-2 md:gap-0 md:items-start md:items-end"
+                    >
+                      <span class="text-2xl font-bold text-gray-800"
+                        >₹3499</span
+                      >
+                      <span class="text-gray-600 text-xs"
+                        >+₹400 taxes & fees</span
                       >
                       <span class="text-gray-600 text-xs">Per Night</span>
                     </div>
@@ -1042,7 +1128,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-gray-300 py-12 mt-auto">
+    <footer class="bg-gray-800 text-gray-300 py-5 mt-auto">
       <div class="mx-auto px-4 w-[100%]">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
           <!-- Column 1: Company -->
@@ -1133,7 +1219,7 @@
                 </li>
                 <li>
                   <a
-                    href="./hotelPanna.html"
+                    href="./hotelinPanna.html"
                     class="hover:text-white transition-colors"
                     >Hotels</a
                   >
@@ -1174,7 +1260,7 @@
           </div>
         </div>
 
-        <div class="border-t border-gray-700 mt-8 pt-8 text-sm text-center">
+        <div class="border-t border-gray-700 mt-8 pt-5 text-sm text-center">
           <span>
             &copy; 2025 Seven Safar Tours And Travells. All rights reserved.
           </span>

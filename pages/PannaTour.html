@@ -196,84 +196,107 @@
       <div
         class="bg-gray-700 flex items-center justify-between py-2 px-3 text-white font-semibold text-sm"
       >
-        <a href="" class="cursor-pointer hover:tracking-wide">Tour Itinerary</a>
-        <a href="" class="cursor-pointer hover:tracking-wide">
-          Payment Policy</a
+        <a href="#about-tour-section" class="cursor-pointer hover:border-b"
+          >Tour Itinerary</a
         >
-        <a href="" class="cursor-pointer hover:tracking-wide"
-          >Terms & conditions</a
-        >
-        <a href="" class="cursor-pointer hover:tracking-wide"
-          >Cancellation Policy</a
-        >
+        <a href="" class="cursor-pointer hover:border-b"> Payment Policy</a>
+        <a href="" class="cursor-pointer hover:border-b">Terms & conditions</a>
+        <a href="" class="cursor-pointer hover:border-b">Cancellation Policy</a>
       </div>
     </section>
 
     <!-- Tour Details Content -->
-    <section id="about-tour-section">
+    <section id="about-tour-section" class="scroll-mt-20">
       <div class="container mx-auto px-4 py-10">
         <div class="flex flex-col lg:flex-row gap-6">
-          <!-- Tour Cards Section (75% width on large screens) -->
-          <div class="w-full lg:w-2/3">
-            <h2 class="text-2xl font-semibold mb-4">About | Tour Itinerary</h2>
-            <p><span class="font-bold"> Duration: </span> 01 Night/ 02 Days</p>
-            <p class="pt-4">
-              Panna National Park is a beautiful wildlife sanctuary located in
-              the state of Madhya Pradesh, India. It's known for its diverse
-              flora and fauna, making it a great destination for nature lovers
-              and wildlife enthusiasts. If you're planning a fun tour to Panna
-              National Park, here are some activities and attractions you can
-              consider going through this itinerary:
-            </p>
+          <!-- Tour Content (75% width on large screens) -->
+          <div class="w-full lg:w-3/4">
+            <!-- About Section -->
+            <div id="about" class="mb-10 scroll-mt-20">
+              <h2 class="text-2xl font-semibold mb-4">
+                About | Tour Itinerary
+              </h2>
+              <p><span class="font-bold">Duration:</span> 01 Night / 02 Days</p>
+              <p class="pt-4">
+                Panna National Park is a beautiful wildlife sanctuary located in
+                the state of Madhya Pradesh, India. It's known for its diverse
+                flora and fauna, making it a great destination for nature lovers
+                and wildlife enthusiasts.
+              </p>
+            </div>
 
-            <div class="mt-4">
-              <h2 class="text-2xl font-semibold mb-4">Tour Itinerary</h2>
+            <!-- Tour Itinerary Section -->
+            <div id="itinerary" class="mb-10 scroll-mt-20">
+              <h2 class="text-2xl font-semibold mb-6">Tour Itinerary</h2>
 
-              <div class="mt-6">
-                <div class="day-1">
-                  <div
-                    class="hotel-card bg-white rounded-xl shadow-md overflow-hidden flex flex-col md:flex-row"
-                  >
-                    <div class="relative md:w-80">
-                      <img
-                        src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
-                        alt="Luxury Resort"
-                        class="w-full h-48 md:h-full object-cover"
-                      />
-                      <div
-                        class="absolute top-4 right-4 bg-blue-600 text-white text-xs font-bold px-3 py-2 rounded-lg"
-                      >
-                        Day - 1
-                      </div>
-                    </div>
-                    <div>
-                      <h5>
-                        Arrive Panna National Park & Transfer to Wildlife Resort
-                      </h5>
-                      <p class="text-sm">
-                        Once you arrive in Panna National Park, our
-                        representative will attain and accompany you and take
-                        you to the resort. Refresh yourself with an endearing
-                        lunch after that you can have some relaxing time. Create
-                        memories with some clickable moments with your loved
-                        ones in the best of backdrop of the resort. You can take
-                        pleasure in the evening at your leisure. Spend some
-                        friend moment enjoying bonfire and snacks. Later, have
-                        savage dinner and sleep with the thought of spotting
-                        tiger in the morning.
-                      </p>
+              <!-- Day 1 -->
+              <section id="day-1" class="mb-6 scroll-mt-20">
+                <div
+                  class="hotel-card bg-white rounded-xl shadow-md overflow-hidden flex flex-col md:flex-row"
+                >
+                  <div class="relative md:w-60">
+                    <img
+                      src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80"
+                      alt="Luxury Resort"
+                      class="w-full h-48 md:h-full object-cover"
+                    />
+                    <div
+                      class="absolute top-4 right-4 bg-blue-600 text-white text-xs font-bold px-3 py-2 rounded-lg"
+                    >
+                      Day 1
                     </div>
                   </div>
+                  <div class="p-4">
+                    <h5 class="text-lg font-semibold mb-2">
+                      Arrive Panna National Park & Transfer to Wildlife Resort
+                    </h5>
+                    <p class="text-sm text-gray-700">
+                      Once you arrive in Panna National Park, our representative
+                      will greet you and take you to the resort. Enjoy lunch,
+                      relax, and capture moments with your loved ones in the
+                      scenic backdrop. In the evening, enjoy a bonfire with
+                      snacks followed by dinner.
+                    </p>
+                  </div>
                 </div>
+              </section>
 
-                <div class="day-2"></div>
-              </div>
+              <!-- Day 2 -->
+              <section id="day-2" class="mb-6 scroll-mt-20">
+                <div
+                  class="hotel-card bg-white rounded-xl shadow-md overflow-hidden flex flex-col md:flex-row"
+                >
+                  <div class="relative md:w-60">
+                    <img
+                      src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80"
+                      alt="Safari Jeep"
+                      class="w-full h-48 md:h-full object-cover"
+                    />
+                    <div
+                      class="absolute top-4 right-4 bg-green-600 text-white text-xs font-bold px-3 py-2 rounded-lg"
+                    >
+                      Day 2
+                    </div>
+                  </div>
+                  <div class="p-4">
+                    <h5 class="text-lg font-semibold mb-2">
+                      Morning Jungle Safari & Departure
+                    </h5>
+                    <p class="text-sm text-gray-700">
+                      Early morning, head out for an adventurous jungle safari
+                      to spot tigers and other wildlife. Return to the resort
+                      for breakfast, then check out for your onward journey with
+                      memories of a lifetime.
+                    </p>
+                  </div>
+                </div>
+              </section>
             </div>
           </div>
 
-          <!-- Banner Section (25% width on large screens) -->
+          <!-- Sidebar Navigation (25% width) -->
           <div
-            class="w-full lg:w-1/3 rounded-md shadow-md overflow-hidden bg-gray-800 h-fit border-2 border-gray-100"
+            class="w-full lg:w-1/4 rounded-md shadow-md overflow-hidden bg-gray-800 h-fit border-2 border-gray-100"
           >
             <form id="enquiry-form" class="p-4 flex flex-col gap-4 pb-12">
               <h3 class="text-xl font-semibold text-yellow-500">Enquiry</h3>
@@ -515,7 +538,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-gray-300 py-12 mt-auto">
+    <footer class="bg-gray-800 text-gray-300 py-5 mt-auto">
       <div class="mx-auto px-4 w-[100%]">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
           <!-- Column 1: Company -->
@@ -606,7 +629,7 @@
                 </li>
                 <li>
                   <a
-                    href="./hotelPanna.html"
+                    href="./hotelinPanna.html"
                     class="hover:text-white transition-colors"
                     >Hotels</a
                   >
@@ -647,7 +670,7 @@
           </div>
         </div>
 
-        <div class="border-t border-gray-700 mt-8 pt-8 text-sm text-center">
+        <div class="border-t border-gray-700 mt-8 pt-5 text-sm text-center">
           <span>
             &copy; 2025 Seven Safar Tours And Travells. All rights reserved.
           </span>
