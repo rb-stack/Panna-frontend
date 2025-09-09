@@ -429,17 +429,17 @@
           <div class="flex flex-col gap-6">
             <!-- Hotel Card 1 -->
             <div
-              class="hotel-card bg-white rounded-xl shadow-md overflow-hidden flex flex-col md:flex-row"
+              class="tour-card bg-white rounded-sm shadow-md overflow-hidden flex flex-col md:flex-row border border-gray-200"
             >
               <!-- Image Section -->
-              <div class="relative md:w-64">
+              <div class="relative md:w-64 py-2 pl-2">
                 <!-- Big Image -->
                 <div class="big-image">
                   <img
                     id="mainImage1"
                     src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80"
                     alt="Luxury Resort"
-                    class="w-full h-48 md:h-32 object-cover transition-all duration-300"
+                    class="w-full h-48 md:h-32 rounded-md object-cover transition-all duration-300"
                   />
                   <div
                     class="absolute top-4 left-4 bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded-lg"
@@ -449,131 +449,83 @@
                 </div>
 
                 <!-- Thumbnails -->
-                <div
-                  class="grid grid-cols-3 gap-2 py-2 pl-2 pr-2 md:pr-0 bg-white"
-                >
+                <div class="grid grid-cols-3 gap-2 pt-2 pr-2 md:pr-0 bg-white">
                   <img
                     onclick="changeImage('mainImage1', this)"
                     src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=200&q=80"
                     alt="Thumb 1"
-                    class="cursor-pointer rounded-md object-cover h-16 w-full hover:opacity-80 transition"
+                    class="cursor-pointer object-cover rounded-sm h-16 w-full hover:opacity-80 transition"
                   />
                   <img
                     onclick="changeImage('mainImage1', this)"
                     src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=200&q=80"
                     alt="Thumb 2"
-                    class="cursor-pointer rounded-md object-cover h-16 w-full hover:opacity-80 transition"
+                    class="cursor-pointer object-cover rounded-sm h-16 w-full hover:opacity-80 transition"
                   />
                   <img
                     onclick="changeImage('mainImage1', this)"
                     src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
                     alt="Thumb 3"
-                    class="cursor-pointer rounded-md object-cover h-16 w-full hover:opacity-80 transition"
+                    class="cursor-pointer object-cover rounded-sm h-16 w-full hover:opacity-80 transition"
                   />
                 </div>
               </div>
 
+              <!-- Content Section -->
               <div class="p-5 flex flex-col md:flex-row justify-between flex-1">
                 <div class="flex-1">
-                  <div>
-                    <h3 class="text-xl font-bold text-gray-800">
-                      Panna Jungle Lodge
-                    </h3>
-                  </div>
-                  <div class="flex items-center justify-between">
-                    <p class="text-gray-600 mt-2 flex items-center">
-                      <i class="fas fa-map-marker-alt mr-2 text-red-500"></i>
-                      Madla Gate, Panna
-                    </p>
+                  <h3 class="text-xl font-bold text-gray-800">
+                    Panna Jungle Lodge
+                  </h3>
 
-                    <div class="flex md:hidden block">
-                      <i class="fas fa-star text-yellow-400"></i>
-                      <i class="fas fa-star text-yellow-400"></i>
-                      <i class="fas fa-star text-yellow-400"></i>
-                      <i class="fas fa-star text-yellow-400"></i>
-                      <i class="far fa-star text-yellow-400"></i>
-                    </div>
+                  <!-- Stars -->
+                  <div class="flex mb-2">
+                    <i class="fas fa-star text-yellow-400 text-xs"></i>
+                    <i class="fas fa-star text-yellow-400 text-xs"></i>
+                    <i class="fas fa-star text-yellow-400 text-xs"></i>
+                    <i class="fas fa-star text-yellow-400 text-xs"></i>
+                    <i class="far fa-star text-yellow-400 text-xs"></i>
                   </div>
+
+                  <!-- Badge -->
                   <div
-                    class="flex items-center mt-4 text-xs text-gray-700 flex-wrap"
+                    class="mt-2 text-gray-600 bg-green-200 py-1 px-2 rounded-sm w-fit"
                   >
-                    <h4 class="font-bold mr-3 mb-2">Facilities:</h4>
-                    <span class="flex items-center mr-4 mb-2">
-                      <i class="fas fa-wifi mr-1 text-blue-500"></i> WiFi
-                    </span>
-                    <span class="flex items-center mr-4 mb-2">
-                      <i class="fas fa-swimming-pool mr-1 text-blue-500"></i>
-                      Pool
-                    </span>
-                    <span class="flex items-center mb-2">
-                      <i class="fas fa-utensils mr-1 text-blue-500"></i>
-                      Restaurant
-                    </span>
+                    <p style="font-size: 13px !important">
+                      1 Night/2 Days | 01 Jeep Safari
+                    </p>
                   </div>
-                  <div
-                    class="flex items-center mt-1 text-xs text-gray-700 flex-wrap"
+
+                  <!-- Description -->
+                  <p class="text-gray-700" style="font-size: 13px !important">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Fugit iste est ipsum illum saepe porro illo repellendus
+                    nesciunt!
+                  </p>
+
+                  <!-- Button -->
+                  <button
+                    class="bg-green-600 text-white px-5 py-1 font-bold rounded-md hover:bg-green-700 transition-colors w-full md:w-auto mt-3"
                   >
-                    <h4 class="font-bold mr-3 mb-2">
-                      <i class="fas fa-utensils mr-1 text-red-500"></i>
-                      1 Delux room
-                    </h4>
-                    <h4 class="font-bold mr-3 mb-2">
-                      <i class="fas fa-utensils mr-1 text-red-500"></i>
-                      1 Night | 2 Days
-                    </h4>
-                    <h4 class="font-bold mr-3 mb-2">
-                      <i class="fas fa-utensils mr-1 text-red-500"></i>
-                      1 Jeep Safari
-                    </h4>
-                  </div>
-                </div>
-                <div
-                  class="md:border-t md:border-t-0 md:border-l-2 md:border-green-100 md:pl-4"
-                >
-                  <div
-                    class="flex flex-col gap-4 justify-between items-start md:items-end"
-                  >
-                    <div class="flex hidden md:block">
-                      <i class="fas fa-star text-yellow-400"></i>
-                      <i class="fas fa-star text-yellow-400"></i>
-                      <i class="fas fa-star text-yellow-400"></i>
-                      <i class="fas fa-star text-yellow-400"></i>
-                      <i class="far fa-star text-yellow-400"></i>
-                    </div>
-                    <div
-                      class="flex md:flex-col items-center gap-2 md:gap-0 md:items-start md:items-end"
-                    >
-                      <span class="text-2xl font-bold text-gray-800"
-                        >₹3499</span
-                      >
-                      <span class="text-gray-600 text-xs"
-                        >+₹400 taxes & fees</span
-                      >
-                      <span class="text-gray-600 text-xs">Per Night</span>
-                    </div>
-                    <button
-                      class="bg-green-600 text-white px-4 py-2 font-bold rounded-md hover:bg-green-700 transition-colors w-full md:w-auto"
-                    >
-                      <a href="../pages/hotelPanna.html"> Book Now </a>
-                    </button>
-                  </div>
+                    <a href="./PannaTour.html">Read more</a>
+                  </button>
                 </div>
               </div>
             </div>
 
-            <!-- Hotel Card 1 -->
+            <!-- Hotel Card 2 -->
             <div
-              class="hotel-card bg-white rounded-xl shadow-md overflow-hidden flex flex-col md:flex-row"
+              class="tour-card bg-white rounded-sm shadow-md overflow-hidden flex flex-col md:flex-row border border-gray-200"
             >
               <!-- Image Section -->
-              <div class="relative md:w-64">
+              <div class="relative md:w-64 py-2 pl-2">
                 <!-- Big Image -->
                 <div class="big-image">
                   <img
                     id="mainImage1"
                     src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80"
                     alt="Luxury Resort"
-                    class="w-full h-48 md:h-32 object-cover transition-all duration-300"
+                    class="w-full h-48 md:h-32 rounded-md object-cover transition-all duration-300"
                   />
                   <div
                     class="absolute top-4 left-4 bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded-lg"
@@ -583,131 +535,83 @@
                 </div>
 
                 <!-- Thumbnails -->
-                <div
-                  class="grid grid-cols-3 gap-2 py-2 pl-2 pr-2 md:pr-0 bg-white"
-                >
+                <div class="grid grid-cols-3 gap-2 pt-2 pr-2 md:pr-0 bg-white">
                   <img
                     onclick="changeImage('mainImage1', this)"
                     src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=200&q=80"
                     alt="Thumb 1"
-                    class="cursor-pointer rounded-md object-cover h-16 w-full hover:opacity-80 transition"
+                    class="cursor-pointer object-cover rounded-sm h-16 w-full hover:opacity-80 transition"
                   />
                   <img
                     onclick="changeImage('mainImage1', this)"
                     src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=200&q=80"
                     alt="Thumb 2"
-                    class="cursor-pointer rounded-md object-cover h-16 w-full hover:opacity-80 transition"
+                    class="cursor-pointer object-cover rounded-sm h-16 w-full hover:opacity-80 transition"
                   />
                   <img
                     onclick="changeImage('mainImage1', this)"
                     src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
                     alt="Thumb 3"
-                    class="cursor-pointer rounded-md object-cover h-16 w-full hover:opacity-80 transition"
+                    class="cursor-pointer object-cover rounded-sm h-16 w-full hover:opacity-80 transition"
                   />
                 </div>
               </div>
 
+              <!-- Content Section -->
               <div class="p-5 flex flex-col md:flex-row justify-between flex-1">
                 <div class="flex-1">
-                  <div>
-                    <h3 class="text-xl font-bold text-gray-800">
-                      Panna Jungle Lodge
-                    </h3>
-                  </div>
-                  <div class="flex items-center justify-between">
-                    <p class="text-gray-600 mt-2 flex items-center">
-                      <i class="fas fa-map-marker-alt mr-2 text-red-500"></i>
-                      Madla Gate, Panna
-                    </p>
+                  <h3 class="text-xl font-bold text-gray-800">
+                    Panna Jungle Lodge
+                  </h3>
 
-                    <div class="flex md:hidden block">
-                      <i class="fas fa-star text-yellow-400"></i>
-                      <i class="fas fa-star text-yellow-400"></i>
-                      <i class="fas fa-star text-yellow-400"></i>
-                      <i class="fas fa-star text-yellow-400"></i>
-                      <i class="far fa-star text-yellow-400"></i>
-                    </div>
+                  <!-- Stars -->
+                  <div class="flex mb-2">
+                    <i class="fas fa-star text-yellow-400 text-xs"></i>
+                    <i class="fas fa-star text-yellow-400 text-xs"></i>
+                    <i class="fas fa-star text-yellow-400 text-xs"></i>
+                    <i class="fas fa-star text-yellow-400 text-xs"></i>
+                    <i class="far fa-star text-yellow-400 text-xs"></i>
                   </div>
+
+                  <!-- Badge -->
                   <div
-                    class="flex items-center mt-4 text-xs text-gray-700 flex-wrap"
+                    class="mt-2 text-gray-600 bg-green-200 py-1 px-2 rounded-sm w-fit"
                   >
-                    <h4 class="font-bold mr-3 mb-2">Facilities:</h4>
-                    <span class="flex items-center mr-4 mb-2">
-                      <i class="fas fa-wifi mr-1 text-blue-500"></i> WiFi
-                    </span>
-                    <span class="flex items-center mr-4 mb-2">
-                      <i class="fas fa-swimming-pool mr-1 text-blue-500"></i>
-                      Pool
-                    </span>
-                    <span class="flex items-center mb-2">
-                      <i class="fas fa-utensils mr-1 text-blue-500"></i>
-                      Restaurant
-                    </span>
+                    <p style="font-size: 13px !important">
+                      1 Night/2 Days | 01 Jeep Safari
+                    </p>
                   </div>
-                  <div
-                    class="flex items-center mt-1 text-xs text-gray-700 flex-wrap"
+
+                  <!-- Description -->
+                  <p class="text-gray-700" style="font-size: 13px !important">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Fugit iste est ipsum illum saepe porro illo repellendus
+                    nesciunt!
+                  </p>
+
+                  <!-- Button -->
+                  <button
+                    class="bg-green-600 text-white px-5 py-1 font-bold rounded-md hover:bg-green-700 transition-colors w-full md:w-auto mt-3"
                   >
-                    <h4 class="font-bold mr-3 mb-2">
-                      <i class="fas fa-utensils mr-1 text-red-500"></i>
-                      1 Delux room
-                    </h4>
-                    <h4 class="font-bold mr-3 mb-2">
-                      <i class="fas fa-utensils mr-1 text-red-500"></i>
-                      1 Night | 2 Days
-                    </h4>
-                    <h4 class="font-bold mr-3 mb-2">
-                      <i class="fas fa-utensils mr-1 text-red-500"></i>
-                      1 Jeep Safari
-                    </h4>
-                  </div>
-                </div>
-                <div
-                  class="md:border-t md:border-t-0 md:border-l-2 md:border-green-100 md:pl-4"
-                >
-                  <div
-                    class="flex flex-col gap-4 justify-between items-start md:items-end"
-                  >
-                    <div class="flex hidden md:block">
-                      <i class="fas fa-star text-yellow-400"></i>
-                      <i class="fas fa-star text-yellow-400"></i>
-                      <i class="fas fa-star text-yellow-400"></i>
-                      <i class="fas fa-star text-yellow-400"></i>
-                      <i class="far fa-star text-yellow-400"></i>
-                    </div>
-                    <div
-                      class="flex md:flex-col items-center gap-2 md:gap-0 md:items-start md:items-end"
-                    >
-                      <span class="text-2xl font-bold text-gray-800"
-                        >₹3499</span
-                      >
-                      <span class="text-gray-600 text-xs"
-                        >+₹400 taxes & fees</span
-                      >
-                      <span class="text-gray-600 text-xs">Per Night</span>
-                    </div>
-                    <button
-                      class="bg-green-600 text-white px-4 py-2 font-bold rounded-md hover:bg-green-700 transition-colors w-full md:w-auto"
-                    >
-                      <a href="../pages/hotelPanna.html"> Book Now </a>
-                    </button>
-                  </div>
+                    <a href="./PannaTour.html">Read more</a>
+                  </button>
                 </div>
               </div>
             </div>
 
-            <!-- Hotel Card 1 -->
+            <!-- Hotel Card 3 -->
             <div
-              class="hotel-card bg-white rounded-xl shadow-md overflow-hidden flex flex-col md:flex-row"
+              class="tour-card bg-white rounded-sm shadow-md overflow-hidden flex flex-col md:flex-row border border-gray-200"
             >
               <!-- Image Section -->
-              <div class="relative md:w-64">
+              <div class="relative md:w-64 py-2 pl-2">
                 <!-- Big Image -->
                 <div class="big-image">
                   <img
                     id="mainImage1"
                     src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80"
                     alt="Luxury Resort"
-                    class="w-full h-48 md:h-32 object-cover transition-all duration-300"
+                    class="w-full h-48 md:h-32 rounded-md object-cover transition-all duration-300"
                   />
                   <div
                     class="absolute top-4 left-4 bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded-lg"
@@ -717,131 +621,83 @@
                 </div>
 
                 <!-- Thumbnails -->
-                <div
-                  class="grid grid-cols-3 gap-2 py-2 pl-2 pr-2 md:pr-0 bg-white"
-                >
+                <div class="grid grid-cols-3 gap-2 pt-2 pr-2 md:pr-0 bg-white">
                   <img
                     onclick="changeImage('mainImage1', this)"
                     src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=200&q=80"
                     alt="Thumb 1"
-                    class="cursor-pointer rounded-md object-cover h-16 w-full hover:opacity-80 transition"
+                    class="cursor-pointer object-cover rounded-sm h-16 w-full hover:opacity-80 transition"
                   />
                   <img
                     onclick="changeImage('mainImage1', this)"
                     src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=200&q=80"
                     alt="Thumb 2"
-                    class="cursor-pointer rounded-md object-cover h-16 w-full hover:opacity-80 transition"
+                    class="cursor-pointer object-cover rounded-sm h-16 w-full hover:opacity-80 transition"
                   />
                   <img
                     onclick="changeImage('mainImage1', this)"
                     src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
                     alt="Thumb 3"
-                    class="cursor-pointer rounded-md object-cover h-16 w-full hover:opacity-80 transition"
+                    class="cursor-pointer object-cover rounded-sm h-16 w-full hover:opacity-80 transition"
                   />
                 </div>
               </div>
 
+              <!-- Content Section -->
               <div class="p-5 flex flex-col md:flex-row justify-between flex-1">
                 <div class="flex-1">
-                  <div>
-                    <h3 class="text-xl font-bold text-gray-800">
-                      Panna Jungle Lodge
-                    </h3>
-                  </div>
-                  <div class="flex items-center justify-between">
-                    <p class="text-gray-600 mt-2 flex items-center">
-                      <i class="fas fa-map-marker-alt mr-2 text-red-500"></i>
-                      Madla Gate, Panna
-                    </p>
+                  <h3 class="text-xl font-bold text-gray-800">
+                    Panna Jungle Lodge
+                  </h3>
 
-                    <div class="flex md:hidden block">
-                      <i class="fas fa-star text-yellow-400"></i>
-                      <i class="fas fa-star text-yellow-400"></i>
-                      <i class="fas fa-star text-yellow-400"></i>
-                      <i class="fas fa-star text-yellow-400"></i>
-                      <i class="far fa-star text-yellow-400"></i>
-                    </div>
+                  <!-- Stars -->
+                  <div class="flex mb-2">
+                    <i class="fas fa-star text-yellow-400 text-xs"></i>
+                    <i class="fas fa-star text-yellow-400 text-xs"></i>
+                    <i class="fas fa-star text-yellow-400 text-xs"></i>
+                    <i class="fas fa-star text-yellow-400 text-xs"></i>
+                    <i class="far fa-star text-yellow-400 text-xs"></i>
                   </div>
+
+                  <!-- Badge -->
                   <div
-                    class="flex items-center mt-4 text-xs text-gray-700 flex-wrap"
+                    class="mt-2 text-gray-600 bg-green-200 py-1 px-2 rounded-sm w-fit"
                   >
-                    <h4 class="font-bold mr-3 mb-2">Facilities:</h4>
-                    <span class="flex items-center mr-4 mb-2">
-                      <i class="fas fa-wifi mr-1 text-blue-500"></i> WiFi
-                    </span>
-                    <span class="flex items-center mr-4 mb-2">
-                      <i class="fas fa-swimming-pool mr-1 text-blue-500"></i>
-                      Pool
-                    </span>
-                    <span class="flex items-center mb-2">
-                      <i class="fas fa-utensils mr-1 text-blue-500"></i>
-                      Restaurant
-                    </span>
+                    <p style="font-size: 13px !important">
+                      1 Night/2 Days | 01 Jeep Safari
+                    </p>
                   </div>
-                  <div
-                    class="flex items-center mt-1 text-xs text-gray-700 flex-wrap"
+
+                  <!-- Description -->
+                  <p class="text-gray-700" style="font-size: 13px !important">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Fugit iste est ipsum illum saepe porro illo repellendus
+                    nesciunt!
+                  </p>
+
+                  <!-- Button -->
+                  <button
+                    class="bg-green-600 text-white px-5 py-1 font-bold rounded-md hover:bg-green-700 transition-colors w-full md:w-auto mt-3"
                   >
-                    <h4 class="font-bold mr-3 mb-2">
-                      <i class="fas fa-utensils mr-1 text-red-500"></i>
-                      1 Delux room
-                    </h4>
-                    <h4 class="font-bold mr-3 mb-2">
-                      <i class="fas fa-utensils mr-1 text-red-500"></i>
-                      1 Night | 2 Days
-                    </h4>
-                    <h4 class="font-bold mr-3 mb-2">
-                      <i class="fas fa-utensils mr-1 text-red-500"></i>
-                      1 Jeep Safari
-                    </h4>
-                  </div>
-                </div>
-                <div
-                  class="md:border-t md:border-t-0 md:border-l-2 md:border-green-100 md:pl-4"
-                >
-                  <div
-                    class="flex flex-col gap-4 justify-between items-start md:items-end"
-                  >
-                    <div class="flex hidden md:block">
-                      <i class="fas fa-star text-yellow-400"></i>
-                      <i class="fas fa-star text-yellow-400"></i>
-                      <i class="fas fa-star text-yellow-400"></i>
-                      <i class="fas fa-star text-yellow-400"></i>
-                      <i class="far fa-star text-yellow-400"></i>
-                    </div>
-                    <div
-                      class="flex md:flex-col items-center gap-2 md:gap-0 md:items-start md:items-end"
-                    >
-                      <span class="text-2xl font-bold text-gray-800"
-                        >₹3499</span
-                      >
-                      <span class="text-gray-600 text-xs"
-                        >+₹400 taxes & fees</span
-                      >
-                      <span class="text-gray-600 text-xs">Per Night</span>
-                    </div>
-                    <button
-                      class="bg-green-600 text-white px-4 py-2 font-bold rounded-md hover:bg-green-700 transition-colors w-full md:w-auto"
-                    >
-                      <a href="../pages/hotelPanna.html"> Book Now </a>
-                    </button>
-                  </div>
+                    <a href="./PannaTour.html">Read more</a>
+                  </button>
                 </div>
               </div>
             </div>
 
-            <!-- Hotel Card 1 -->
+            <!-- Hotel Card 4 -->
             <div
-              class="hotel-card bg-white rounded-xl shadow-md overflow-hidden flex flex-col md:flex-row"
+              class="tour-card bg-white rounded-sm shadow-md overflow-hidden flex flex-col md:flex-row border border-gray-200"
             >
               <!-- Image Section -->
-              <div class="relative md:w-64">
+              <div class="relative md:w-64 py-2 pl-2">
                 <!-- Big Image -->
                 <div class="big-image">
                   <img
                     id="mainImage1"
                     src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80"
                     alt="Luxury Resort"
-                    class="w-full h-48 md:h-32 object-cover transition-all duration-300"
+                    class="w-full h-48 md:h-32 rounded-md object-cover transition-all duration-300"
                   />
                   <div
                     class="absolute top-4 left-4 bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded-lg"
@@ -851,131 +707,83 @@
                 </div>
 
                 <!-- Thumbnails -->
-                <div
-                  class="grid grid-cols-3 gap-2 py-2 pl-2 pr-2 md:pr-0 bg-white"
-                >
+                <div class="grid grid-cols-3 gap-2 pt-2 pr-2 md:pr-0 bg-white">
                   <img
                     onclick="changeImage('mainImage1', this)"
                     src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=200&q=80"
                     alt="Thumb 1"
-                    class="cursor-pointer rounded-md object-cover h-16 w-full hover:opacity-80 transition"
+                    class="cursor-pointer object-cover rounded-sm h-16 w-full hover:opacity-80 transition"
                   />
                   <img
                     onclick="changeImage('mainImage1', this)"
                     src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=200&q=80"
                     alt="Thumb 2"
-                    class="cursor-pointer rounded-md object-cover h-16 w-full hover:opacity-80 transition"
+                    class="cursor-pointer object-cover rounded-sm h-16 w-full hover:opacity-80 transition"
                   />
                   <img
                     onclick="changeImage('mainImage1', this)"
                     src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
                     alt="Thumb 3"
-                    class="cursor-pointer rounded-md object-cover h-16 w-full hover:opacity-80 transition"
+                    class="cursor-pointer object-cover rounded-sm h-16 w-full hover:opacity-80 transition"
                   />
                 </div>
               </div>
 
+              <!-- Content Section -->
               <div class="p-5 flex flex-col md:flex-row justify-between flex-1">
                 <div class="flex-1">
-                  <div>
-                    <h3 class="text-xl font-bold text-gray-800">
-                      Panna Jungle Lodge
-                    </h3>
-                  </div>
-                  <div class="flex items-center justify-between">
-                    <p class="text-gray-600 mt-2 flex items-center">
-                      <i class="fas fa-map-marker-alt mr-2 text-red-500"></i>
-                      Madla Gate, Panna
-                    </p>
+                  <h3 class="text-xl font-bold text-gray-800">
+                    Panna Jungle Lodge
+                  </h3>
 
-                    <div class="flex md:hidden block">
-                      <i class="fas fa-star text-yellow-400"></i>
-                      <i class="fas fa-star text-yellow-400"></i>
-                      <i class="fas fa-star text-yellow-400"></i>
-                      <i class="fas fa-star text-yellow-400"></i>
-                      <i class="far fa-star text-yellow-400"></i>
-                    </div>
+                  <!-- Stars -->
+                  <div class="flex mb-2">
+                    <i class="fas fa-star text-yellow-400 text-xs"></i>
+                    <i class="fas fa-star text-yellow-400 text-xs"></i>
+                    <i class="fas fa-star text-yellow-400 text-xs"></i>
+                    <i class="fas fa-star text-yellow-400 text-xs"></i>
+                    <i class="far fa-star text-yellow-400 text-xs"></i>
                   </div>
+
+                  <!-- Badge -->
                   <div
-                    class="flex items-center mt-4 text-xs text-gray-700 flex-wrap"
+                    class="mt-2 text-gray-600 bg-green-200 py-1 px-2 rounded-sm w-fit"
                   >
-                    <h4 class="font-bold mr-3 mb-2">Facilities:</h4>
-                    <span class="flex items-center mr-4 mb-2">
-                      <i class="fas fa-wifi mr-1 text-blue-500"></i> WiFi
-                    </span>
-                    <span class="flex items-center mr-4 mb-2">
-                      <i class="fas fa-swimming-pool mr-1 text-blue-500"></i>
-                      Pool
-                    </span>
-                    <span class="flex items-center mb-2">
-                      <i class="fas fa-utensils mr-1 text-blue-500"></i>
-                      Restaurant
-                    </span>
+                    <p style="font-size: 13px !important">
+                      1 Night/2 Days | 01 Jeep Safari
+                    </p>
                   </div>
-                  <div
-                    class="flex items-center mt-1 text-xs text-gray-700 flex-wrap"
+
+                  <!-- Description -->
+                  <p class="text-gray-700" style="font-size: 13px !important">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Fugit iste est ipsum illum saepe porro illo repellendus
+                    nesciunt!
+                  </p>
+
+                  <!-- Button -->
+                  <button
+                    class="bg-green-600 text-white px-5 py-1 font-bold rounded-md hover:bg-green-700 transition-colors w-full md:w-auto mt-3"
                   >
-                    <h4 class="font-bold mr-3 mb-2">
-                      <i class="fas fa-utensils mr-1 text-red-500"></i>
-                      1 Delux room
-                    </h4>
-                    <h4 class="font-bold mr-3 mb-2">
-                      <i class="fas fa-utensils mr-1 text-red-500"></i>
-                      1 Night | 2 Days
-                    </h4>
-                    <h4 class="font-bold mr-3 mb-2">
-                      <i class="fas fa-utensils mr-1 text-red-500"></i>
-                      1 Jeep Safari
-                    </h4>
-                  </div>
-                </div>
-                <div
-                  class="md:border-t md:border-t-0 md:border-l-2 md:border-green-100 md:pl-4"
-                >
-                  <div
-                    class="flex flex-col gap-4 justify-between items-start md:items-end"
-                  >
-                    <div class="flex hidden md:block">
-                      <i class="fas fa-star text-yellow-400"></i>
-                      <i class="fas fa-star text-yellow-400"></i>
-                      <i class="fas fa-star text-yellow-400"></i>
-                      <i class="fas fa-star text-yellow-400"></i>
-                      <i class="far fa-star text-yellow-400"></i>
-                    </div>
-                    <div
-                      class="flex md:flex-col items-center gap-2 md:gap-0 md:items-start md:items-end"
-                    >
-                      <span class="text-2xl font-bold text-gray-800"
-                        >₹3499</span
-                      >
-                      <span class="text-gray-600 text-xs"
-                        >+₹400 taxes & fees</span
-                      >
-                      <span class="text-gray-600 text-xs">Per Night</span>
-                    </div>
-                    <button
-                      class="bg-green-600 text-white px-4 py-2 font-bold rounded-md hover:bg-green-700 transition-colors w-full md:w-auto"
-                    >
-                      <a href="../pages/hotelPanna.html"> Book Now </a>
-                    </button>
-                  </div>
+                    <a href="./PannaTour.html">Read more</a>
+                  </button>
                 </div>
               </div>
             </div>
 
-            <!-- Hotel Card 1 -->
+            <!-- Hotel Card 5 -->
             <div
-              class="hotel-card bg-white rounded-xl shadow-md overflow-hidden flex flex-col md:flex-row"
+              class="tour-card bg-white rounded-sm shadow-md overflow-hidden flex flex-col md:flex-row border border-gray-200"
             >
               <!-- Image Section -->
-              <div class="relative md:w-64">
+              <div class="relative md:w-64 py-2 pl-2">
                 <!-- Big Image -->
                 <div class="big-image">
                   <img
                     id="mainImage1"
                     src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80"
                     alt="Luxury Resort"
-                    class="w-full h-48 md:h-32 object-cover transition-all duration-300"
+                    class="w-full h-48 md:h-32 rounded-md object-cover transition-all duration-300"
                   />
                   <div
                     class="absolute top-4 left-4 bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded-lg"
@@ -985,114 +793,66 @@
                 </div>
 
                 <!-- Thumbnails -->
-                <div
-                  class="grid grid-cols-3 gap-2 py-2 pl-2 pr-2 md:pr-0 bg-white"
-                >
+                <div class="grid grid-cols-3 gap-2 pt-2 pr-2 md:pr-0 bg-white">
                   <img
                     onclick="changeImage('mainImage1', this)"
                     src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=200&q=80"
                     alt="Thumb 1"
-                    class="cursor-pointer rounded-md object-cover h-16 w-full hover:opacity-80 transition"
+                    class="cursor-pointer object-cover rounded-sm h-16 w-full hover:opacity-80 transition"
                   />
                   <img
                     onclick="changeImage('mainImage1', this)"
                     src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=200&q=80"
                     alt="Thumb 2"
-                    class="cursor-pointer rounded-md object-cover h-16 w-full hover:opacity-80 transition"
+                    class="cursor-pointer object-cover rounded-sm h-16 w-full hover:opacity-80 transition"
                   />
                   <img
                     onclick="changeImage('mainImage1', this)"
                     src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
                     alt="Thumb 3"
-                    class="cursor-pointer rounded-md object-cover h-16 w-full hover:opacity-80 transition"
+                    class="cursor-pointer object-cover rounded-sm h-16 w-full hover:opacity-80 transition"
                   />
                 </div>
               </div>
 
+              <!-- Content Section -->
               <div class="p-5 flex flex-col md:flex-row justify-between flex-1">
                 <div class="flex-1">
-                  <div>
-                    <h3 class="text-xl font-bold text-gray-800">
-                      Panna Jungle Lodge
-                    </h3>
-                  </div>
-                  <div class="flex items-center justify-between">
-                    <p class="text-gray-600 mt-2 flex items-center">
-                      <i class="fas fa-map-marker-alt mr-2 text-red-500"></i>
-                      Madla Gate, Panna
-                    </p>
+                  <h3 class="text-xl font-bold text-gray-800">
+                    Panna Jungle Lodge
+                  </h3>
 
-                    <div class="flex md:hidden block">
-                      <i class="fas fa-star text-yellow-400"></i>
-                      <i class="fas fa-star text-yellow-400"></i>
-                      <i class="fas fa-star text-yellow-400"></i>
-                      <i class="fas fa-star text-yellow-400"></i>
-                      <i class="far fa-star text-yellow-400"></i>
-                    </div>
+                  <!-- Stars -->
+                  <div class="flex mb-2">
+                    <i class="fas fa-star text-yellow-400 text-xs"></i>
+                    <i class="fas fa-star text-yellow-400 text-xs"></i>
+                    <i class="fas fa-star text-yellow-400 text-xs"></i>
+                    <i class="fas fa-star text-yellow-400 text-xs"></i>
+                    <i class="far fa-star text-yellow-400 text-xs"></i>
                   </div>
+
+                  <!-- Badge -->
                   <div
-                    class="flex items-center mt-4 text-xs text-gray-700 flex-wrap"
+                    class="mt-2 text-gray-600 bg-green-200 py-1 px-2 rounded-sm w-fit"
                   >
-                    <h4 class="font-bold mr-3 mb-2">Facilities:</h4>
-                    <span class="flex items-center mr-4 mb-2">
-                      <i class="fas fa-wifi mr-1 text-blue-500"></i> WiFi
-                    </span>
-                    <span class="flex items-center mr-4 mb-2">
-                      <i class="fas fa-swimming-pool mr-1 text-blue-500"></i>
-                      Pool
-                    </span>
-                    <span class="flex items-center mb-2">
-                      <i class="fas fa-utensils mr-1 text-blue-500"></i>
-                      Restaurant
-                    </span>
+                    <p style="font-size: 13px !important">
+                      1 Night/2 Days | 01 Jeep Safari
+                    </p>
                   </div>
-                  <div
-                    class="flex items-center mt-1 text-xs text-gray-700 flex-wrap"
+
+                  <!-- Description -->
+                  <p class="text-gray-700" style="font-size: 13px !important">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Fugit iste est ipsum illum saepe porro illo repellendus
+                    nesciunt!
+                  </p>
+
+                  <!-- Button -->
+                  <button
+                    class="bg-green-600 text-white px-5 py-1 font-bold rounded-md hover:bg-green-700 transition-colors w-full md:w-auto mt-3"
                   >
-                    <h4 class="font-bold mr-3 mb-2">
-                      <i class="fas fa-utensils mr-1 text-red-500"></i>
-                      1 Delux room
-                    </h4>
-                    <h4 class="font-bold mr-3 mb-2">
-                      <i class="fas fa-utensils mr-1 text-red-500"></i>
-                      1 Night | 2 Days
-                    </h4>
-                    <h4 class="font-bold mr-3 mb-2">
-                      <i class="fas fa-utensils mr-1 text-red-500"></i>
-                      1 Jeep Safari
-                    </h4>
-                  </div>
-                </div>
-                <div
-                  class="md:border-t md:border-t-0 md:border-l-2 md:border-green-100 md:pl-4"
-                >
-                  <div
-                    class="flex flex-col gap-4 justify-between items-start md:items-end"
-                  >
-                    <div class="flex hidden md:block">
-                      <i class="fas fa-star text-yellow-400"></i>
-                      <i class="fas fa-star text-yellow-400"></i>
-                      <i class="fas fa-star text-yellow-400"></i>
-                      <i class="fas fa-star text-yellow-400"></i>
-                      <i class="far fa-star text-yellow-400"></i>
-                    </div>
-                    <div
-                      class="flex md:flex-col items-center gap-2 md:gap-0 md:items-start md:items-end"
-                    >
-                      <span class="text-2xl font-bold text-gray-800"
-                        >₹3499</span
-                      >
-                      <span class="text-gray-600 text-xs"
-                        >+₹400 taxes & fees</span
-                      >
-                      <span class="text-gray-600 text-xs">Per Night</span>
-                    </div>
-                    <button
-                      class="bg-green-600 text-white px-4 py-2 font-bold rounded-md hover:bg-green-700 transition-colors w-full md:w-auto"
-                    >
-                      <a href="../pages/hotelPanna.html"> Book Now </a>
-                    </button>
-                  </div>
+                    <a href="./PannaTour.html">Read more</a>
+                  </button>
                 </div>
               </div>
             </div>
