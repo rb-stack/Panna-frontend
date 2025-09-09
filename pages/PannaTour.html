@@ -13,6 +13,20 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
+    <style>
+      /* Custom styles */
+      .sticky-form {
+        position: sticky;
+        top: 100px; /* Adjust based on your header height */
+      }
+
+      @media (max-width: 1023px) {
+        .sticky-form {
+          position: relative;
+          top: 0;
+        }
+      }
+    </style>
   </head>
   <body>
     <!-- Header -->
@@ -146,20 +160,20 @@
       <div
         class="bg-white shadow-lg overflow-hidden tour-plan-card border border-gray-100"
       >
-        <div class="grid grid-cols-1 md:grid-cols-3 h-full md:h-[60vh]">
-          <div class="md:col-span-2">
+        <div class="grid grid-cols-1 md:grid-cols-2 h-full md:h-[60vh]">
+          <div>
             <img
               src="../assets/images/tour-Packages2.jpg"
               alt="Panna National Park tour plan"
               class="w-full h-64 md:h-full object-cover"
             />
           </div>
-          <div class="p-6 md:p-8 flex flex-col justify-start">
+          <div class="p-4 md:px-6 flex flex-col justify-start">
             <h3 class="text-2xl font-bold text-gray-800 mb-4 heading-font">
               Panna National Park Fun Tour
             </h3>
 
-            <div class="space-y-4">
+            <div class="space-y-3">
               <div class="flex">
                 <div class="bg-green-100 p-2 rounded-lg mr-4">
                   <i class="fas fa-clock text-green-600"></i>
@@ -189,6 +203,22 @@
                   <span class="text-gray-600">1 Night Stay</span>
                 </div>
               </div>
+
+              <div class="flex items-start">
+                <div class="bg-yellow-100 p-2 rounded-lg mr-4">
+                  <i class="fas fa-hotel text-yellow-600"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-gray-700">Ratings</h4>
+                  <div class="flex">
+                    <i class="fas fa-star text-yellow-400 text-xs"></i>
+                    <i class="fas fa-star text-yellow-400 text-xs"></i>
+                    <i class="fas fa-star text-yellow-400 text-xs"></i>
+                    <i class="fas fa-star text-yellow-400 text-xs"></i>
+                    <i class="far fa-star text-yellow-400 text-xs"></i>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -199,15 +229,21 @@
         <a href="#about-tour-section" class="cursor-pointer hover:border-b"
           >Tour Itinerary</a
         >
-        <a href="" class="cursor-pointer hover:border-b"> Payment Policy</a>
-        <a href="" class="cursor-pointer hover:border-b">Terms & conditions</a>
-        <a href="" class="cursor-pointer hover:border-b">Cancellation Policy</a>
+        <a href="#paymentPolicy" class="cursor-pointer hover:border-b">
+          Payment Policy</a
+        >
+        <a href="#termsAndConditions" class="cursor-pointer hover:border-b"
+          >Terms & conditions</a
+        >
+        <a href="#cancellationPolicy" class="cursor-pointer hover:border-b"
+          >Cancellation Policy</a
+        >
       </div>
     </section>
 
     <!-- Tour Details Content -->
-    <section id="about-tour-section" class="scroll-mt-20">
-      <div class="container mx-auto px-4 py-10">
+    <section id="about-tour-section" class="mt-6 max-w-6xl mx-auto px-4">
+      <div class="w-full py-10">
         <div class="flex flex-col lg:flex-row gap-6">
           <!-- Tour Content (75% width on large screens) -->
           <div class="w-full lg:w-3/4">
@@ -234,7 +270,7 @@
                 <div
                   class="hotel-card bg-white rounded-xl shadow-md overflow-hidden flex flex-col md:flex-row"
                 >
-                  <div class="relative md:w-60">
+                  <div class="relative md:w-[38vw]">
                     <img
                       src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80"
                       alt="Luxury Resort"
@@ -246,7 +282,7 @@
                       Day 1
                     </div>
                   </div>
-                  <div class="p-4">
+                  <div class="p-4 md:w-[60vw]">
                     <h5 class="text-lg font-semibold mb-2">
                       Arrive Panna National Park & Transfer to Wildlife Resort
                     </h5>
@@ -266,96 +302,276 @@
                 <div
                   class="hotel-card bg-white rounded-xl shadow-md overflow-hidden flex flex-col md:flex-row"
                 >
-                  <div class="relative md:w-60">
+                  <div class="relative md:w-[38vw]">
                     <img
-                      src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80"
-                      alt="Safari Jeep"
+                      src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80"
+                      alt="Luxury Resort"
                       class="w-full h-48 md:h-full object-cover"
                     />
                     <div
-                      class="absolute top-4 right-4 bg-green-600 text-white text-xs font-bold px-3 py-2 rounded-lg"
+                      class="absolute top-4 right-4 bg-blue-600 text-white text-xs font-bold px-3 py-2 rounded-lg"
                     >
                       Day 2
                     </div>
                   </div>
-                  <div class="p-4">
+                  <div class="p-4 md:w-[60vw]">
                     <h5 class="text-lg font-semibold mb-2">
-                      Morning Jungle Safari & Departure
+                      Arrive Panna National Park & Transfer to Wildlife Resort
                     </h5>
                     <p class="text-sm text-gray-700">
-                      Early morning, head out for an adventurous jungle safari
-                      to spot tigers and other wildlife. Return to the resort
-                      for breakfast, then check out for your onward journey with
-                      memories of a lifetime.
+                      Once you arrive in Panna National Park, our representative
+                      will greet you and take you to the resort. Enjoy lunch,
+                      relax, and capture moments with your loved ones in the
+                      scenic backdrop. In the evening, enjoy a bonfire with
+                      snacks followed by dinner.
+                    </p>
+                  </div>
+                </div>
+              </section>
+
+              <!-- Day 3 -->
+              <section id="day-1" class="mb-6 scroll-mt-20">
+                <div
+                  class="hotel-card bg-white rounded-xl shadow-md overflow-hidden flex flex-col md:flex-row"
+                >
+                  <div class="relative md:w-[38vw]">
+                    <img
+                      src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80"
+                      alt="Luxury Resort"
+                      class="w-full h-48 md:h-full object-cover"
+                    />
+                    <div
+                      class="absolute top-4 right-4 bg-blue-600 text-white text-xs font-bold px-3 py-2 rounded-lg"
+                    >
+                      Day 3
+                    </div>
+                  </div>
+                  <div class="p-4 md:w-[60vw]">
+                    <h5 class="text-lg font-semibold mb-2">
+                      Arrive Panna National Park
+                    </h5>
+                    <p class="text-sm text-gray-700">
+                      Once you arrive in Panna National Park, our representative
+                      will greet you and take you to the resort. Enjoy lunch,
+                      relax, and capture moments with your loved ones in the
+                      scenic backdrop. In the evening, enjoy a bonfire with
+                      snacks followed by dinner.
                     </p>
                   </div>
                 </div>
               </section>
             </div>
+
+            <!-- Payment Policy Section -->
+            <div id="paymentPolicy">
+              <h2 class="text-2xl font-semibold mb-4">Payment Policy:</h2>
+              <ul class="list-disc ml-8">
+                <li>
+                  GTI Travels (Pvt.) Ltd. accepts Credit Card, Debit Card,
+                  Paypal and Direct Deposit as forms of payment.
+                </li>
+                <li>Kindly make payment only in company accounts.</li>
+                <li>
+                  Travelers can pay 50% advance to hold the booking on confirmed
+                  basis & rest 50% amount will be settled on arrival/starting
+                  the tour.
+                </li>
+                <li>
+                  Travelers can pay 100% amount to confirm the booking and enjoy
+                  more discount benefits.
+                </li>
+                <li>
+                  Travelers agree to pay all statutory taxes, surcharges and
+                  fees, as applicable.
+                </li>
+              </ul>
+            </div>
+
+            <!-- Terms and Conditions Section -->
+            <div id="termsAndConditions" class="mt-4">
+              <h2 class="text-2xl font-semibold mb-4">Terms & conditions:</h2>
+              <ul class="list-disc ml-8 list-color-green">
+                <li>In all hotels base category room will be provided.</li>
+                <li>
+                  In case of upgradation of room will cost extra and pay to the
+                  hotel directly.
+                </li>
+                <li>Time of check-in 12:00 noon and check out 11:00 AM.</li>
+                <li>
+                  Please make sure and enter correct age of passengers at the
+                  time of booking. Passengers furnishing incorrect age may incur
+                  penalty at the time of travelling.
+                </li>
+                <li>
+                  In case of non availability of rooms in mentioned hotel we
+                  shall provide similar standard hotel.
+                </li>
+                <li>
+                  In case of 3 persons, 1 room with 1 extra mattress will be
+                  provided.
+                </li>
+                <li>
+                  Any changes in Govt. taxes, hotel charges, safari charges etc
+                  will be informed by mail or phone before traveling date.
+                </li>
+                <li>
+                  Company will not be responsible for any accident, loss/theft
+                  or dammage of luggage.
+                </li>
+                <li>
+                  We reserve the right to make itinerary and safari changes as
+                  operational or other circumstances require.
+                </li>
+              </ul>
+            </div>
+
+            <!-- Cancellation Policy Section -->
+            <div id="cancellationPolicy" class="mt-4">
+              <h2 class="text-2xl font-semibold mb-1">
+                Policy Regarding Cancellation/ No Show / Early Departure :
+              </h2>
+              <p>
+                In case if you are postponing or cancelling your tour/travel due
+                to any unavoidable reasons, you must intimate us in writing.
+                Please make it sure that cancellation charges would be effective
+                from the date we receive your mail in writing. Following
+                cancellation policy would be applicable:
+              </p>
+              <ul class="list-disc ml-8 list-color-green mt-3">
+                <li>30 days prior to arrival - 10% of the tour cost.</li>
+                <li>
+                  15 days to 29 days prior to arrival - 30% of the tour cost.
+                </li>
+                <li>
+                  07 days to 14 days prior to arrival - 40 % of the tour cost
+                </li>
+                <li>
+                  02 days to 06 days prior to arrival - 50% of the tour cost.
+                </li>
+                <li>Less than 48 hours or no show - NO REFUND.</li>
+                <li>Jeep Safari & Canter Safari amount are non refundable.</li>
+                <li>
+                  In case of 3 persons, 1 room with 1 extra mattress will be
+                  provided.
+                </li>
+                <li>
+                  Any changes in Govt. taxes, hotel charges, safari charges etc
+                  will be informed by mail or phone before traveling date.
+                </li>
+                <li>
+                  <span class="font-bold text-md">Important Note:</span> In case
+                  your safari is not booked due to reasons like technical error
+                  or non-availability of seat, we will refund the whole amount
+                  in your given bank account. The same would be communicated
+                  accordingly.
+                </li>
+                <li>
+                  <span class="font-bold text-md">In case of peak season:</span>
+                  weekends or weekdays (Holi, Diwali, X'Mas & New Year)
+                  hotel/Forest Lodges bookings separate cancellation policy is
+                  applicable (which would be advised as and when required).
+                </li>
+                <li>
+                  <span class="font-bold text-md"
+                    >Our Liabilities and Limitations:</span
+                  >
+                  Please note that after you finalize the tour/service cost and
+                  in case if there are any hikes in permit fees of
+                  safaris/museums, taxes, fuel cost or guide charges decided by
+                  the Govt of India, the same would be charged as extra.
+                </li>
+                <li>
+                  Force Majeure events, strikes, fairs, festivals, weather
+                  conditions, traffic problems, overbooking of hotels, closure
+                  of / entry restrictions at a place of visit, etc. While we
+                  will do our best to make suitable alternate arrangements, we
+                  would not be held liable for any refunds/compensation claims
+                  arising out of this.
+                </li>
+                <li>
+                  In case of dispute, if any, shall be subject to the exclusive
+                  jurisdiction of the courts in New Delhi.
+                </li>
+              </ul>
+            </div>
           </div>
 
           <!-- Sidebar Navigation (25% width) -->
-          <div
-            class="w-full lg:w-1/4 rounded-md shadow-md overflow-hidden bg-gray-800 h-fit border-2 border-gray-100"
-          >
-            <form id="enquiry-form" class="p-4 flex flex-col gap-4 pb-12">
-              <h3 class="text-xl font-semibold text-yellow-500">Enquiry</h3>
-              <input
-                type="text"
-                placeholder="Enter your name"
-                required
-                id="name"
-                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
-              />
-              <input
-                type="text"
-                placeholder="Enter Contact Number"
-                required
-                id="number"
-                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
-              />
-              <input
-                type="email"
-                placeholder="Enter Email"
-                required
-                id="name"
-                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
-              />
-              <select
-                name="country"
-                id="country"
-                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+          <div class="w-full lg:w-1/4">
+            <div class="sticky-form">
+              <div
+                class="rounded-md shadow-md overflow-hidden bg-gray-800 h-fit border-2 border-gray-100"
               >
-                <option value="" disabled selected>Select your Country</option>
-                <option value="India" default>India</option>
-                <option value="China">China</option>
-                <option value="China">China</option>
-                <option value="China">China</option>
-                <option value="China">China</option>
-                <option value="China">China</option>
-                <option value="China">China</option>
-                <option value="China">China</option>
-              </select>
-              <select
-                name="packages"
-                id="packages"
-                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
-              >
-                <option value="" disabled selected>Select your Package</option>
-                <option value="core-zone" default>
-                  Lorem ipsum dolor sit amet.
-                </option>
-                <option value="buffer-zone">Lorem ipsum dolor sit amet.</option>
-                <option value="buffer-zone">Lorem ipsum dolor sit amet.</option>
-                <option value="buffer-zone">Lorem ipsum dolor sit amet.</option>
-              </select>
-              <button
-                type="submit"
-                class="bg-green-700 text-lg font-semibold text-white rounded-md hover:bg-green-800 py-2 px-3 w-full"
-              >
-                Submit
-              </button>
-            </form>
+                <form id="enquiry-form" class="p-4 flex flex-col gap-4 pb-12">
+                  <h3 class="text-xl font-semibold text-yellow-500">Enquiry</h3>
+                  <input
+                    type="text"
+                    placeholder="Enter your name"
+                    required
+                    id="name"
+                    class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                  />
+                  <input
+                    type="text"
+                    placeholder="Enter Contact Number"
+                    required
+                    id="number"
+                    class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                  />
+                  <input
+                    type="email"
+                    placeholder="Enter Email"
+                    required
+                    id="email"
+                    class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                  />
+                  <select
+                    name="country"
+                    id="country"
+                    class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                  >
+                    <option value="" disabled selected>
+                      Select your Country
+                    </option>
+                    <option value="India" default>India</option>
+                    <option value="USA">United States</option>
+                    <option value="UK">United Kingdom</option>
+                    <option value="Canada">Canada</option>
+                    <option value="Australia">Australia</option>
+                    <option value="Germany">Germany</option>
+                    <option value="France">France</option>
+                    <option value="Other">Other</option>
+                  </select>
+                  <select
+                    name="packages"
+                    id="packages"
+                    class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                  >
+                    <option value="" disabled selected>
+                      Select your Package
+                    </option>
+                    <option value="panna-fun-tour" default>
+                      Panna National Park Fun Tour
+                    </option>
+                    <option value="wildlife-safari">
+                      Wildlife Safari Adventure
+                    </option>
+                    <option value="family-package">
+                      Family Getaway Package
+                    </option>
+                    <option value="photography-expedition">
+                      Photography Expedition
+                    </option>
+                  </select>
+                  <button
+                    type="submit"
+                    class="bg-green-700 text-lg font-semibold text-white rounded-md hover:bg-green-800 py-2 px-3 w-full transition-colors"
+                  >
+                    Submit
+                  </button>
+                </form>
+              </div>
+            </div>
           </div>
         </div>
       </div>
