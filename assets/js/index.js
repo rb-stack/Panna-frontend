@@ -276,36 +276,12 @@ document.addEventListener("DOMContentLoaded", function () {
     return 4;
   }
 
-  // Create indicator dots
-  function createIndicators() {
-    indicators.innerHTML = "";
-    const totalIndicators = Math.ceil(cardData.length / cardsPerView);
-
-    for (let i = 0; i < totalIndicators; i++) {
-      const indicator = document.createElement("button");
-      indicator.className = `w-3 h-3 rounded-full ${
-        i === 0 ? "bg-blue-600" : "bg-gray-300"
-      }`;
-      indicator.addEventListener("click", () => {
-        goToSlide(i);
-      });
-      indicators.appendChild(indicator);
-    }
-  }
-
   // Update carousel position
   function updateCarousel() {
     const cardWidth = document.querySelector(".carousel-card").offsetWidth + 16; // card width + gap
     carousel.style.transform = `translateX(-${
       currentIndex * cardWidth * cardsPerView
     }px)`;
-
-    // Update indicators
-    document.querySelectorAll("#indicators button").forEach((indicator, i) => {
-      indicator.className = `w-3 h-3 rounded-full ${
-        i === currentIndex ? "bg-blue-600" : "bg-gray-300"
-      }`;
-    });
   }
 
   // Go to specific slide
@@ -344,14 +320,36 @@ document.addEventListener("DOMContentLoaded", function () {
   // Handle window resize
   window.addEventListener("resize", () => {
     cardsPerView = calculateCardsPerView();
-    createIndicators();
     updateCarousel();
   });
 
   // Initialize
-  createIndicators();
   updateCarousel();
 
   // Auto slide every 5 seconds
   setInterval(nextSlide, 5000);
+});
+
+// Enquiry Form
+const enquiryBtn = document.getElementById("enquiry-btn");
+const enquiryForm = document.getElementById("Enquiry-form");
+const enquiryCloseBtn = document.getElementById("enquiry-close-btn");
+let isClicked = false;
+
+enquiryBtn.addEventListener("click", () => {
+  isClicked = !isClicked; // flip the state
+
+  if (isClicked) {
+    enquiryForm.classList.remove("hidden");
+    enquiryForm.classList.add("block");
+  } else {
+    enquiryForm.classList.remove("block");
+    enquiryForm.classList.add("hidden");
+  }
+});
+
+enquiryCloseBtn.addEventListener("click", () => {
+  isClicked = !isClicked; // flip the state
+  enquiryForm.classList.remove("hidden");
+  enquiryForm.classList.add("hidden");
 });

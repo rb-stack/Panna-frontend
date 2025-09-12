@@ -136,6 +136,63 @@
       <button>Enquiry Now</button>
     </div>
 
+    <!-- Enquiry Form -->
+    <div
+      id="Enquiry-form"
+      class="hidden p-5 shadow-lg border border-gray-700 rounded-lg"
+    >
+      <form class="flex flex-col gap-2">
+        <h3 class="font-bold">Enquiry</h3>
+        <input
+          type="text"
+          placeholder="Name"
+          required
+          id="name"
+          class="bg-gray-50 px-3 py-1 border border-gray-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-green-500"
+        />
+        <input
+          type="text"
+          placeholder="Contact Number"
+          required
+          id="number"
+          class="bg-gray-50 px-3 py-1 border border-gray-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-green-500"
+        />
+        <input
+          type="email"
+          placeholder="Email"
+          required
+          id="email"
+          class="bg-gray-50 px-3 py-1 border border-gray-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-green-500"
+        />
+        <textarea
+          name="remarks"
+          id="remarks"
+          placeholder="remarks"
+          rows="4"
+          cols="35"
+          class="bg-gray-50 px-3 py-1 border border-gray-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-green-500"
+        ></textarea>
+        <div
+          id="enquiry-form-btn"
+          class="w-full flex items-center justify-between gap-6 mt-2"
+        >
+          <button
+            type="submit"
+            id="enquiry-submit-btn"
+            class="text-semibold bg-green-600 hover:bg-green-700 text-white rounded-md px-5 py-2 w-full"
+          >
+            Submit
+          </button>
+          <button
+            id="enquiry-close-btn"
+            class="text-semibold bg-red-500 hover:bg-red-600 text-white rounded-md px-5 py-2 w-full"
+          >
+            close
+          </button>
+        </div>
+      </form>
+    </div>
+
     <!-- Hero Section -->
     <section class="hero-pattern" id="hero-section">
       <div class="hero-content-wrapper text-gray-800">
@@ -233,8 +290,8 @@
           <div
             class="stat-box bg-white p-5 rounded-xl text-center shadow-md border border-green-100"
           >
-            <h3 class="text-3xl font-bold text-green-700 mb-2">40+</h3>
-            <p class="text-sm text-gray-600">Tiger</p>
+            <h3 class="text-3xl font-bold text-green-700 mb-2">200+</h3>
+            <p class="text-sm text-gray-600">Birds Species</p>
           </div>
         </div>
       </div>
@@ -810,9 +867,9 @@
           </div>
         </div>
 
-        <!-- 2010-2021 -->
+        <!-- 2021 -->
         <div class="timeline-item">
-          <div class="timeline-year">2010-2021</div>
+          <div class="timeline-year">2021</div>
           <div class="timeline-content">
             <h3 class="text-xl font-semibold text-green-800 mb-2">
               A Roaring Success

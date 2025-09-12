@@ -74,7 +74,7 @@ body {
   position: fixed;
   right: 2%;
   bottom: 5%;
-  z-index: 10;
+  z-index: 100;
   background: #3d7d4a;
   padding: 10px 21px;
   border-radius: 24px;
@@ -87,6 +87,15 @@ body {
 #enquiry-btn:hover {
   background: green;
   transform: translateY(-4px);
+}
+
+#Enquiry-form {
+  position: fixed;
+  right: 2%;
+  bottom: 15%;
+  z-index: 100;
+  background: rgba(232, 232, 232, 0.715);
+  backdrop-filter: blur(10px);
 }
 
 /* Hero Styles */
