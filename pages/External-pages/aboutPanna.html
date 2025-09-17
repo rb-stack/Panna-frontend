@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Panna | FAQ'S Page</title>
+    <title>Panna | About Panna National Park Page</title>
     <!-- Tailwind CSS via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Custom CSS files -->
@@ -34,7 +34,7 @@
       }
     </style>
   </head>
-  <body>
+  <body class="min-h-screen flex flex-col">
     <!-- Header -->
     <header class="bg-white shadow-sm sticky top-0 z-10">
       <div class="container mx-auto px-4">
@@ -62,27 +62,27 @@
           <!-- Desktop Navigation -->
           <nav class="hidden md:flex items-center space-x-4">
             <a
-              href="../../index.html"
+              href="./index.html"
               class="text-gray-600 hover:text-green-600 font-medium text-sm"
               >Home</a
             >
             <a
-              href="../../pages/safariBooking.html"
+              href="./pages/safariBooking.html"
               class="custom-nav-btn text-gray-600 hover:text-green-600 font-medium text-sm"
               >Online Safari Booking</a
             >
             <a
-              href="../../pages/hotelinPanna.html"
+              href="./pages/hotelinPanna.html"
               class="text-gray-600 hover:text-green-600 font-medium text-sm"
               >Hotel in Panna</a
             >
             <a
-              href="../../pages/tourPackages.html"
+              href="./pages/tourPackages.html"
               class="text-gray-600 hover:text-green-600 font-medium text-sm"
               >Tour Packages</a
             >
             <a
-              href="../../pages/payment.html"
+              href="./pages/payment.html"
               class="text-gray-600 hover:text-green-600 font-medium text-sm"
               >Pay Now</a
             >
@@ -151,441 +151,135 @@
       </div>
     </header>
 
+    <!-- Enquiry Now Button -->
+    <div id="enquiry-btn">
+      <button>Enquiry Now</button>
+    </div>
+
+    <!-- Enquiry Form -->
+    <div
+      id="Enquiry-form"
+      class="hidden p-5 shadow-lg border border-gray-700 rounded-lg"
+    >
+      <form class="flex flex-col gap-2">
+        <h3 class="font-bold">Enquiry</h3>
+        <input
+          type="text"
+          placeholder="Name"
+          required
+          id="name"
+          class="bg-gray-50 px-3 py-1 border border-gray-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-green-500"
+        />
+        <input
+          type="text"
+          placeholder="Contact Number"
+          required
+          id="number"
+          class="bg-gray-50 px-3 py-1 border border-gray-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-green-500"
+        />
+        <input
+          type="email"
+          placeholder="Email"
+          required
+          id="email"
+          class="bg-gray-50 px-3 py-1 border border-gray-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-green-500"
+        />
+        <textarea
+          name="remarks"
+          id="remarks"
+          placeholder="remarks"
+          rows="4"
+          cols="35"
+          class="bg-gray-50 px-3 py-1 border border-gray-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-green-500"
+        ></textarea>
+        <div
+          id="enquiry-form-btn"
+          class="w-full flex items-center justify-between gap-6 mt-2"
+        >
+          <button
+            type="submit"
+            id="enquiry-submit-btn"
+            class="text-semibold bg-green-600 hover:bg-green-700 text-white rounded-md px-5 py-2 w-full"
+          >
+            Submit
+          </button>
+          <button
+            id="enquiry-close-btn"
+            class="text-semibold bg-red-500 hover:bg-red-600 text-white rounded-md px-5 py-2 w-full"
+          >
+            close
+          </button>
+        </div>
+      </form>
+    </div>
+
     <!-- Hero Section -->
     <section class="" id="reach-hero-section">
       <div class="reach-hero-content-wrapper text-white">
-        <h1 class="text-xl md:text-3xl font-bold">
-          Go through the FAQs about Panna National Park
-        </h1>
+        <h1 class="text-xl md:text-3xl font-bold">About Panna National Park</h1>
         <p
           class="mt-1 text-lg md:text-xl mx-auto"
           style="color: rgb(202, 202, 202) !important"
         >
-          Everything you need to know before planning your trip.
+          A land of tigers, waterfalls, and rich biodiversity in the heart of
+          India.
         </p>
       </div>
     </section>
 
-    <!-- FAQ's Details -->
-    <section id="faq-details" class="px-4 w-full md:max-w-5xl mx-auto my-6">
-      <!-- Heading -->
-      <div class="text-center mb-8">
-        <h2 class="text-2xl md:text-3xl font-bold text-green-700">
-          FAQs about Panna National Park
-        </h2>
-        <p class="text-gray-600 mx-auto">
-          Your guide to the most asked questions about Panna National Park.
-        </p>
-      </div>
-
-      <!-- FAQ Wrapper -->
-      <div id="faq-wrapper" class="space-y-4">
-        <!-- FAQ Item -->
-        <div
-          class="faq-box border border-green-500 rounded-md shadow-sm overflow-hidden"
-        >
-          <!-- Question Row -->
-          <div
-            class="faq-header flex justify-between items-center cursor-pointer hover:bg-green-50 px-4 py-3 transition"
-          >
-            <h3 class="font-semibold text-gray-800">
-              What is Panna National Park famous for?
-            </h3>
-            <button
-              class="toggle-btn text-lg transition-transform duration-300 bg-gray-800 text-white py-1 px-3 rounded-sm"
-            >
-              <i class="fa-solid fa-chevron-down"></i>
-            </button>
-          </div>
-
-          <!-- Answer -->
-          <div class="faq-content hidden px-4 mt-4 pb-4 text-gray-700 text-sm">
-            <p>
-              Panna is famous for its successful tiger reintroduction project,
-              stunning landscapes with deep gorges, and the beautiful Ken River.
-              It's also a UNESCO Biosphere Reserve.
-            </p>
-          </div>
-        </div>
-
-        <!-- Duplicate structure for more FAQs -->
-        <div
-          class="faq-box border border-green-500 rounded-md shadow-sm overflow-hidden"
-        >
-          <div
-            class="faq-header flex justify-between items-center cursor-pointer hover:bg-green-50 px-4 py-3 transition"
-          >
-            <h3 class="font-semibold text-gray-800">
-              What is the best time to visit Panna?
-            </h3>
-            <button
-              class="toggle-btn text-lg transition-transform duration-300 bg-gray-800 text-white py-1 px-3 rounded-sm"
-            >
-              <i class="fa-solid fa-chevron-down"></i>
-            </button>
-          </div>
-          <div class="faq-content hidden px-4 mt-4 pb-4 text-gray-700 text-sm">
-            <p>
-              The best time is from October to March when the weather is cool
-              and pleasant. The park remains closed during the monsoon season
-              (July to September).
-            </p>
-          </div>
-        </div>
-
-        <!-- Duplicate structure for more FAQs -->
-        <div
-          class="faq-box border border-green-500 rounded-md shadow-sm overflow-hidden"
-        >
-          <div
-            class="faq-header flex justify-between items-center cursor-pointer hover:bg-green-50 px-4 py-3 transition"
-          >
-            <h3 class="font-semibold text-gray-800">
-              How many safari zones are there in Panna?
-            </h3>
-            <button
-              class="toggle-btn text-lg transition-transform duration-300 bg-gray-800 text-white py-1 px-3 rounded-sm"
-            >
-              <i class="fa-solid fa-chevron-down"></i>
-            </button>
-          </div>
-          <div class="faq-content hidden px-4 mt-4 pb-4 text-gray-700 text-sm">
-            <p>
-              Panna Tiger Reserve has multiple safari zones, with the most
-              popular ones being the Core Zone (Madla Gate) and the Buffer Zone
-              (Hinauta Gate).
-            </p>
-          </div>
-        </div>
-
-        <!-- Duplicate structure for more FAQs -->
-        <div
-          class="faq-box border border-green-500 rounded-md shadow-sm overflow-hidden"
-        >
-          <div
-            class="faq-header flex justify-between items-center cursor-pointer hover:bg-green-50 px-4 py-3 transition"
-          >
-            <h3 class="font-semibold text-gray-800">
-              What animals can I see besides tigers?
-            </h3>
-            <button
-              class="toggle-btn text-lg transition-transform duration-300 bg-gray-800 text-white py-1 px-3 rounded-sm"
-            >
-              <i class="fa-solid fa-chevron-down"></i>
-            </button>
-          </div>
-          <div class="faq-content hidden px-4 mt-4 pb-4 text-gray-700 text-sm">
-            <p>
-              You can spot leopards, sloth bears, Indian wolves, striped hyenas,
-              sambar deer, chinkara, and over 200 species of birds, including
-              the endangered vulture.
-            </p>
-          </div>
-        </div>
-
-        <!-- Duplicate structure for more FAQs -->
-        <div
-          class="faq-box border border-green-500 rounded-md shadow-sm overflow-hidden"
-        >
-          <div
-            class="faq-header flex justify-between items-center cursor-pointer hover:bg-green-50 px-4 py-3 transition"
-          >
-            <h3 class="font-semibold text-gray-800">
-              How can I book a safari permit?
-            </h3>
-            <button
-              class="toggle-btn text-lg transition-transform duration-300 bg-gray-800 text-white py-1 px-3 rounded-sm"
-            >
-              <i class="fa-solid fa-chevron-down"></i>
-            </button>
-          </div>
-          <div class="faq-content hidden px-4 mt-4 pb-4 text-gray-700 text-sm">
-            <p>
-              Safari permits can be booked online through the online safari
-              page. It is highly advised to book well in advance, especially on
-              weekends.
-            </p>
-          </div>
-        </div>
-
-        <!-- Duplicate structure for more FAQs -->
-        <div
-          class="faq-box border border-green-500 rounded-md shadow-sm overflow-hidden"
-        >
-          <div
-            class="faq-header flex justify-between items-center cursor-pointer hover:bg-green-50 px-4 py-3 transition"
-          >
-            <h3 class="font-semibold text-gray-800">
-              What are the safari timings?
-            </h3>
-            <button
-              class="toggle-btn text-lg transition-transform duration-300 bg-gray-800 text-white py-1 px-3 rounded-sm"
-            >
-              <i class="fa-solid fa-chevron-down"></i>
-            </button>
-          </div>
-          <div class="faq-content hidden px-4 mt-4 pb-4 text-gray-700 text-sm">
-            <p>
-              Safaris are conducted in two shifts: Morning (approx. 6:30 AM -
-              10:30 AM) and Evening (approx. 2:30 PM - 5:30 PM). Timings change
-              slightly with the seasons.
-            </p>
-          </div>
-        </div>
-
-        <!-- Duplicate structure for more FAQs -->
-        <div
-          class="faq-box border border-green-500 rounded-md shadow-sm overflow-hidden"
-        >
-          <div
-            class="faq-header flex justify-between items-center cursor-pointer hover:bg-green-50 px-4 py-3 transition"
-          >
-            <h3 class="font-semibold text-gray-800">
-              What types of safaris are available?
-            </h3>
-            <button
-              class="toggle-btn text-lg transition-transform duration-300 bg-gray-800 text-white py-1 px-3 rounded-sm"
-            >
-              <i class="fa-solid fa-chevron-down"></i>
-            </button>
-          </div>
-          <div class="faq-content hidden px-4 mt-4 pb-4 text-gray-700 text-sm">
-            <p>
-              You can enjoy open-top Gypsy (Jeep) safaris for a more private
-              experience or shared Canter safaris, which are larger vehicles
-              seating more people.
-            </p>
-          </div>
-        </div>
-
-        <!-- Duplicate structure for more FAQs -->
-        <div
-          class="faq-box border border-green-500 rounded-md shadow-sm overflow-hidden"
-        >
-          <div
-            class="faq-header flex justify-between items-center cursor-pointer hover:bg-green-50 px-4 py-3 transition"
-          >
-            <h3 class="font-semibold text-gray-800">
-              Is it necessary to hire a guide?
-            </h3>
-            <button
-              class="toggle-btn text-lg transition-transform duration-300 bg-gray-800 text-white py-1 px-3 rounded-sm"
-            >
-              <i class="fa-solid fa-chevron-down"></i>
-            </button>
-          </div>
-          <div class="faq-content hidden px-4 mt-4 pb-4 text-gray-700 text-sm">
-            <p>
-              Yes, a government-approved naturalist guide is mandatory for every
-              safari. Their knowledge significantly enhances your chances of
-              spotting wildlife and understanding the ecosystem.
-            </p>
-          </div>
-        </div>
-
-        <!-- Duplicate structure for more FAQs -->
-        <div
-          class="faq-box border border-green-500 rounded-md shadow-sm overflow-hidden"
-        >
-          <div
-            class="faq-header flex justify-between items-center cursor-pointer hover:bg-green-50 px-4 py-3 transition"
-          >
-            <h3 class="font-semibold text-gray-800">
-              How many days are sufficient for a visit?
-            </h3>
-            <button
-              class="toggle-btn text-lg transition-transform duration-300 bg-gray-800 text-white py-1 px-3 rounded-sm"
-            >
-              <i class="fa-solid fa-chevron-down"></i>
-            </button>
-          </div>
-          <div class="faq-content hidden px-4 mt-4 pb-4 text-gray-700 text-sm">
-            <p>
-              A stay of 2 nights and 3 days is ideal. This allows for 3-4 safari
-              attempts, increasing your chances of tiger sightings and exploring
-              other local attractions.
-            </p>
-          </div>
-        </div>
-
-        <!-- Duplicate structure for more FAQs -->
-        <div
-          class="faq-box border border-green-500 rounded-md shadow-sm overflow-hidden"
-        >
-          <div
-            class="faq-header flex justify-between items-center cursor-pointer hover:bg-green-50 px-4 py-3 transition"
-          >
-            <h3 class="font-semibold text-gray-800">
-              Is Panna National Park safe for visitors?
-            </h3>
-            <button
-              class="toggle-btn text-lg transition-transform duration-300 bg-gray-800 text-white py-1 px-3 rounded-sm"
-            >
-              <i class="fa-solid fa-chevron-down"></i>
-            </button>
-          </div>
-          <div class="faq-content hidden px-4 mt-4 pb-4 text-gray-700 text-sm">
-            <p>
-              Yes, visitors must remain inside the authorized safari vehicles at
-              all times. Following the guide's instructions ensures a completely
-              safe and enjoyable experience.
-            </p>
-          </div>
-        </div>
-
-        <!-- Duplicate structure for more FAQs -->
-        <div
-          class="faq-box border border-green-500 rounded-md shadow-sm overflow-hidden"
-        >
-          <div
-            class="faq-header flex justify-between items-center cursor-pointer hover:bg-green-50 px-4 py-3 transition"
-          >
-            <h3 class="font-semibold text-gray-800">
-              Can we get food and water inside the park?
-            </h3>
-            <button
-              class="toggle-btn text-lg transition-transform duration-300 bg-gray-800 text-white py-1 px-3 rounded-sm"
-            >
-              <i class="fa-solid fa-chevron-down"></i>
-            </button>
-          </div>
-          <div class="faq-content hidden px-4 mt-4 pb-4 text-gray-700 text-sm">
-            <p>
-              No, eating is not allowed during the safari. You should carry
-              drinking water. Meals are available at your resort or at canteens
-              located at the safari gates.
-            </p>
-          </div>
-        </div>
-
-        <!-- Duplicate structure for more FAQs -->
-        <div
-          class="faq-box border border-green-500 rounded-md shadow-sm overflow-hidden"
-        >
-          <div
-            class="faq-header flex justify-between items-center cursor-pointer hover:bg-green-50 px-4 py-3 transition"
-          >
-            <h3 class="font-semibold text-gray-800">
-              What are the nearby attractions to visit? The ancient Khajuraho
-              Temples (a UNESCO World Heritage Site) are just 30-45 minutes away
-              and are a must-visit for their stunning architecture and intricate
-              sculptures.
-            </h3>
-            <button
-              class="toggle-btn text-lg transition-transform duration-300 bg-gray-800 text-white py-1 px-3 rounded-sm"
-            >
-              <i class="fa-solid fa-chevron-down"></i>
-            </button>
-          </div>
-          <div class="faq-content hidden px-4 mt-4 pb-4 text-gray-700 text-sm">
-            <p>
-              No, eating is not allowed during the safari. You should carry
-              drinking water. Meals are available at your resort or at canteens
-              located at the safari gates.
-            </p>
-          </div>
-        </div>
-
-        <!-- Duplicate structure for more FAQs -->
-        <div
-          class="faq-box border border-green-500 rounded-md shadow-sm overflow-hidden"
-        >
-          <div
-            class="faq-header flex justify-between items-center cursor-pointer hover:bg-green-50 px-4 py-3 transition"
-          >
-            <h3 class="font-semibold text-gray-800">
-              What is the nearest airport and railway station?
-            </h3>
-            <button
-              class="toggle-btn text-lg transition-transform duration-300 bg-gray-800 text-white py-1 px-3 rounded-sm"
-            >
-              <i class="fa-solid fa-chevron-down"></i>
-            </button>
-          </div>
-          <div class="faq-content hidden px-4 mt-4 pb-4 text-gray-700 text-sm">
-            <p>
-              The nearest airport is Khajuraho (IATA code: HJR) which is 25 km
-              away. The nearest railway station is also in Khajuraho,
-              well-connected to major cities.
-            </p>
-          </div>
-        </div>
-
-        <!-- Duplicate structure for more FAQs -->
-        <div
-          class="faq-box border border-green-500 rounded-md shadow-sm overflow-hidden"
-        >
-          <div
-            class="faq-header flex justify-between items-center cursor-pointer hover:bg-green-50 px-4 py-3 transition"
-          >
-            <h3 class="font-semibold text-gray-800">
-              Are there any restrictions on photography?
-            </h3>
-            <button
-              class="toggle-btn text-lg transition-transform duration-300 bg-gray-800 text-white py-1 px-3 rounded-sm"
-            >
-              <i class="fa-solid fa-chevron-down"></i>
-            </button>
-          </div>
-          <div class="faq-content hidden px-4 mt-4 pb-4 text-gray-700 text-sm">
-            <p>
-              Photography for personal use is allowed. Commercial photography
-              requires special permission. The use of flash photography is
-              strictly prohibited to avoid disturbing the animals.
-            </p>
-          </div>
-        </div>
-
-        <!-- Duplicate structure for more FAQs -->
-        <div
-          class="faq-box border border-green-500 rounded-md shadow-sm overflow-hidden"
-        >
-          <div
-            class="faq-header flex justify-between items-center cursor-pointer hover:bg-green-50 px-4 py-3 transition"
-          >
-            <h3 class="font-semibold text-gray-800">
-              Is there a chance we won't see a tiger?
-            </h3>
-            <button
-              class="toggle-btn text-lg transition-transform duration-300 bg-gray-800 text-white py-1 px-3 rounded-sm"
-            >
-              <i class="fa-solid fa-chevron-down"></i>
-            </button>
-          </div>
-          <div class="faq-content hidden px-4 mt-4 pb-4 text-gray-700 text-sm">
-            <p>
-              Yes, as tigers are wild and elusive. A safari offers a chance to
-              see one, but the experience of being in the beautiful forest is
-              rewarding in itself.
-            </p>
-          </div>
-        </div>
-
-        <!-- Duplicate structure for more FAQs -->
-        <div
-          class="faq-box border border-green-500 rounded-md shadow-sm overflow-hidden"
-        >
-          <div
-            class="faq-header flex justify-between items-center cursor-pointer hover:bg-green-50 px-4 py-3 transition"
-          >
-            <h3 class="font-semibold text-gray-800">
-              Can we visit during the summer months (April-June)?
-            </h3>
-            <button
-              class="toggle-btn text-lg transition-transform duration-300 bg-gray-800 text-white py-1 px-3 rounded-sm"
-            >
-              <i class="fa-solid fa-chevron-down"></i>
-            </button>
-          </div>
-          <div class="faq-content hidden px-4 mt-4 pb-4 text-gray-700 text-sm">
-            <p>
-              Yes, you can. While it is very hot, these months are actually the
-              best for wildlife spotting as animals congregate around
-              waterholes, making them easier to see.
-            </p>
-          </div>
-        </div>
-      </div>
+    <!-- About Panna Section -->
+    <section
+      id="aboutPanna-section"
+      class="w-full relative md:max-w-6xl mx-auto px-4 py-5"
+    >
+      <p>
+        Among all the famous national parks like Pench, Kanha and Tadoba lies
+        the jewel of Madhya Pradesh state in the centre of the Vindhya Ranges
+        called the Panna National Park. Also called the Panna Tiger reserve, it
+        is spread across an area of 542 square kilometres. In the initial years
+        it belonged as a private property to the royal Bundela dynasty who ruled
+        the parts of Panna, Chattarpur, and Bijawar. They are used for private
+        hunting and poaching . The first step towards the national park began in
+        1975 when it was turned to Gangua wildlife sanctuary by joining the
+        north and south Panna forest divisions.
+      </p>
+      <p class="mt-3">
+        And finally in the year 1981 it was officially declared as the Panna
+        National Park, and in 1994 as India's 22nd Tiger Reserve and the 5th in
+        central India. This has a mention from the mythological point of view as
+        well, where it is said that the Pandava came and stayed here in the
+        caves during their time of exile.
+      </p>
+      <p class="mt-3">
+        The park is uniquely situated at the junction where the flat Gangetic
+        plains meet the highland of the Deccan peninsula. The ken river is said
+        to be the lifeline for the entire park as it forms a catchment area. The
+        forest remains open from October to June which allows visitors and
+        wildlife enthusiasts to spot tigers, other mammals and a wide variety of
+        birds. The park also contains a wonderful variety of other landscapes
+        including closed canopy forests, open areas with short grass and open
+        Savannah woodlands that look similar to habitats found in sub-Saharan
+        Africa.
+      </p>
+      <p class="mt-3">
+        Some of the key features that make Panna distinct from other parks in
+        Madhya Pradesh is said to be its bench topography. This means the land
+        can be broadly divided into three main tablelands on the Panna side that
+        is the upper Talgaon Plateau, the middle Hinnauta plateau, and the lower
+        Ken valley. On the other side flows the Ken River which flows from the
+        south to north through the centre of the reserve. It is home to Gharial
+        and Mugger crocodiles and many other aquatic animals. It is also said to
+        be the least polluted river in India as it is a tributary to the Yamuna
+        River. It flows across the forest for an approximate distance of 55 kms.
+      </p>
+      <p class="mt-3">
+        So if you are planning to visit the panna national park, plan well in
+        advance and make sure to plan for which type of safari zone you want to
+        cover as this has four zones, Core and Buffer zones which is further
+        dived as Madla Zone, Hinauta Zone, Jhinna Zone and Akola Zone. This will
+        be a safari adventure which is a memory for your lifetime, that you will
+        cherish forever.
+      </p>
     </section>
 
     <!-- Important Link Section -->
@@ -897,19 +591,5 @@
     </footer>
 
     <script src="../../assets/js/index.js"></script>
-
-    <!-- Script -->
-    <script>
-      document.querySelectorAll(".faq-header").forEach((header) => {
-        header.addEventListener("click", () => {
-          const content = header.nextElementSibling;
-          const icon = header.querySelector("i");
-
-          // Toggle current FAQ
-          content.classList.toggle("hidden");
-          icon.classList.toggle("rotate-180");
-        });
-      });
-    </script>
   </body>
 </html>

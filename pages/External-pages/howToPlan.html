@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Panna | Major Attractions Page</title>
+    <title>Panna | About Panna National Park Page</title>
     <!-- Tailwind CSS via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Custom CSS files -->
@@ -34,7 +34,7 @@
       }
     </style>
   </head>
-  <body>
+  <body class="min-h-screen flex flex-col">
     <!-- Header -->
     <header class="bg-white shadow-sm sticky top-0 z-10">
       <div class="container mx-auto px-4">
@@ -62,27 +62,27 @@
           <!-- Desktop Navigation -->
           <nav class="hidden md:flex items-center space-x-4">
             <a
-              href="../../index.html"
+              href="./index.html"
               class="text-gray-600 hover:text-green-600 font-medium text-sm"
               >Home</a
             >
             <a
-              href="../../pages/safariBooking.html"
+              href="./pages/safariBooking.html"
               class="custom-nav-btn text-gray-600 hover:text-green-600 font-medium text-sm"
               >Online Safari Booking</a
             >
             <a
-              href="../../pages/hotelinPanna.html"
+              href="./pages/hotelinPanna.html"
               class="text-gray-600 hover:text-green-600 font-medium text-sm"
               >Hotel in Panna</a
             >
             <a
-              href="../../pages/tourPackages.html"
+              href="./pages/tourPackages.html"
               class="text-gray-600 hover:text-green-600 font-medium text-sm"
               >Tour Packages</a
             >
             <a
-              href="../../pages/payment.html"
+              href="./pages/payment.html"
               class="text-gray-600 hover:text-green-600 font-medium text-sm"
               >Pay Now</a
             >
@@ -151,161 +151,431 @@
       </div>
     </header>
 
+    <!-- Enquiry Now Button -->
+    <div id="enquiry-btn">
+      <button>Enquiry Now</button>
+    </div>
+
+    <!-- Enquiry Form -->
+    <div
+      id="Enquiry-form"
+      class="hidden p-5 shadow-lg border border-gray-700 rounded-lg"
+    >
+      <form class="flex flex-col gap-2">
+        <h3 class="font-bold">Enquiry</h3>
+        <input
+          type="text"
+          placeholder="Name"
+          required
+          id="name"
+          class="bg-gray-50 px-3 py-1 border border-gray-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-green-500"
+        />
+        <input
+          type="text"
+          placeholder="Contact Number"
+          required
+          id="number"
+          class="bg-gray-50 px-3 py-1 border border-gray-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-green-500"
+        />
+        <input
+          type="email"
+          placeholder="Email"
+          required
+          id="email"
+          class="bg-gray-50 px-3 py-1 border border-gray-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-green-500"
+        />
+        <textarea
+          name="remarks"
+          id="remarks"
+          placeholder="remarks"
+          rows="4"
+          cols="35"
+          class="bg-gray-50 px-3 py-1 border border-gray-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-green-500"
+        ></textarea>
+        <div
+          id="enquiry-form-btn"
+          class="w-full flex items-center justify-between gap-6 mt-2"
+        >
+          <button
+            type="submit"
+            id="enquiry-submit-btn"
+            class="text-semibold bg-green-600 hover:bg-green-700 text-white rounded-md px-5 py-2 w-full"
+          >
+            Submit
+          </button>
+          <button
+            id="enquiry-close-btn"
+            class="text-semibold bg-red-500 hover:bg-red-600 text-white rounded-md px-5 py-2 w-full"
+          >
+            close
+          </button>
+        </div>
+      </form>
+    </div>
+
     <!-- Hero Section -->
     <section class="" id="reach-hero-section">
       <div class="reach-hero-content-wrapper text-white">
-        <h1 class="text-xl md:text-3xl font-bold">
-          Places to Visit Near Panna National Park
-        </h1>
+        <h1 class="text-xl md:text-3xl font-bold">About Panna National Park</h1>
         <p
           class="mt-1 text-lg md:text-xl mx-auto"
           style="color: rgb(202, 202, 202) !important"
         >
-          Adventure continues beyond the jungle with exciting attractions near
-          Panna.
+          A land of tigers, waterfalls, and rich biodiversity in the heart of
+          India.
         </p>
       </div>
     </section>
 
-    <!-- Major Attractions Details -->
-    <section
-      id="major-attractions-details"
-      class="px-4 w-full md:max-w-6xl mx-auto mt-4 md:mt-6"
-    >
-      <div>
-        <!-- Tourist Attractions 1 -->
-        <div class="flex flex-col md:flex-row h-full gap-4">
-          <div class="w-full md:w-2/3">
-            <h3 class="font-bold text-xl">Khajuraho Temples</h3>
-            <h3 class="font-semibold text-md mb-2">
-              Distance from Panna National Park: 44.3 km
-            </h3>
-            <p class="mb-1">
-              This place is a UNESCO World Heritage Site, which is known for its
-              stunning ancient temples built by the Chandela dynasty. The
-              architectural designs of these temples are famous worldwide for
-              their unique Nagara-style design and detailed sculptures that
-              depict various aspects of life. A visit here is a profound journey
-              into India's rich cultural and artistic heritage.
+    <!-- How to plan Section -->
+    <section class="py-6 px-4 md:px-8">
+      <div class="max-w-6xl mx-auto">
+        <!-- Introduction -->
+        <div>
+          <p class="text-gray-700 mb-4">
+            Like a secret treasure which is not known to many, the Panna
+            National Park in the state of Madhya Pradesh is said to be a hidden
+            gem. It is located in the Panna and Chhatarpur districts of Madhya
+            Pradesh and this park is very close to a famous city called
+            Khajuraho which has very old and special temples that comes under
+            the UNESCO World Heritage Site of Group of Monuments.
+          </p>
+          <p class="text-gray-700 mb-4">
+            A trip to Panna is full of fun adventures. Either you can go on an
+            exciting jeep safari to see wild animals in the forest or you can
+            also enjoy a peaceful boat ride on the Ken River. You can stay for a
+            night and go for night safaris and camp in between the jungle with
+            bonfire, barbeque and music all around.
+          </p>
+          <p class="text-gray-700">
+            There are many other cool places to see nearby, like mysterious
+            caves, a waterfall, and the amazing temples of Khajuraho. To plan a
+            great trip to Panna National Park you need to make a list of things
+            to do. First, you should learn about the park like where it is, what
+            animals and plants live there, the best time to visit, how to reach
+            there, where to stay, what fun activities you can do and so on.
+          </p>
+        </div>
+
+        <!-- Guide Sections -->
+        <div class="grid md:grid-cols-2 gap-8 mt-2">
+          <!-- Best Time to Visit -->
+          <div class="bg-white rounded-xl shadow-md border p-6">
+            <div class="flex items-center mb-4">
+              <div class="bg-green-100 p-3 rounded-full mr-4">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6 text-green-700"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                  />
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-green-800">
+                Pick the Best Time to Go
+              </h3>
+            </div>
+            <p class="text-gray-700">
+              The park remains open from October to March as during the winter
+              months the weather remains cool and pleasant. There is very less
+              humidity and dry climate making it easier for the whole day safari
+              ride. But it remains closed from July to September during the
+              monsoons as it rains heavily making it difficult for the jeep to
+              move. Also it allows the forest to rejuvenate into greenery with
+              foliage and a chance to stay and breather.
             </p>
-            <h4 class="font-semibold text-sm">Highlights:</h4>
-            <ul class="flex flex-col ml-6 list-disc">
-              <li>A UNESCO World Heritage Site with stunning architecture.</li>
-              <li>World-famous for intricate and detailed stone carvings.</li>
+          </div>
+
+          <!-- How to Reach -->
+          <div class="bg-white rounded-xl shadow-md border p-6">
+            <div class="flex items-center mb-4">
+              <div class="bg-green-100 p-3 rounded-full mr-4">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6 text-green-700"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                  />
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                  />
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-green-800">
+                Figure Out How to Reach Panna National Park
+              </h3>
+            </div>
+            <p class="text-gray-700 mb-2">
+              The easiest way to get to the park is to first travel to the city
+              of Khajuraho.
+            </p>
+            <ul class="text-gray-700 list-disc pl-5 space-y-1">
               <li>
-                Offers a deep insight into India's rich history and culture.
+                <span class="font-medium">By Air:</span> The closest airport is
+                in Khajuraho which lies 25 km away.
+              </li>
+              <li>
+                <span class="font-medium">By Train:</span> The closest train
+                station is also in Khajuraho that is 22 km away.
               </li>
             </ul>
-          </div>
-          <div class="w-full md:w-1/3">
-            <img src="../../assets/images/junona.jpg" alt="" />
-          </div>
-        </div>
-
-        <!-- Tourist Attractions 2 -->
-        <div class="mt-6 flex flex-col-reverse md:flex-row h-full gap-4">
-          <div class="w-full md:w-1/3">
-            <img src="../../assets/images/junona.jpg" alt="" />
-          </div>
-          <div class="w-full md:w-2/3">
-            <h3 class="font-bold text-xl">Raneh Falls & Canyon</h3>
-            <h3 class="font-semibold text-md mb-2">
-              Distance from Panna National Park: 18.7 km
-            </h3>
-            <p class="mb-1">
-              It is made along the Ken River. The falls are said to be a natural
-              canyon, which is made up of pure crystalline granite that has hues
-              of pink, red, and grey. The force of the waterfall multiplies
-              during the monsoon, making it look like a beautiful cascade
-              falling. As the river makes its way, it cuts through these
-              colourful rock formations, which people come from far places to
-              see.
+            <p class="text-gray-700 mt-2">
+              Once you get to Khajuraho you can take a taxi for the short ride
+              to Panna National Park. You can also drive there yourself from
+              other big cities like Bhopal, Jhansi.
             </p>
-            <h4 class="font-semibold text-sm">Highlights:</h4>
-            <ul class="flex flex-col ml-6 list-disc">
-              <li>Made up of coloured granite from a canyon</li>
-              <li>In the monsoon, the beauty multiples</li>
-              <li>Perfect for photography and geological wonders</li>
-            </ul>
           </div>
-        </div>
 
-        <!-- Tourist Attractions 3 -->
-        <div class="mt-6 flex flex-col md:flex-row h-full gap-4">
-          <div class="w-full md:w-2/3">
-            <h3 class="font-bold text-xl">Ken Gharial Sanctuary</h3>
-            <h3 class="font-semibold text-md mb-2">
-              Distance from Panna National Park: 22.5 km
-            </h3>
-            <p class="mb-1">
-              On the banks of the Ken River, it is home to the endangered
-              Gharial. A boat ride in the morning or afternoon will make you
-              spot several of them. They come out of the water, and you can see
-              these reptiles basking on sandbanks for sunlight to fall, along
-              with crocodiles and a variety of birds.
+          <!-- Safari Adventure -->
+          <div class="bg-white rounded-xl shadow-md border p-6">
+            <div class="flex items-center mb-4">
+              <div class="bg-green-100 p-3 rounded-full mr-4">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6 text-green-700"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"
+                  />
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-green-800">
+                Choose Your Safari Adventure
+              </h3>
+            </div>
+            <p class="text-gray-700">
+              A safari is a fun ride in a jeep through the forest to look for
+              animals. It's a good idea to plan this part early. As Panna
+              National Park is divided into four main areas (called zones) known
+              as Madla and Hinouta (core Zones) and Jinna and Akola (Buffer
+              Zones), where safaris happen, you can pick which area you want to
+              explore. Safaris happen twice a day, once in the morning and once
+              in the afternoon. You can book a jeep just for your family or
+              share one with others according to your convenience.
             </p>
-            <h4 class="font-semibold text-sm">Highlights:</h4>
-            <ul class="flex flex-col ml-6 list-disc">
-              <li>Protected habitat for the endangered Gharials</li>
-              <li>Boat ride on the Ken River</li>
-              <li>Spot a wide variety of birds and aquatic animals</li>
-            </ul>
           </div>
-          <div class="w-full md:w-1/3">
-            <img src="../../assets/images/junona.jpg" alt="" />
-          </div>
-        </div>
 
-        <!-- Tourist Attractions 4 -->
-        <div class="mt-6 flex flex-col-reverse md:flex-row h-full gap-4">
-          <div class="w-full md:w-1/3">
-            <img src="../../assets/images/junona.jpg" alt="" />
-          </div>
-          <div class="w-full md:w-2/3">
-            <h3 class="font-bold text-xl">Diamond Mines (Majhagaon)</h3>
-            <h3 class="font-semibold text-md mb-2">
-              Distance from Panna National Park: 55.2 km
-            </h3>
-            <p class="mb-1">
-              Known as the only active Diamond mine in Asia at Majhagaon. As you
-              get a tour here, you will get to know the history of diamond
-              mining, how the formation of diamonds happens according to the
-              different geographical characteristics, and how this region is
-              favourable. Since it is very rare to find these areas, it is named
-              “The Treasure Land”.
+          <!-- Book Safari -->
+          <div class="bg-white rounded-xl shadow-md border p-6">
+            <div class="flex items-center mb-4">
+              <div class="bg-green-100 p-3 rounded-full mr-4">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6 text-green-700"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"
+                  />
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-green-800">
+                Book Your Safari Ride Early
+              </h3>
+            </div>
+            <p class="text-gray-700">
+              You must book your jeep safari well in advance. There are only a
+              certain number of jeeps allowed in the park each day, so they can
+              run out. You can book your spot on the computer (online) or
+              contact us where we are there to help you out in details. It is a
+              very smart idea to do this a few weeks early to make sure you get
+              a jeep.
             </p>
-            <h4 class="font-semibold text-sm">Highlights:</h4>
-            <ul class="flex flex-col ml-6 list-disc">
-              <li>Get to see the only active diamond mine in Asia</li>
-              <li>Know the history of the mining area</li>
-              <li>A place where geological and industrial tourism boost.</li>
-            </ul>
           </div>
-        </div>
 
-        <!-- Tourist Attractions 5 -->
-        <div class="mt-6 flex flex-col md:flex-row h-full gap-4">
-          <div class="w-full md:w-2/3">
-            <h3 class="font-bold text-xl">Ken Gharial Sanctuary</h3>
-            <h3 class="font-semibold text-md mb-2">
-              Distance from Panna National Park: 22.5 km
-            </h3>
-            <p class="mb-1">
-              On the banks of the Ken River, it is home to the endangered
-              Gharial. A boat ride in the morning or afternoon will make you
-              spot several of them. They come out of the water, and you can see
-              these reptiles basking on sandbanks for sunlight to fall, along
-              with crocodiles and a variety of birds.
+          <!-- Accommodation -->
+          <div class="bg-white rounded-xl shadow-md border p-6">
+            <div class="flex items-center mb-4">
+              <div class="bg-green-100 p-3 rounded-full mr-4">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6 text-green-700"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+                  />
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-green-800">
+                Pick a Place for Your Accommodation
+              </h3>
+            </div>
+            <p class="text-gray-700">
+              You will need a hotel or resort to sleep in. It is best to choose
+              one that is close to the park gate for easy access to safari and
+              other activities. This makes it easy to get to your safari in the
+              early morning. There are many different options for resorts and
+              hotels. Some are a little pricey and some cost a lot of money. You
+              can pick one that is right for your family. Make sure to check if
+              they have a room available for the days you want to visit.
             </p>
-            <h4 class="font-semibold text-sm">Highlights:</h4>
-            <ul class="flex flex-col ml-6 list-disc">
-              <li>Protected habitat for the endangered Gharials</li>
-              <li>Boat ride on the Ken River</li>
-              <li>Spot a wide variety of birds and aquatic animals</li>
-            </ul>
           </div>
-          <div class="w-full md:w-1/3">
-            <img src="../../assets/images/junona.jpg" alt="" />
+
+          <!-- Safari Preparation -->
+          <div class="bg-white rounded-xl shadow-md border p-6">
+            <div class="flex items-center mb-4">
+              <div class="bg-green-100 p-3 rounded-full mr-4">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6 text-green-700"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+                  />
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-green-800">
+                Get Ready for Your Safari
+              </h3>
+            </div>
+            <p class="text-gray-700">
+              The jeep safari will be one of the best adventures of your life
+              going through the rocky and muddy ways with ups and downs and the
+              excitement of moving inside the jungle to spot animals. Apart from
+              the bengal tiger you may see leopards, bears, more than 200
+              species of birds, aquatic animals and a lot more. The best times
+              for animal spotting are early in the morning or late in the
+              afternoon where they come near the water bodies to drink water.
+            </p>
+          </div>
+
+          <!-- Nearby Places -->
+          <div class="bg-white rounded-xl shadow-md border p-6">
+            <div class="flex items-center mb-4">
+              <div class="bg-green-100 p-3 rounded-full mr-4">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6 text-green-700"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                  />
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                  />
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-green-800">
+                Visit Other Places Nearby
+              </h3>
+            </div>
+            <p class="text-gray-700">
+              Your trip can be even more fun by visiting other cool places near
+              the national park. You can see the beautiful Pandav Falls and
+              explore ancient caves located right in the park. Another great
+              place to visit is the Ken Gharial Sanctuary which is a protected
+              area next to Panna that helps save the endangered gharial which is
+              a special type of crocodile and is a wonderful place to see these
+              reptiles. Finally at last you can take a short drive to see the
+              famous Khajuraho Temples. These very old temples are a UNESCO
+              World Heritage Site and are known for their amazing and detailed
+              stone carvings making them a fantastic place to learn about
+              history and culture.
+            </p>
+          </div>
+
+          <!-- Packing List -->
+          <div class="bg-white rounded-xl shadow-md border p-6">
+            <div class="flex items-center mb-4">
+              <div class="bg-green-100 p-3 rounded-full mr-4">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6 text-green-700"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"
+                  />
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-green-800">
+                Pack Your Bags Wisely
+              </h3>
+            </div>
+            <p class="text-gray-700 mb-3">
+              Packing the right things is very important for a fun and
+              comfortable trip to the forest.
+            </p>
+            <h4 class="font-semibold text-green-700 mb-2">
+              What to Pack for Your Safari:
+            </h4>
+            <ul class="text-gray-700 list-disc pl-5 space-y-1">
+              <li>
+                Do not forget sunscreen and hats as the day increases, the heat
+                makes you tan.
+              </li>
+              <li>
+                Wear light colors or camouflage pattern dress that will blend
+                with the color of forest.
+              </li>
+              <li>
+                Wear comfortable walking or trekking shoes that will help in
+                giving comfort to your foot.
+              </li>
+              <li>
+                Carry a small backpack where you can add water bottles and other
+                snacks.
+              </li>
+              <li>Do not forget to carry a first aid kit for emergencies.</li>
+              <li>
+                Carry gears and binoculars that will help in birdwatching and
+                also a good quality of camera lens for photography.
+              </li>
+            </ul>
           </div>
         </div>
       </div>
