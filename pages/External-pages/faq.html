@@ -36,7 +36,7 @@
   </head>
   <body>
     <!-- Header -->
-    <header class="bg-white shadow-sm sticky top-0 z-10">
+    <header class="bg-white shadow-sm sticky top-0 z-50">
       <div class="container mx-auto px-4">
         <div class="flex justify-between items-center py-4">
           <a href="#" class="text-2xl font-bold text-indigo-600">Logo</a>
@@ -111,31 +111,31 @@
 
           <div class="p-4 overflow-y-auto h-[calc(100vh-80px)]">
             <a
-              href="./index.html"
+              href="../../index.html"
               class="block py-3 px-4 text-gray-600 hover:text-green-600 hover:bg-gray-50 rounded-lg font-medium text-sm transition-colors"
               onclick="closeMenu()"
               >Home</a
             >
             <a
-              href="./pages/tourPackages.html"
+              href="./../tourPackages.html"
               class="block py-3 px-4 text-gray-600 hover:text-green-600 hover:bg-gray-50 rounded-lg font-medium text-sm transition-colors"
               onclick="closeMenu()"
               >Tour Packages</a
             >
             <a
-              href="./pages/hotelinPanna.html"
+              href="./../hotelinPanna.html"
               class="block py-3 px-4 text-gray-600 hover:text-green-600 hover:bg-gray-50 rounded-lg font-medium text-sm transition-colors"
               onclick="closeMenu()"
               >Hotel in Panna</a
             >
             <a
-              href="./pages/payment.html"
+              href="./../payment.html"
               class="block py-3 px-4 text-gray-600 hover:text-green-600 hover:bg-gray-50 rounded-lg font-medium text-sm transition-colors"
               onclick="closeMenu()"
               >Payment</a
             >
             <a
-              href="./pages/safariBooking.html"
+              href="./../safariBooking.html"
               class="block py-3 px-4 mt-4 custom-nav-btn text-gray-600 hover:text-green-600 font-medium text-sm transition-colors"
               onclick="closeMenu()"
               >Online Safari Booking</a
@@ -150,6 +150,68 @@
         </nav>
       </div>
     </header>
+
+    <!-- Enquiry Now Button -->
+    <div id="enquiry-btn">
+      <button>Enquiry Now</button>
+    </div>
+
+    <!-- Enquiry Form -->
+    <div
+      id="Enquiry-form"
+      class="hidden p-5 shadow-lg border border-gray-700 rounded-lg"
+    >
+      <form class="flex flex-col gap-2">
+        <h3 class="font-bold">Enquiry</h3>
+        <input
+          type="text"
+          placeholder="Name"
+          required
+          id="name"
+          class="bg-gray-50 px-3 py-1 border border-gray-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-green-500"
+        />
+        <input
+          type="text"
+          placeholder="Contact Number"
+          required
+          id="number"
+          class="bg-gray-50 px-3 py-1 border border-gray-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-green-500"
+        />
+        <input
+          type="email"
+          placeholder="Email"
+          required
+          id="email"
+          class="bg-gray-50 px-3 py-1 border border-gray-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-green-500"
+        />
+        <textarea
+          name="remarks"
+          id="remarks"
+          placeholder="remarks"
+          rows="4"
+          cols="35"
+          class="bg-gray-50 px-3 py-1 border border-gray-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-green-500"
+        ></textarea>
+        <div
+          id="enquiry-form-btn"
+          class="w-full flex items-center justify-between gap-6 mt-2"
+        >
+          <button
+            type="submit"
+            id="enquiry-submit-btn"
+            class="text-semibold bg-green-600 hover:bg-green-700 text-white rounded-md px-5 py-2 w-full"
+          >
+            Submit
+          </button>
+          <button
+            id="enquiry-close-btn"
+            class="text-semibold bg-red-500 hover:bg-red-600 text-white rounded-md px-5 py-2 w-full"
+          >
+            close
+          </button>
+        </div>
+      </form>
+    </div>
 
     <!-- Hero Section -->
     <section class="" id="reach-hero-section">
