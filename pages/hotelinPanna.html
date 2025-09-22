@@ -1390,6 +1390,7 @@
       const filterSection = document.getElementById("filter-container");
       const closeFilters = document.getElementById("close-filters");
       const applyFilterBtn = document.getElementById("apply-filter-btn");
+      const resetFilterBtn = document.querySelector("button.bg-gray-200");
 
       if (filterToggle) {
         filterToggle.addEventListener("click", function () {
@@ -1409,9 +1410,22 @@
         });
       }
 
-      if (closeFilters) {
+      // Apply filter functionality
+      if (applyFilterBtn) {
         applyFilterBtn.addEventListener("click", function () {
+          applyFilters();
           filterSection.classList.add("hidden");
+          if (filterToggle) {
+            filterToggle.textContent = "Show Filters";
+          }
+        });
+      }
+
+      // Reset filter functionality
+      if (resetFilterBtn) {
+        resetFilterBtn.addEventListener("click", function () {
+          resetFilters();
+          applyFilters();
         });
       }
 
@@ -1420,6 +1434,107 @@
           "/200/",
           "/800/"
         );
+      }
+
+      // Filter implementation functions
+      function applyFilters() {
+        const priceFilterValue = parseInt(
+          document.getElementById("price-range").value
+        );
+        const selectedRatings = getSelectedRatings();
+        const selectedAmenities = getSelectedAmenities();
+        const selectedLocation = document.querySelector("select").value;
+
+        const hotelCards = document.querySelectorAll(".hotel-card");
+
+        hotelCards.forEach((card) => {
+          const price = parseInt(
+            card.querySelector(".text-2xl").textContent.replace("₹", "")
+          );
+          const rating = getCardRating(card);
+          const amenities = getCardAmenities(card);
+          const location = card
+            .querySelector(".fa-map-marker-alt")
+            .parentNode.textContent.trim();
+
+          const priceMatch = price <= priceFilterValue;
+          const ratingMatch =
+            selectedRatings.length === 0 || selectedRatings.includes(rating);
+          const amenitiesMatch =
+            selectedAmenities.length === 0 ||
+            selectedAmenities.every((amenity) => amenities.includes(amenity));
+          const locationMatch =
+            selectedLocation === "All Locations" ||
+            location.includes(selectedLocation);
+
+          if (priceMatch && ratingMatch && amenitiesMatch && locationMatch) {
+            card.style.display = "flex";
+          } else {
+            card.style.display = "none";
+          }
+        });
+      }
+
+      function getSelectedRatings() {
+        const ratings = [];
+        if (document.getElementById("rating-5").checked) ratings.push(5);
+        if (document.getElementById("rating-4").checked) ratings.push(4);
+        if (document.getElementById("rating-3").checked) ratings.push(3);
+        return ratings;
+      }
+
+      function getSelectedAmenities() {
+        const amenities = [];
+        if (document.getElementById("wifi").checked) amenities.push("WiFi");
+        if (document.getElementById("pool").checked) amenities.push("Pool");
+        if (document.getElementById("spa").checked) amenities.push("Spa");
+        if (document.getElementById("breakfast").checked)
+          amenities.push("Breakfast");
+        if (document.getElementById("gym").checked) amenities.push("Gym");
+        return amenities;
+      }
+
+      function getCardRating(card) {
+        const stars = card.querySelectorAll(".fa-star:not(.far)").length;
+        return stars;
+      }
+
+      function getCardAmenities(card) {
+        const amenities = [];
+        const amenitiesText = card.querySelectorAll(
+          ".text-xs.text-gray-700 span"
+        );
+
+        amenitiesText.forEach((span) => {
+          if (span.textContent.includes("WiFi")) amenities.push("WiFi");
+          if (span.textContent.includes("Pool")) amenities.push("Pool");
+          if (span.textContent.includes("Restaurant"))
+            amenities.push("Breakfast"); // Assuming restaurant means breakfast
+          // Add more mappings as needed
+        });
+
+        return amenities;
+      }
+
+      function resetFilters() {
+        // Reset price range
+        document.getElementById("price-range").value = 5000;
+        document.getElementById("price-value").textContent = "5000";
+
+        // Reset star ratings
+        document.getElementById("rating-5").checked = false;
+        document.getElementById("rating-4").checked = true;
+        document.getElementById("rating-3").checked = true;
+
+        // Reset amenities
+        document.getElementById("wifi").checked = true;
+        document.getElementById("pool").checked = false;
+        document.getElementById("spa").checked = false;
+        document.getElementById("breakfast").checked = true;
+        document.getElementById("gym").checked = false;
+
+        // Reset location
+        document.querySelector("select").value = "All Locations";
       }
     </script>
   </body>
